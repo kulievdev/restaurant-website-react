@@ -29,16 +29,9 @@
     font-size: 14px;
 }
 
-#navigation__link {
+.navigation__links li:first-child a {
     color: rgb(255, 138, 0);
 }
-/* .navigation__links li:first-child a {
-    color: rgb(255, 138, 0);
-} */
-
-/* .navigation__links .navigation__link {
-    color: rgb(255, 138, 0);
-} */
 
 .navigation__actions {
     display: flex;
