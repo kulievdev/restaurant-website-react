@@ -1,5 +1,6 @@
 import "./Menu.css";
 import { meals } from "./data";
+import { Button } from "../../../../design-system/Button/Button";
 
 import starFilled from "../../../../assets/star-filled.svg";
 import starEmpty from "../../../../assets/star-empty.svg";
@@ -26,7 +27,9 @@ const Meal = (props) => {
             <p className="card__text">{props.description}</p>
             <div className="card__footer">
                 <span className="menu-section__price">{props.price}</span>
-                <button className="btn btn-md btn-orange">Order Now</button>
+                <Button size="md" color="orange">
+                    Order Now
+                </Button>
             </div>
         </div>
     );
@@ -38,13 +41,21 @@ const Menu = () => {
             <div className="menu-section__container container">
                 <h2>Our Popular Menu</h2>
                 <div className="menu-section__filters">
-                    <button className="btn btn-lg btn-black">
+                    <Button size="lg" color="black">
                         All Catagories
-                    </button>
-                    <button className="btn btn-lg btn-gray">Dinner</button>
-                    <button className="btn btn-lg btn-gray">Lunch</button>
-                    <button className="btn btn-lg btn-gray">Dessert</button>
-                    <button className="btn btn-lg btn-gray">Drink</button>
+                    </Button>
+                    <Button size="lg" color="gray">
+                        Dinner
+                    </Button>
+                    <Button size="lg" color="gray">
+                        Lunch
+                    </Button>
+                    <Button size="lg" color="gray">
+                        Dessert
+                    </Button>
+                    <Button size="lg" color="gray">
+                        Drink
+                    </Button>
                 </div>
                 <div className="menu-section__meals">
                     {meals.map((meal, idx) => {

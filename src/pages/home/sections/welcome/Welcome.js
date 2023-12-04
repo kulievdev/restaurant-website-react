@@ -1,5 +1,6 @@
 import "./Welcome.css";
 import saladImage from "../../../../assets/salad.png";
+import { Button } from "../../../../design-system/Button/Button";
 
 const Welcome = () => {
     return (
@@ -17,9 +18,9 @@ const Welcome = () => {
                         Facilisis ultricies at eleifend proin. Congue nibh nulla
                         malesuada ultricies nec quam
                     </p>
-                    <button className="btn btn-lg btn-orange">
+                    <Button size="lg" color="orange">
                         See Our Menu
-                    </button>
+                    </Button>
                 </div>
             </div>
         </section>

@@ -2,6 +2,7 @@ import "./Chefs.css";
 import chef1 from "../../../../assets/betran.png";
 import chef2 from "../../../../assets/ferry.png";
 import chef3 from "../../../../assets/iswan.png";
+import { Button } from "../../../../design-system/Button/Button";
 
 const Chef = (props) => {
     return (
@@ -25,7 +26,9 @@ const Chefs = () => {
                     <Chef img={chef2} name="Ferry Sauwi" title="Chef" />
                     <Chef img={chef3} name="Iswan Dracho" title="Chef" />
                 </div>
-                <button className="btn btn-lg btn-orange">View All</button>
+                <Button size="lg" color="orange">
+                    View All
+                </Button>
             </div>
         </section>
     );
