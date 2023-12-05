@@ -1,6 +1,7 @@
 import "./TopNavigation.css";
 import cartIcon from "../../../../assets/cart.svg";
 import logo from "../../../../assets/logo-white.svg";
+import { Button } from "../../../../design-system/Button/Button";
 
 const links = [
     { text: "Home", link: "https://google.com" },
@@ -28,7 +29,9 @@ const TopNavigation = () => {
                     <figure>
                         <img src={cartIcon} alt="Shopping Cart" />
                     </figure>
-                    <button className="btn btn-sm btn-green">Log In</button>
+                    <Button size="sm" color="green">
+                        Log In
+                    </Button>
                 </div>
             </nav>
         </header>

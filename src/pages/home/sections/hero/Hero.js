@@ -1,6 +1,7 @@
 import "./Hero.css";
 
 import spaghettiImage from "../../../../assets/menu-spaghetti.png";
+import { Button } from "../../../../design-system/Button/Button";
 
 const Hero = () => {
     return (
@@ -14,12 +15,12 @@ const Hero = () => {
                         Sodales senectus dictum arcu sit tristique donec eget.
                     </p>
                     <div className="hero-section__cta">
-                        <button className="btn btn-lg btn-orange">
+                        <Button size="lg" color="orange">
                             Order Now
-                        </button>
-                        <button className="btn btn-lg btn-green">
+                        </Button>
+                        <Button size="lg" color="green">
                             Reservation
-                        </button>
+                        </Button>
                     </div>
                 </div>
 
