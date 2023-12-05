@@ -5,6 +5,7 @@ import { Menu } from "./sections/menu/Menu";
 import { Reservation } from "./sections/reservation/Reservation";
 import { Chefs } from "./sections/chefs/Chefs";
 import { Testimonials } from "./sections/testimonials/Testimonials";
+import { BusinessHours } from "./sections/business-hours/BusinessHours";
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <Reservation />
             <Chefs />
             <Testimonials />
+            <BusinessHours />
         </>
     );
 };
