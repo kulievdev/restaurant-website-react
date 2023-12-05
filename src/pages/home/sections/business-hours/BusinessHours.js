@@ -4,12 +4,12 @@ import "./BusinessHours.css";
 const BusinessHours = () => {
     return (
         <section id="hours-section">
-            <div class="hours-section__container container">
-                <div class="hours-section__background">
-                    <div class="hours-section__hours">
+            <div className="hours-section__container container">
+                <div className="hours-section__background">
+                    <div className="hours-section__hours">
                         <h2>We are open from</h2>
                         <h3>Monday - Sunday</h3>
-                        <div class="hours-section__lunch-dinner">
+                        <div className="hours-section__lunch-dinner">
                             <p>Launch: Mon-Sun: 11:00am-02:00pm</p>
                             <p>Dinner: Sunday: 04:00pm-08:00pm</p>
                             <p>04:00pm-09:00pm</p>
