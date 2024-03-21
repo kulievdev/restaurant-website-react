@@ -10,14 +10,19 @@
     font-weight: 600;
 }
 
-* {
-    padding: 0;
+*,
+*::before,
+*::after {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: "Poppins", sans-serif;
+}
+html {
+    font-size: 62.5%; /* it sets base font size to 10px */
 }
 
 ul {
@@ -26,11 +31,4 @@ ul {
 
 a {
     text-decoration: none;
-}
-
-/* Container */
-
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
 }

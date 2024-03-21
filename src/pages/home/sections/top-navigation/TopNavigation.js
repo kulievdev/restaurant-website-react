@@ -1,8 +1,9 @@
 import "./TopNavigation.css";
-import cartIcon from "../../../../assets/cart.svg";
-import logo from "../../../../assets/logo-white.svg";
 import Button from "../../../../design-system/Button/Button";
 import React, { useState } from "react";
+import Logo from "../../../../design-system/Logo/Logo";
+import styled from "styled-components";
+import Cart from "../../../../design-system/Cart/Cart";
 
 const links = [
     { text: "Home", link: "" },
@@ -12,6 +13,39 @@ const links = [
     { text: "Contact Us", link: "" }
 ];
 
+const Header = styled.div`
+    max-width: 144rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: yellow;
+    align-items: center;
+    padding: 6.7rem 0;
+`;
+
+const Navigation = styled.nav``;
+
+const UnorderedList = styled.ul`
+    display: flex;
+    gap: 4.5rem;
+    font-size: 1.4rem;
+`;
+
+const List = styled.li``;
+
+const Link = styled.a`
+    color: #311f09;
+
+    ${List}:first-child & {
+        color: orange;
+    }
+`;
+
+const NavigationActions = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
 const TopNavigation = () => {
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
@@ -20,40 +54,26 @@ const TopNavigation = () => {
     };
 
     return (
-        <header className={`header ${isHamburgerOpen ? "open" : ""}`}>
-            <nav className="navigation">
-                <img src={logo} alt="DeliziOso" className="logo-white" />
-                <div
-                    className={`hamburger ${isHamburgerOpen ? "open" : ""}`}
-                    onClick={toggleHamburger}
-                >
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                </div>
-                <ul
-                    className={`navigation__links ${
-                        isHamburgerOpen ? "open" : ""
-                    }`}
-                >
+        <Header>
+            <Logo />
+            <Navigation>
+                <UnorderedList>
                     {links.map((link, idx) => (
-                        <li key={idx}>
-                            <a href={link.link} onClick={toggleHamburger}>
+                        <List key={idx}>
+                            <Link href={link.link} onClick={toggleHamburger}>
                                 {link.text}
-                            </a>
-                        </li>
+                            </Link>
+                        </List>
                     ))}
-                </ul>
-                <div className="navigation__actions">
-                    <figure>
-                        <img src={cartIcon} alt="Shopping Cart" />
-                    </figure>
-                    <Button size="sm" color="green">
-                        Log In
-                    </Button>
-                </div>
-            </nav>
-        </header>
+                </UnorderedList>
+            </Navigation>
+            <NavigationActions>
+                <Cart />
+                <Button size="sm" color="green">
+                    Log In
+                </Button>
+            </NavigationActions>
+        </Header>
     );
 };
 
