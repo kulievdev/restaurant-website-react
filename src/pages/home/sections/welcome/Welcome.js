@@ -1,6 +1,6 @@
 import "./Welcome.css";
 import saladImage from "../../../../assets/salad.png";
-import { Button } from "../../../../design-system/Button/Button";
+import Button from "../../../../design-system/Button/Button";
 
 const Welcome = () => {
     return (

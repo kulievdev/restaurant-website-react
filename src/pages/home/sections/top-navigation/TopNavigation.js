@@ -1,29 +1,48 @@
 import "./TopNavigation.css";
 import cartIcon from "../../../../assets/cart.svg";
 import logo from "../../../../assets/logo-white.svg";
-import { Button } from "../../../../design-system/Button/Button";
+import Button from "../../../../design-system/Button/Button";
+import React, { useState } from "react";
 
 const links = [
-    { text: "Home", link: "https://google.com" },
-    { text: "Menu", link: "https://facebook.com" },
+    { text: "Home", link: "" },
+    { text: "Menu", link: "" },
     { text: "About us", link: "" },
     { text: "Reservation", link: "" },
-    { text: "Contact Us", link: "./contact.html" }
+    { text: "Contact Us", link: "" }
 ];
 
 const TopNavigation = () => {
+    const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+
+    const toggleHamburger = () => {
+        setIsHamburgerOpen(!isHamburgerOpen);
+    };
+
     return (
-        <header className="header">
+        <header className={`header ${isHamburgerOpen ? "open" : ""}`}>
             <nav className="navigation">
                 <img src={logo} alt="DeliziOso" className="logo-white" />
-                <ul className="navigation__links">
-                    {links.map((link, idx) => {
-                        return (
-                            <li key={idx}>
-                                <a href={link.link}>{link.text}</a>
-                            </li>
-                        );
-                    })}
+                <div
+                    className={`hamburger ${isHamburgerOpen ? "open" : ""}`}
+                    onClick={toggleHamburger}
+                >
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                </div>
+                <ul
+                    className={`navigation__links ${
+                        isHamburgerOpen ? "open" : ""
+                    }`}
+                >
+                    {links.map((link, idx) => (
+                        <li key={idx}>
+                            <a href={link.link} onClick={toggleHamburger}>
+                                {link.text}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
                 <div className="navigation__actions">
                     <figure>

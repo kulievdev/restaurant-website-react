@@ -1,6 +1,6 @@
 import "./Menu.css";
 import { meals } from "./data";
-import { Button } from "../../../../design-system/Button/Button";
+import Button from "../../../../design-system/Button/Button";
 
 import starFilled from "../../../../assets/star-filled.svg";
 import starEmpty from "../../../../assets/star-empty.svg";

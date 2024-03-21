@@ -18,4 +18,4 @@ const Button = ({ size, color, children }) => {
     );
 };
 
-export { Button };
+export default Button;

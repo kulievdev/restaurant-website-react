@@ -1,6 +1,6 @@
 import "./Reservation.css";
 import reservationImg from "../../../../assets/reservation.png";
-import { Button } from "../../../../design-system/Button/Button";
+import Button from "../../../../design-system/Button/Button";
 
 const Reservation = () => {
     return (

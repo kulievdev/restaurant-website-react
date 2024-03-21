@@ -2,7 +2,7 @@ import "./Chefs.css";
 import chef1 from "../../../../assets/betran.png";
 import chef2 from "../../../../assets/ferry.png";
 import chef3 from "../../../../assets/iswan.png";
-import { Button } from "../../../../design-system/Button/Button";
+import Button from "../../../../design-system/Button/Button";
 
 const Chef = (props) => {
     return (

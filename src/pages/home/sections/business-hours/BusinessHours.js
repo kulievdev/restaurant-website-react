@@ -1,4 +1,4 @@
-import { Button } from "../../../../design-system/Button/Button";
+import Button from "../../../../design-system/Button/Button";
 import "./BusinessHours.css";
 
 const BusinessHours = () => {

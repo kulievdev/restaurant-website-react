@@ -1,7 +1,7 @@
 import "./Hero.css";
 
 import spaghettiImage from "../../../../assets/menu-spaghetti.png";
-import { Button } from "../../../../design-system/Button/Button";
+import Button from "../../../../design-system/Button/Button";
 
 const Hero = () => {
     return (
