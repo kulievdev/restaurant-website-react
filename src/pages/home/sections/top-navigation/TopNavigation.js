@@ -19,6 +19,7 @@ const Header = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-top: 6.7rem;
+    padding: 0 5rem;
 `;
 
 const Navigation = styled.nav``;

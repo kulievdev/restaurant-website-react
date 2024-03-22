@@ -8,7 +8,7 @@ const HeroSectionContainer = styled.div`
     max-width: 144rem;
     margin: 0 auto;
     display: flex;
-    padding: 15rem 0;
+    padding: 15rem 5rem;
 `;
 
 const HeroContent = styled.div`
