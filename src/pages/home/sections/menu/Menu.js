@@ -2,21 +2,16 @@ import meals from "./data";
 import Button from "../../../../design-system/Button/Button";
 import Meal from "./Meal";
 import styled from "styled-components";
+import { SectionHeading } from "../../../components/layout";
 
-const MenuSection = styled.section``;
+const MenuSection = styled.section`
+    text-align: center;
+`;
 
 const MenuSectionContainer = styled.div`
     max-width: 144rem;
     margin: 0 auto;
     padding: 15rem 5rem;
-`;
-
-const MenuHeading = styled.h2`
-    text-align: center;
-    font-size: 6rem;
-    line-height: 7rem;
-    color: #311f09;
-    margin-bottom: 5rem;
 `;
 
 const MenuCategories = styled.div`
@@ -35,7 +30,9 @@ const Menu = () => {
     return (
         <MenuSection id="menu-section">
             <MenuSectionContainer>
-                <MenuHeading>Our Popular Menu</MenuHeading>
+                <SectionHeading $marginBottom="5">
+                    Our Popular Menu
+                </SectionHeading>
                 <MenuCategories className="menu-section__filters">
                     <Button size="lg" color="black">
                         All Catagories

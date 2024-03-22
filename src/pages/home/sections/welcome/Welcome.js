@@ -1,6 +1,11 @@
 import saladImage from "../../../../assets/salad.png";
 import Button from "../../../../design-system/Button/Button";
 import styled from "styled-components";
+import {
+    OrangeSpanText,
+    SectionDescription,
+    SectionHeading
+} from "../../../components/layout";
 
 const WelcomeSection = styled.section`
     background-color: #3fc66e1a;
@@ -34,26 +39,6 @@ const WelcomeContent = styled.div`
     justify-content: center;
 `;
 
-const WelcomeHeading = styled.h2`
-    font-size: 8rem;
-    font-weight: 700;
-    line-height: 8rem;
-    color: #311f09;
-    margin-bottom: 6rem;
-`;
-
-const RestaurantName = styled.span`
-    color: #ff8a00;
-`;
-
-const WelcomeDescription = styled.p`
-    font-size: 2rem;
-    line-height: 4rem;
-    font-weight: 400;
-    margin-bottom: 10rem;
-    color: #5c4529;
-`;
-
 const Welcome = () => {
     return (
         <WelcomeSection id="welcome-section">
@@ -64,14 +49,14 @@ const Welcome = () => {
                     </WelcomeImageContainer>
                 </WelcomeImageWrapper>
                 <WelcomeContent>
-                    <WelcomeHeading>
-                        Welcome to <RestaurantName>DeliziOso</RestaurantName>
-                    </WelcomeHeading>
-                    <WelcomeDescription>
+                    <SectionHeading $marginBottom="6">
+                        Welcome to <OrangeSpanText>DeliziOso</OrangeSpanText>
+                    </SectionHeading>
+                    <SectionDescription $marginBottom="10">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Facilisis ultricies at eleifend proin. Congue nibh nulla
                         malesuada ultricies nec quam
-                    </WelcomeDescription>
+                    </SectionDescription>
                     <Button size="lg" color="orange">
                         See Our Menu
                     </Button>

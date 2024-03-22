@@ -1,6 +1,11 @@
 import reservationImg from "../../../../assets/reservation.png";
 import Button from "../../../../design-system/Button/Button";
 import styled from "styled-components";
+import {
+    OrangeSpanText,
+    SectionDescription,
+    SectionHeading
+} from "../../../components/layout";
 
 const ReservationSection = styled.section`
     background-color: #fff4e766;
@@ -34,25 +39,6 @@ const ReservationContent = styled.div`
     width: 50%;
 `;
 
-const ReservationHeading = styled.h2`
-    font-size: 60px;
-    line-height: 70px;
-    color: rgb(49, 31, 9);
-    margin-bottom: 50px;
-`;
-
-const ReservationSpanText = styled.span`
-    color: #ff8a00;
-`;
-
-const ReservationDescription = styled.p`
-    font-size: 2rem;
-    line-height: 4rem;
-    font-weight: 400;
-    margin-bottom: 10rem;
-    color: #5c4529;
-`;
-
 const Reservation = () => {
     return (
         <ReservationSection id="reservation-section">
@@ -66,15 +52,15 @@ const Reservation = () => {
                     </ReservationImageContainer>
                 </ReservationImageWrapper>
                 <ReservationContent>
-                    <ReservationHeading>
+                    <SectionHeading $marginBottom="5">
                         Let's reserve <br />
-                        <ReservationSpanText>a table</ReservationSpanText>
-                    </ReservationHeading>
-                    <ReservationDescription>
+                        <OrangeSpanText>a table</OrangeSpanText>
+                    </SectionHeading>
+                    <SectionDescription $marginBottom="10">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Facilisis ultricies at eleifend proin. Congue nibh nulla
                         malesuada ultricies nec quam
-                    </ReservationDescription>
+                    </SectionDescription>
                     <Button size="lg" color="orange">
                         Reservation
                     </Button>

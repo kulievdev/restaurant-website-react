@@ -32,7 +32,7 @@ const Chef = (props) => {
         <ChefWrapper>
             <ChefImage
                 src={props.img}
-                alt="Betran Chef"
+                alt={props.alt}
                 $backgroundColor={props.backgroundColor}
             />
             <ChefName>{props.name}</ChefName>

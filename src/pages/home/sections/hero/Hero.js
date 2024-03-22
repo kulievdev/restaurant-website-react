@@ -1,6 +1,7 @@
 import Button from "../../../../design-system/Button/Button";
 import styled from "styled-components";
 import spaghettiImage from "../../../../assets/menu-spaghetti.png";
+import { SectionHeading, SectionDescription } from "../../../components/layout";
 
 const HeroSection = styled.section``;
 
@@ -29,22 +30,6 @@ const RestaurantName = styled.span`
     padding: 1rem 3rem;
 `;
 
-const HeroHeading = styled.h2`
-    margin-bottom: 2.2rem;
-    color: #311f09;
-    font-size: 8rem;
-    font-weight: 700;
-    line-height: 8.8rem;
-`;
-
-const HeroDescription = styled.p`
-    margin-bottom: 8.4rem;
-    font-weight: 400;
-    line-height: 4rem;
-    color: #5c4529;
-    font-size: 2rem;
-`;
-
 const HeroCtaWrapper = styled.div`
     display: flex;
     gap: 2.3rem;
@@ -70,14 +55,14 @@ const Hero = () => {
             <HeroSectionContainer>
                 <HeroContent>
                     <RestaurantName>DeliziOso</RestaurantName>
-                    <HeroHeading>
+                    <SectionHeading $marginBottom="2.2">
                         Italian <br />
                         Cuisine
-                    </HeroHeading>
-                    <HeroDescription>
+                    </SectionHeading>
+                    <SectionDescription $marginBottom="8.4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Sodales senectus dictum arcu sit tristique donec eget.
-                    </HeroDescription>
+                    </SectionDescription>
                     <HeroCtaWrapper>
                         <Button size="lg" color="orange">
                             Order Now
