@@ -38,7 +38,7 @@ const Menu = () => {
     return (
         <MenuSection id="menu-section">
             <MenuSectionContainer>
-                <SectionHeading $marginBottom="5">
+                <SectionHeading $marginBottom="6">
                     Our Popular Menu
                 </SectionHeading>
                 <MenuCategories className="menu-section__filters">

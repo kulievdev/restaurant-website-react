@@ -24,7 +24,7 @@ const Chefs = () => {
     return (
         <ChefsSection id="chefs-section">
             <ChefsSectionContainer>
-                <SectionHeading $marginBottom="5">
+                <SectionHeading $marginBottom="13.5">
                     Our Greatest <OrangeSpanText>Chefs</OrangeSpanText>
                 </SectionHeading>
                 <ChefsWrapper>
