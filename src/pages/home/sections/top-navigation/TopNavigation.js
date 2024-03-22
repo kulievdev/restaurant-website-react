@@ -1,4 +1,3 @@
-import "./TopNavigation.css";
 import Button from "../../../../design-system/Button/Button";
 import React, { useState } from "react";
 import Logo from "../../../../design-system/Logo/Logo";
@@ -18,9 +17,8 @@ const Header = styled.div`
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    background-color: yellow;
     align-items: center;
-    padding: 6.7rem 0;
+    margin-top: 6.7rem;
 `;
 
 const Navigation = styled.nav``;
@@ -28,7 +26,7 @@ const Navigation = styled.nav``;
 const UnorderedList = styled.ul`
     display: flex;
     gap: 4.5rem;
-    font-size: 1.4rem;
+    font-size: 2rem;
 `;
 
 const List = styled.li``;
@@ -69,7 +67,7 @@ const TopNavigation = () => {
             </Navigation>
             <NavigationActions>
                 <Cart />
-                <Button size="sm" color="green">
+                <Button size="md" color="green">
                     Log In
                 </Button>
             </NavigationActions>
