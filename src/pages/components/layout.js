@@ -26,6 +26,10 @@ const SectionContainer = styled.div`
     max-width: 144rem;
     margin: 0 auto;
     padding: 15rem 5rem;
+
+    @media (min-width: 144rem) {
+        max-width: 192rem;
+    }
 `;
 
 export { SectionContainer, SectionHeading, SectionDescription, OrangeSpanText };

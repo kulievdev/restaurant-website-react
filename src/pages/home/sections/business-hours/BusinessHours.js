@@ -7,7 +7,7 @@ const BusinessHoursSection = styled.section``;
 const BusinessHoursSectionContainer = styled(SectionContainer)``;
 
 const BusinessHoursBackground = styled.div`
-    max-width: 144rem;
+    max-width: 115rem;
     height: 75rem;
     margin: 0 auto;
     border-radius: 15rem;

@@ -48,7 +48,8 @@ const Welcome = () => {
                 </WelcomeImageWrapper>
                 <WelcomeContent>
                     <SectionHeading $marginBottom="6">
-                        Welcome to <OrangeSpanText>DeliziOso</OrangeSpanText>
+                        Welcome to <br />
+                        <OrangeSpanText>DeliziOso</OrangeSpanText>
                     </SectionHeading>
                     <SectionDescription $marginBottom="10">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.

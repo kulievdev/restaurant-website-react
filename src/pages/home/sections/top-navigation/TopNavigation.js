@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Logo from "../../../../design-system/Logo/Logo";
 import styled from "styled-components";
 import Cart from "../../../../design-system/Cart/Cart";
+import { SectionContainer } from "../../../components/layout";
 
 const links = [
     { text: "Home", link: "" },
@@ -12,9 +13,7 @@ const links = [
     { text: "Contact Us", link: "" }
 ];
 
-const Header = styled.div`
-    max-width: 144rem;
-    margin: 0 auto;
+const Header = styled(SectionContainer)`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,7 +52,7 @@ const TopNavigation = () => {
     };
 
     return (
-        <Header>
+        <Header as="header">
             <Logo type="dark" />
             <Navigation>
                 <UnorderedList>
