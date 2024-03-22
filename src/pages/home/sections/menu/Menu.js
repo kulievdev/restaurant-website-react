@@ -1,46 +1,42 @@
-import "./Menu.css";
-import { meals } from "./data";
+import meals from "./data";
 import Button from "../../../../design-system/Button/Button";
+import Meal from "./Meal";
+import styled from "styled-components";
 
-import starFilled from "../../../../assets/star-filled.svg";
-import starEmpty from "../../../../assets/star-empty.svg";
+const MenuSection = styled.section``;
 
-const Star = (props) => {
-    return (
-        <img
-            src={props.number ? starFilled : starEmpty}
-            alt={props.number ? "Filled Star" : "Empty Star"}
-        />
-    );
-};
+const MenuSectionContainer = styled.div`
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 15rem 5rem;
+`;
 
-const Meal = (props) => {
-    return (
-        <div className="card">
-            <img src={props.img} alt={props.name} className="card__img" />
-            <h3 className="card__title">{props.name}</h3>
-            <div className="menu-section__stars">
-                {props.rating.map((number, idx) => {
-                    return <Star number={number} key={idx} />;
-                })}
-            </div>
-            <p className="card__text">{props.description}</p>
-            <div className="card__footer">
-                <span className="menu-section__price">{props.price}</span>
-                <Button size="md" color="orange">
-                    Order Now
-                </Button>
-            </div>
-        </div>
-    );
-};
+const MenuHeading = styled.h2`
+    text-align: center;
+    font-size: 6rem;
+    line-height: 7rem;
+    color: #311f09;
+    margin-bottom: 5rem;
+`;
+
+const MenuCategories = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+`;
+
+const MenuMealsWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+`;
 
 const Menu = () => {
     return (
-        <section id="menu-section">
-            <div className="menu-section__container container">
-                <h2>Our Popular Menu</h2>
-                <div className="menu-section__filters">
+        <MenuSection id="menu-section">
+            <MenuSectionContainer>
+                <MenuHeading>Our Popular Menu</MenuHeading>
+                <MenuCategories className="menu-section__filters">
                     <Button size="lg" color="black">
                         All Catagories
                     </Button>
@@ -56,8 +52,8 @@ const Menu = () => {
                     <Button size="lg" color="gray">
                         Drink
                     </Button>
-                </div>
-                <div className="menu-section__meals">
+                </MenuCategories>
+                <MenuMealsWrapper>
                     {meals.map((meal, idx) => {
                         return (
                             <Meal
@@ -70,10 +66,10 @@ const Menu = () => {
                             />
                         );
                     })}
-                </div>
-            </div>
-        </section>
+                </MenuMealsWrapper>
+            </MenuSectionContainer>
+        </MenuSection>
     );
 };
 
-export { Menu };
+export default Menu;

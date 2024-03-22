@@ -57,7 +57,7 @@ const WelcomeDescription = styled.p`
 
 const Welcome = () => {
     return (
-        <WelcomeSection>
+        <WelcomeSection id="welcome-section">
             <WelcomeSectionContainer>
                 <WelcomeImageWrapper>
                     <WelcomeImageContainer>

@@ -69,7 +69,7 @@ const Hero = () => {
         <HeroSection>
             <HeroSectionContainer>
                 <HeroContent>
-                    <RestaurantName>Delizioso</RestaurantName>
+                    <RestaurantName>DeliziOso</RestaurantName>
                     <HeroHeading>
                         Italian <br />
                         Cuisine

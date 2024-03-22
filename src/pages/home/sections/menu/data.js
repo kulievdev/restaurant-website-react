@@ -1,14 +1,9 @@
-import "./Menu.css";
-
 import spaghettiImage from "../../../../assets/menu-spaghetti.png";
 import gnocchiImage from "../../../../assets/menu-gnocchi.png";
 import ravioliImage from "../../../../assets/menu-rovioli.png";
 import penneAllaVodakImage from "../../../../assets/menu-penne-alla-vodak.png";
 import risotoImage from "../../../../assets/menu-risoto.png";
 import splitzaImage from "../../../../assets/menu-splitza.png";
-
-import starFilled from "../../../../assets/star-filled.svg";
-import starEmpty from "../../../../assets/star-empty.svg";
 
 const meals = [
     {
@@ -60,4 +55,4 @@ const meals = [
     }
 ];
 
-export { meals };
+export default meals;
