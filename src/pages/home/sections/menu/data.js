@@ -9,7 +9,7 @@ const meals = [
     {
         name: "Spaghetti",
         img: spaghettiImage,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        text: "A quintessential Italian dish, featuring al dente pasta tossed in a rich tomato sauce infused with garlic, onions, basil, and topped with grated Parmesan cheese.",
         rating: [1, 1, 1, 0, 0],
         price: "$6.99"
     },
@@ -17,7 +17,7 @@ const meals = [
     {
         name: "Gnocchi",
         img: gnocchiImage,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        text: "Pillowy soft potato dumplings, delicately seasoned and served with your choice of savory sauces, offering a comforting taste of Italy in every bite.",
         rating: [1, 1, 1, 1, 0],
         price: "$11.49"
     },
@@ -25,7 +25,7 @@ const meals = [
     {
         name: "Ravioli",
         img: ravioliImage,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        text: "Tender pasta pillows stuffed with a variety of delectable fillings, from creamy ricotta and spinach to savory meats, served in a flavorful sauce for an exquisite Italian dining experience.",
         rating: [1, 1, 1, 1, 1],
         price: "$14.99"
     },
@@ -33,7 +33,7 @@ const meals = [
     {
         name: "Penne Alla Vodak",
         img: penneAllaVodakImage,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        text: "Al dente penne pasta coated in a creamy tomato sauce infused with vodka, balanced with hints of garlic, onions, and a touch of cream, offering a luxurious twist on traditional Italian cuisine.",
         rating: [1, 1, 1, 0, 0],
         price: "$19.49"
     },
@@ -41,7 +41,7 @@ const meals = [
     {
         name: "Risotto",
         img: risotoImage,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        text: "Creamy Arborio rice cooked to perfection, infused with flavorful broth and complemented by a variety of ingredients such as mushrooms, seafood, or vegetables, resulting in a rich and comforting Italian dish.",
         rating: [1, 1, 1, 1, 1],
         price: "$17.49"
     },
@@ -49,7 +49,7 @@ const meals = [
     {
         name: "Splitza",
         img: splitzaImage,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam,diam.",
+        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
         rating: [1, 1, 1, 0, 0],
         price: "$6.99"
     }

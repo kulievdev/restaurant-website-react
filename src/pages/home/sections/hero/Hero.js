@@ -4,7 +4,8 @@ import spaghettiImage from "../../../../assets/menu-spaghetti.png";
 import {
     SectionHeading,
     SectionDescription,
-    SectionContainer
+    SectionContainer,
+    OrangeSpanText
 } from "../../../components/layout";
 
 const HeroSection = styled.section``;
@@ -61,8 +62,12 @@ const Hero = () => {
                         Cuisine
                     </SectionHeading>
                     <SectionDescription $marginBottom="8.4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sodales senectus dictum arcu sit tristique donec eget.
+                        Experience the Essence of Italy at{" "}
+                        <OrangeSpanText>DeliziOso,</OrangeSpanText> where each
+                        dish embodies the rich flavors and traditions of Italian
+                        cuisine. From handmade pastas to mouthwatering pizzas
+                        and decadent desserts, our menu promises a culinary
+                        journey through Italy's finest. Buon Appetito!
                     </SectionDescription>
                     <HeroCtaWrapper>
                         <Button size="lg" color="orange">

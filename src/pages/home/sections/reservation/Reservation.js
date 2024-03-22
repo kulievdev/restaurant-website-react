@@ -54,9 +54,13 @@ const Reservation = () => {
                         <OrangeSpanText>a table</OrangeSpanText>
                     </SectionHeading>
                     <SectionDescription $marginBottom="10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Facilisis ultricies at eleifend proin. Congue nibh nulla
-                        malesuada ultricies nec quam
+                        Ready to savor the flavors of Italy with us? Secure your
+                        spot at <OrangeSpanText>DeliziOso,</OrangeSpanText> by
+                        making a reservation today. Whether it's a romantic
+                        dinner for two or a lively gathering with friends, we're
+                        here to make your dining experience memorable. Simply
+                        with click below or give us a call to reserve your
+                        table. We can't wait to welcome you!
                     </SectionDescription>
                     <Button size="lg" color="orange">
                         Reservation

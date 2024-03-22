@@ -23,11 +23,12 @@ const OrangeSpanText = styled.span`
 `;
 
 const SectionContainer = styled.div`
+    max-width: 144;
     margin: 0 auto;
-    padding: 15rem 144rem;
+    padding: 15rem 5rem;
 
-    @media (min-width: 144rem) {
-        padding: 15rem 192rem;
+    @media (min-width: 1440px) {
+        max-width: 192rem;
     }
 `;
 

@@ -75,8 +75,9 @@ const Footer = () => {
                     <BrandWrapper>
                         <FooterLogo src={logo} alt="Logo" />
                         <FooterText className="footer__text">
-                            Viverra gravida morbi egestas facilisis tortor netus
-                            non duis tempor.
+                            Taste the Difference, Explore Our Menu and Stay
+                            Connected. Follow Us on Social Media for Updates,
+                            Specials, and More!
                         </FooterText>
                         <SocialMediasWrapper>
                             {mySocials.map((social, idx) => {
@@ -113,7 +114,7 @@ const Footer = () => {
                             </NavHeading>
                             <FooterText>
                                 3247 Johnson Ave, <br />
-                                Bronx, NY 10463
+                                New York, NY 10063
                             </FooterText>
                             <Link href="mailto:delizioso@gmail.com">
                                 delizioso@gmail.com

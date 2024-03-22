@@ -52,9 +52,16 @@ const Welcome = () => {
                         <OrangeSpanText>DeliziOso</OrangeSpanText>
                     </SectionHeading>
                     <SectionDescription $marginBottom="10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Facilisis ultricies at eleifend proin. Congue nibh nulla
-                        malesuada ultricies nec quam
+                        Benvenuti! Welcome to{" "}
+                        <OrangeSpanText>DeliziOso,</OrangeSpanText> where the
+                        aroma of Italy fills the air and every guest is family.
+                        Step into our cozy ambiance and prepare to be
+                        transported to the heart of Italian culinary tradition.
+                        Whether you're a connoisseur or new to Italian cuisine,
+                        our warm hospitality and authentic flavors ensure an
+                        unforgettable dining experience. Join us as we celebrate
+                        the art of food and the joy of gathering around the
+                        table.
                     </SectionDescription>
                     <Button size="lg" color="orange">
                         See Our Menu
