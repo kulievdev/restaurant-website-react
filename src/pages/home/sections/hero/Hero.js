@@ -29,16 +29,18 @@ const RestaurantName = styled.span`
     padding: 1rem 3rem;
 `;
 
-const SectionHeading = styled.h2`
-    margin-bottom: 2.4rem;
+const HeroHeading = styled.h2`
+    margin-bottom: 2.2rem;
     color: #311f09;
     font-size: 8rem;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 8.8rem;
 `;
 
-const SectionDescription = styled.p`
+const HeroDescription = styled.p`
     margin-bottom: 8.4rem;
+    font-weight: 400;
+    line-height: 4rem;
     color: #5c4529;
     font-size: 2rem;
 `;
@@ -50,15 +52,12 @@ const HeroCtaWrapper = styled.div`
 
 const HeroImageWrapper = styled.div`
     width: 50%;
+`;
+
+const HeroImageContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-`;
-
-const HeroImagesContainer = styled.div`
-    position: relative;
-    width: 100%;
-    height: auto;
 `;
 
 const HeroMainImage = styled.img`
@@ -71,14 +70,14 @@ const Hero = () => {
             <HeroSectionContainer>
                 <HeroContent>
                     <RestaurantName>Delizioso</RestaurantName>
-                    <SectionHeading>
+                    <HeroHeading>
                         Italian <br />
                         Cuisine
-                    </SectionHeading>
-                    <SectionDescription>
+                    </HeroHeading>
+                    <HeroDescription>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Sodales senectus dictum arcu sit tristique donec eget.
-                    </SectionDescription>
+                    </HeroDescription>
                     <HeroCtaWrapper>
                         <Button size="lg" color="orange">
                             Order Now
@@ -89,47 +88,16 @@ const Hero = () => {
                     </HeroCtaWrapper>
                 </HeroContent>
                 <HeroImageWrapper>
-                    <HeroImagesContainer>
+                    <HeroImageContainer>
                         <HeroMainImage
                             src={spaghettiImage}
                             alt="Spaghetti Image"
                         />
-                    </HeroImagesContainer>
+                    </HeroImageContainer>
                 </HeroImageWrapper>
             </HeroSectionContainer>
         </HeroSection>
     );
 };
 
-export { Hero };
-
-{
-    /* <section id="hero-section">
-            <div className="hero-section__container container">
-                <div className="hero-section__left">
-                    <span>Restaurant</span>
-                    <h1 className="hero-section__heading">Italian Cuisine</h1>
-                    <p className="hero-section__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sodales senectus dictum arcu sit tristique donec eget.
-                    </p>
-                    <div className="hero-section__cta">
-                        <Button size="lg" color="orange">
-                            Order Now
-                        </Button>
-                        <Button size="lg" color="green">
-                            Reservation
-                        </Button>
-                    </div>
-                </div>
-
-                <div className="hero-section__right">
-                    <img
-                        src={spaghettiImage}
-                        alt="Spaghetti"
-                        className="hero-section__img"
-                    />
-                </div>
-            </div>
-        </section> */
-}
+export default Hero;
