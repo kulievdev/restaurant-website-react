@@ -1,4 +1,4 @@
-import spaghettiImage from "../../../../assets/menu-spaghetti.png";
+import spaghettiImage from "../../../../assets/menu-spaghetti-menu.png";
 import gnocchiImage from "../../../../assets/menu-gnocchi.png";
 import ravioliImage from "../../../../assets/menu-rovioli.png";
 import penneAllaVodakImage from "../../../../assets/menu-penne-alla-vodak.png";
