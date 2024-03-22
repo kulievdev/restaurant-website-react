@@ -23,7 +23,7 @@ const OrangeSpanText = styled.span`
 `;
 
 const SectionContainer = styled.div`
-    max-width: 144;
+    max-width: 144rem;
     margin: 0 auto;
     padding: 15rem 5rem;
 

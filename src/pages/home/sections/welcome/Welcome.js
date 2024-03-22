@@ -18,6 +18,9 @@ const WelcomeSectionContainer = styled(SectionContainer)`
 
 const WelcomeImageWrapper = styled.div`
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const WelcomeImageContainer = styled.div`

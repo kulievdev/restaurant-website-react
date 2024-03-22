@@ -39,6 +39,9 @@ const HeroCtaWrapper = styled.div`
 
 const HeroImageWrapper = styled.div`
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const HeroImageContainer = styled.div`
