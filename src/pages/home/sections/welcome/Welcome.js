@@ -32,7 +32,6 @@ const WelcomeContent = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 10rem;
 `;
 
 const WelcomeHeading = styled.h2`
@@ -51,7 +50,7 @@ const WelcomeDescription = styled.p`
     font-size: 2rem;
     line-height: 4rem;
     font-weight: 400;
-    margin-bottom: 12.2rem;
+    margin-bottom: 10rem;
     color: #5c4529;
 `;
 

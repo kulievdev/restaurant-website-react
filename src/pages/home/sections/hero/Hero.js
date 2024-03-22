@@ -60,7 +60,7 @@ const HeroImageContainer = styled.div`
     align-items: center;
 `;
 
-const HeroMainImage = styled.img`
+const HeroImage = styled.img`
     width: 100%;
 `;
 
@@ -89,10 +89,7 @@ const Hero = () => {
                 </HeroContent>
                 <HeroImageWrapper>
                     <HeroImageContainer>
-                        <HeroMainImage
-                            src={spaghettiImage}
-                            alt="Spaghetti Image"
-                        />
+                        <HeroImage src={spaghettiImage} alt="Spaghetti Image" />
                     </HeroImageContainer>
                 </HeroImageWrapper>
             </HeroSectionContainer>
