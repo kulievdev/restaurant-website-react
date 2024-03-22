@@ -26,6 +26,14 @@ const MenuMealsWrapper = styled.div`
     gap: 4rem;
 `;
 
+const currentCategories = [
+    "All Catagories",
+    "Dinner",
+    "Lunch",
+    "Dessert",
+    "Drink"
+];
+
 const Menu = () => {
     return (
         <MenuSection id="menu-section">
@@ -34,21 +42,17 @@ const Menu = () => {
                     Our Popular Menu
                 </SectionHeading>
                 <MenuCategories className="menu-section__filters">
-                    <Button size="lg" color="black">
-                        All Catagories
-                    </Button>
-                    <Button size="lg" color="gray">
-                        Dinner
-                    </Button>
-                    <Button size="lg" color="gray">
-                        Lunch
-                    </Button>
-                    <Button size="lg" color="gray">
-                        Dessert
-                    </Button>
-                    <Button size="lg" color="gray">
-                        Drink
-                    </Button>
+                    {currentCategories.map((category, idx) => (
+                        <Button
+                            key={idx}
+                            size="lg"
+                            color={
+                                category === "All Catagories" ? "black" : "gray"
+                            }
+                        >
+                            {category}
+                        </Button>
+                    ))}
                 </MenuCategories>
                 <MenuMealsWrapper>
                     {meals.map((meal, idx) => {
