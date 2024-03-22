@@ -6,7 +6,7 @@ import Reservation from "./sections/reservation/Reservation";
 import Chefs from "./sections/chefs/Chefs";
 import Testimonials from "./sections/testimonials/Testimonials";
 import BusinessHours from "./sections/business-hours/BusinessHours";
-import { Footer } from "./sections/footer/Footer";
+import Footer from "./sections/footer/Footer";
 
 const Home = () => {
     return (
@@ -24,4 +24,4 @@ const Home = () => {
     );
 };
 
-export { Home };
+export default Home;

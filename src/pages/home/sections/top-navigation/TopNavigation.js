@@ -54,7 +54,7 @@ const TopNavigation = () => {
 
     return (
         <Header>
-            <Logo />
+            <Logo type="dark" />
             <Navigation>
                 <UnorderedList>
                     {links.map((link, idx) => (

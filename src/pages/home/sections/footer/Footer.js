@@ -1,79 +1,139 @@
-import "./Footer.css";
 import logo from "../../../../assets/logo-dark.svg";
-import twitterImg from "../../../../assets/twitter.svg";
-import instagramImg from "../../../../assets/instagram.svg";
-import facebookImg from "../../../../assets/facebook.svg";
+import styled from "styled-components";
+import mySocials from "./mySocials";
+import SocialMedia from "./SocialMedia";
+
+const FooterSection = styled.footer`
+    background-color: #311f09;
+`;
+
+const FooterSectionContainer = styled.div`
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 15rem 5rem;
+`;
+
+const FooterContent = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14rem;
+`;
+
+const BrandWrapper = styled.div`
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`;
+
+const FooterLogo = styled.img`
+    margin-bottom: 2.5rem;
+    width: 14rem;
+`;
+
+const FooterText = styled.p`
+    color: #e3e2e0;
+    font-size: 2rem;
+    line-height: 4rem;
+`;
+
+const SocialMediasWrapper = styled.div`
+    display: flex;
+    gap: 3rem;
+    margin-top: 4rem;
+`;
+
+const NavigationWrapper = styled.div`
+    display: flex;
+    gap: 7rem;
+`;
+
+const Navigation = styled.nav`
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+`;
+
+const NavHeading = styled.h4`
+    color: #ff8a00;
+    font-size: 2.5rem;
+    line-height: 5rem;
+`;
+
+const Link = styled.a`
+    color: #e3e2e0;
+    font-size: 2rem;
+    line-height: 4rem;
+`;
+
+const CopyrightText = styled(FooterText)`
+    text-align: center;
+`;
 
 const Footer = () => {
     return (
-        <footer id="footer">
-            <div className="footer__container container">
-                <div className="footer__content">
-                    <div className="footer__brand">
-                        <img src={logo} alt="" className="footer__logo" />
-                        <p className="footer__text">
+        <FooterSection id="footer">
+            <FooterSectionContainer>
+                <FooterContent>
+                    <BrandWrapper>
+                        <FooterLogo src={logo} alt="Logo" />
+                        <FooterText className="footer__text">
                             Viverra gravida morbi egestas facilisis tortor netus
                             non duis tempor.
-                        </p>
-                        <div className="footer__social-icons">
-                            <img src={twitterImg} alt="Twitter" />
-                            <img src={instagramImg} alt="Instagram" />
-                            <img src={facebookImg} alt="Facebook" />
-                        </div>
-                    </div>
-                    <div className="footer__pages">
-                        <h4 className="footer__heading">Page</h4>
-                        <a href="" className="footer__text">
-                            Home
-                        </a>
-                        <a href="" className="footer__text">
-                            Menu
-                        </a>
-                        <a href="" className="footer__text">
-                            Order Online
-                        </a>
-                        <a href="" className="footer__text">
-                            Catering
-                        </a>
-                        <a href="" className="footer__text">
-                            Reservation
-                        </a>
-                    </div>
-                    <div className="footer__about">
-                        <h4 className="footer__heading">Information</h4>
-                        <a href="" className="footer__text">
-                            About us
-                        </a>
-                        <a href="" className="footer__text">
-                            Testimonial
-                        </a>
-                        <a href="" className="footer__text">
-                            Event
-                        </a>
-                    </div>
-                    <div className="footer__contact">
-                        <h4 className="footer__heading">Get In Touch</h4>
-                        <p className="footer__text">
-                            3247 Johnson Ave, <br />
-                            Bronx, NY 10463
-                        </p>
-                        <a
-                            href="mailto: delizioso@gmail.com"
-                            className="footer__text"
-                        >
-                            delizioso@gmail.com
-                        </a>
-                        <a href="tel:347-567-2828" className="footer__text">
-                            347-567-2828
-                        </a>
-                    </div>
-                </div>
-                <p className="footer__text text-center">
-                    Copyright &copy; 2023 Delizioso
-                </p>
-            </div>
-        </footer>
+                        </FooterText>
+                        <SocialMediasWrapper>
+                            {mySocials.map((social, idx) => {
+                                return (
+                                    <SocialMedia
+                                        key={idx}
+                                        imgSrc={social.imgSrc}
+                                        alt={social.name}
+                                    />
+                                );
+                            })}
+                        </SocialMediasWrapper>
+                    </BrandWrapper>
+                    <NavigationWrapper>
+                        <Navigation>
+                            <NavHeading>Page</NavHeading>
+                            <Link href="">Home</Link>
+                            <Link href="">Menu</Link>
+                            <Link href="">Order Online</Link>
+                            <Link href="">Catering</Link>
+                            <Link href="">Reservation</Link>
+                        </Navigation>
+                        <Navigation>
+                            <NavHeading className="footer__heading">
+                                Information
+                            </NavHeading>
+                            <Link href="">About us</Link>
+                            <Link href="">Testimonial</Link>
+                            <Link href="">Event</Link>
+                        </Navigation>
+                        <Navigation className="footer__contact">
+                            <NavHeading className="footer__heading">
+                                Get In Touch
+                            </NavHeading>
+                            <FooterText>
+                                3247 Johnson Ave, <br />
+                                Bronx, NY 10463
+                            </FooterText>
+                            <Link href="mailto:delizioso@gmail.com">
+                                delizioso@gmail.com
+                            </Link>
+                            <Link
+                                href="tel:347-567-2828"
+                                className="footer__text"
+                            >
+                                222-222-2222
+                            </Link>
+                        </Navigation>
+                    </NavigationWrapper>
+                </FooterContent>
+                <CopyrightText>Copyright &copy; 2023 DeliziOso</CopyrightText>
+            </FooterSectionContainer>
+        </FooterSection>
     );
 };
 
-export { Footer };
+export default Footer;
