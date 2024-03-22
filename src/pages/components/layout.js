@@ -22,4 +22,10 @@ const OrangeSpanText = styled.span`
     color: #ff8a00;
 `;
 
-export { SectionHeading, SectionDescription, OrangeSpanText };
+const SectionContainer = styled.div`
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 15rem 5rem;
+`;
+
+export { SectionContainer, SectionHeading, SectionDescription, OrangeSpanText };

@@ -3,6 +3,7 @@ import Button from "../../../../design-system/Button/Button";
 import styled from "styled-components";
 import {
     OrangeSpanText,
+    SectionContainer,
     SectionDescription,
     SectionHeading
 } from "../../../components/layout";
@@ -11,11 +12,8 @@ const WelcomeSection = styled.section`
     background-color: #3fc66e1a;
 `;
 
-const WelcomeSectionContainer = styled.div`
-    max-width: 144rem;
-    margin: 0 auto;
+const WelcomeSectionContainer = styled(SectionContainer)`
     display: flex;
-    padding: 15rem 5rem;
 `;
 
 const WelcomeImageWrapper = styled.div`

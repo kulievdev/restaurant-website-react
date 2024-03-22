@@ -3,6 +3,7 @@ import Button from "../../../../design-system/Button/Button";
 import styled from "styled-components";
 import {
     OrangeSpanText,
+    SectionContainer,
     SectionDescription,
     SectionHeading
 } from "../../../components/layout";
@@ -11,11 +12,7 @@ const ReservationSection = styled.section`
     background-color: #fff4e766;
 `;
 
-const ReservationSectionContainer = styled.div`
-    max-width: 144rem;
-    margin: 0 auto;
-    padding: 15rem 5rem;
-
+const ReservationSectionContainer = styled(SectionContainer)`
     display: flex;
     align-items: center;
     gap: 4rem;

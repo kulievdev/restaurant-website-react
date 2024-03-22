@@ -2,16 +2,13 @@ import logo from "../../../../assets/logo-dark.svg";
 import styled from "styled-components";
 import mySocials from "./mySocials";
 import SocialMedia from "./SocialMedia";
+import { SectionContainer } from "../../../components/layout";
 
 const FooterSection = styled.footer`
     background-color: #311f09;
 `;
 
-const FooterSectionContainer = styled.div`
-    max-width: 144rem;
-    margin: 0 auto;
-    padding: 15rem 5rem;
-`;
+const FooterSectionContainer = styled(SectionContainer)``;
 
 const FooterContent = styled.div`
     display: flex;

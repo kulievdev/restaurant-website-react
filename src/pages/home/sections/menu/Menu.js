@@ -2,17 +2,13 @@ import meals from "./data";
 import Button from "../../../../design-system/Button/Button";
 import Meal from "./Meal";
 import styled from "styled-components";
-import { SectionHeading } from "../../../components/layout";
+import { SectionContainer, SectionHeading } from "../../../components/layout";
 
 const MenuSection = styled.section`
     text-align: center;
 `;
 
-const MenuSectionContainer = styled.div`
-    max-width: 144rem;
-    margin: 0 auto;
-    padding: 15rem 5rem;
-`;
+const MenuSectionContainer = styled(SectionContainer)``;
 
 const MenuCategories = styled.div`
     display: flex;

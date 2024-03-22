@@ -1,5 +1,9 @@
 import Button from "../../../../design-system/Button/Button";
-import { OrangeSpanText, SectionHeading } from "../../../components/layout";
+import {
+    OrangeSpanText,
+    SectionContainer,
+    SectionHeading
+} from "../../../components/layout";
 import Chef from "./Chef";
 import styled from "styled-components";
 import currentChefs from "./currentChefs";
@@ -8,11 +12,7 @@ const ChefsSection = styled.section`
     text-align: center;
 `;
 
-const ChefsSectionContainer = styled.div`
-    max-width: 144rem;
-    margin: 0 auto;
-    padding: 15rem 5rem;
-`;
+const ChefsSectionContainer = styled(SectionContainer)``;
 
 const ChefsWrapper = styled.div`
     display: flex;

@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import Button from "../../../../design-system/Button/Button";
+import { SectionContainer } from "../../../components/layout";
 
 const BusinessHoursSection = styled.section``;
 
-const BusinessHoursSectionContainer = styled.div`
-    max-width: 144rem;
-    margin: 0 auto;
-    padding: 15rem 5rem;
-`;
+const BusinessHoursSectionContainer = styled(SectionContainer)``;
 
 const BusinessHoursBackground = styled.div`
     max-width: 144rem;

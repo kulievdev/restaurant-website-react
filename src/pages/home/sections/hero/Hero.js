@@ -1,15 +1,16 @@
 import Button from "../../../../design-system/Button/Button";
 import styled from "styled-components";
 import spaghettiImage from "../../../../assets/menu-spaghetti.png";
-import { SectionHeading, SectionDescription } from "../../../components/layout";
+import {
+    SectionHeading,
+    SectionDescription,
+    SectionContainer
+} from "../../../components/layout";
 
 const HeroSection = styled.section``;
 
-const HeroSectionContainer = styled.div`
-    max-width: 144rem;
-    margin: 0 auto;
+const HeroSectionContainer = styled(SectionContainer)`
     display: flex;
-    padding: 15rem 5rem;
 `;
 
 const HeroContent = styled.div`

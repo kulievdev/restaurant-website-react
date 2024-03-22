@@ -1,5 +1,5 @@
 import Testimonial from "./Testimonial";
-import { SectionHeading } from "../../../components/layout";
+import { SectionContainer, SectionHeading } from "../../../components/layout";
 import styled from "styled-components";
 import testimonialsData from "./testimonialsData";
 
@@ -11,11 +11,7 @@ const TestimonialsSection = styled.section`
     background-color: rgb(251, 250, 250);
 `;
 
-const TestimonialsSectionContainer = styled.div`
-    max-width: 144rem;
-    margin: 0 auto;
-    padding: 15rem 5rem;
-`;
+const TestimonialsSectionContainer = styled(SectionContainer)``;
 
 const TestimonialsWrapper = styled.div`
     display: flex;
