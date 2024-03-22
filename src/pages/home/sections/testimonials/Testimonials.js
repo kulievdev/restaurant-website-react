@@ -1,55 +1,51 @@
-import "./Testimonials.css";
-import customer1Img from "../../../../assets/customer-1.png";
-import customer2Img from "../../../../assets/customer-2.png";
-import customer3Img from "../../../../assets/customer-3.png";
+import Testimonial from "./Testimonial";
+import { SectionHeading } from "../../../components/layout";
+import styled from "styled-components";
+import testimonialsData from "./testimonialsData";
 
-const Testimonial = (props) => {
-    return (
-        <div className="testimonials-section__testimonial">
-            <img src={props.img} alt={props.name} />
-            <h4>{props.name}</h4>
-            <h5>{props.occupation}</h5>
-            <p>{props.review}</p>
-        </div>
-    );
-};
+const TestimonialsSection = styled.section`
+    text-align: center;
+    background-image: url(${require("../../../../assets/customers.png")});
+    background-size: cover;
+    background-position: top;
+    background-color: rgb(251, 250, 250);
+`;
+
+const TestimonialsSectionContainer = styled.div`
+    max-width: 144rem;
+    margin: 0 auto;
+    padding: 15rem 5rem;
+`;
+
+const TestimonialsWrapper = styled.div`
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+`;
 
 const Testimonials = () => {
     return (
-        <section id="testimonials-section">
-            <div className="testimonials-section__container container">
-                <h2>What Customers Say</h2>
-                <div className="testimonials-section__testimonials">
-                    <Testimonial
-                        img={customer1Img}
-                        name="William Smith"
-                        occupation="Software Engineer"
-                        review="Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Consequatur excepturi numquam ratione veniam
-                            molestias."
-                    />
-
-                    <Testimonial
-                        img={customer2Img}
-                        name="Starla Virgoun"
-                        occupation="Financial Advisor"
-                        review="Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Consequatur excepturi numquam ratione veniam
-                            molestias."
-                    />
-
-                    <Testimonial
-                        img={customer3Img}
-                        name="James Steven"
-                        occupation="Teacher"
-                        review="Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Consequatur excepturi numquam ratione veniam
-                            molestias."
-                    />
-                </div>
-            </div>
-        </section>
+        <TestimonialsSection>
+            <TestimonialsSectionContainer>
+                <SectionHeading $marginBottom="10">
+                    What Customers Say
+                </SectionHeading>
+                <TestimonialsWrapper>
+                    {testimonialsData.map((testimonial, idx) => {
+                        return (
+                            <Testimonial
+                                key={idx}
+                                img={testimonial.img}
+                                name={testimonial.name}
+                                occupation={testimonial.occupation}
+                                review={testimonial.review}
+                            />
+                        );
+                    })}
+                </TestimonialsWrapper>
+            </TestimonialsSectionContainer>
+        </TestimonialsSection>
     );
 };
 
-export { Testimonials };
+export default Testimonials;

@@ -9,7 +9,7 @@ const SectionHeading = styled.h2`
     margin-bottom: ${(props) => `${props.$marginBottom}rem`};
 `;
 
-const SectionDescription = styled.h2`
+const SectionDescription = styled.p`
     font-size: 2rem;
     line-height: 4rem;
     font-weight: 400;
