@@ -11,15 +11,15 @@ import Footer from "./sections/footer/Footer";
 const Home = () => {
     return (
         <>
-            <TopNavigation />
+            {/* <TopNavigation /> */}
             <Hero />
-            <Welcome />
+            {/* <Welcome />
             <Menu />
             <Reservation />
             <Chefs />
             <Testimonials />
             <BusinessHours />
-            <Footer />
+            <Footer /> */}
         </>
     );
 };

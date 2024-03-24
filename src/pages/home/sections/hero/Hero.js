@@ -11,14 +11,22 @@ import {
 const HeroSection = styled.section``;
 
 const HeroSectionContainer = styled(SectionContainer)`
-    display: flex;
+    @media (min-width: 960px) {
+        display: flex;
+    }
 `;
 
 const HeroContent = styled.div`
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    margin-bottom: 8rem;
+    background-color: yellow;
+
+    @media (min-width: 960px) {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 `;
 
 const RestaurantName = styled.span`
@@ -34,20 +42,27 @@ const RestaurantName = styled.span`
 
 const HeroCtaWrapper = styled.div`
     display: flex;
+    flex-direction: column;
     gap: 2.3rem;
+    width: max-content;
+
+    @media (min-width: 375px) {
+        display: flex;
+        flex-direction: row;
+        gap: 2.3rem;
+    }
 `;
 
 const HeroImageWrapper = styled.div`
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-`;
+    background-color: aqua;
 
-const HeroImageContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @media (min-width: 960px) {
+        width: 50%;
+    }
 `;
 
 const HeroImage = styled.img`
@@ -73,18 +88,22 @@ const Hero = () => {
                         journey through Italy's finest. Buon Appetito!
                     </SectionDescription>
                     <HeroCtaWrapper>
-                        <Button size="lg" color="orange">
+                        <Button
+                            size={window.innerWidth > 1240 ? "lg" : "md"}
+                            color="orange"
+                        >
                             Order Now
                         </Button>
-                        <Button size="lg" color="green">
+                        <Button
+                            size={window.innerWidth > 1240 ? "lg" : "md"}
+                            color="green"
+                        >
                             Reservation
                         </Button>
                     </HeroCtaWrapper>
                 </HeroContent>
                 <HeroImageWrapper>
-                    <HeroImageContainer>
-                        <HeroImage src={spaghettiImage} alt="Spaghetti Image" />
-                    </HeroImageContainer>
+                    <HeroImage src={spaghettiImage} alt="Spaghetti Image" />
                 </HeroImageWrapper>
             </HeroSectionContainer>
         </HeroSection>
