@@ -1,0 +1,19 @@
+.mobile_nav_cta_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.2rem;
+}
+
+.mobile_nav_black {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 0.3rem;
+    border: 0.2rem solid #311f09;
+}
+
+.mobile_nav_orange {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    border: 0.2rem solid #ff8a00;
+}

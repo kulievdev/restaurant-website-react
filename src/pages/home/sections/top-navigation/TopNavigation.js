@@ -4,6 +4,8 @@ import Logo from "../../../../design-system/Logo/Logo";
 import styled from "styled-components";
 import Cart from "../../../../design-system/Cart/Cart";
 import { SectionContainer } from "../../../components/layout";
+import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
+import MobileNavCta from "../../../../design-system/MobileNavCta/MobileNavCta";
 
 const links = [
     { text: "Home", link: "" },
@@ -22,7 +24,13 @@ const Header = styled(SectionContainer)`
     padding-bottom: 0;
 `;
 
-const Navigation = styled.nav``;
+const Navigation = styled.nav`
+    display: none;
+
+    @media (min-width: 1350px) {
+        display: flex;
+    }
+`;
 
 const UnorderedList = styled.ul`
     display: flex;
@@ -42,6 +50,7 @@ const Link = styled.a`
 
 const NavigationActions = styled.div`
     display: flex;
+    gap: 2.5rem;
     align-items: center;
 `;
 
@@ -51,6 +60,8 @@ const TopNavigation = () => {
     const toggleHamburger = () => {
         setIsHamburgerOpen(!isHamburgerOpen);
     };
+
+    const windowWidth = useWindowWidth();
 
     return (
         <Header as="header">
@@ -68,9 +79,13 @@ const TopNavigation = () => {
             </Navigation>
             <NavigationActions>
                 <Cart />
-                <Button size="md" color="green">
-                    Log In
-                </Button>
+                {windowWidth < 1350 ? (
+                    <MobileNavCta />
+                ) : (
+                    <Button size="md" color="green">
+                        Log In
+                    </Button>
+                )}
             </NavigationActions>
         </Header>
     );
