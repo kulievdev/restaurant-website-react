@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const SectionHeading = styled.h2`
-    font-size: 6rem;
-    line-height: 6rem;
+    font-size: 5rem;
+    line-height: 5rem;
     font-weight: 600;
     color: #311f09;
     margin-bottom: ${(props) => `${props.$marginBottom}rem`};
@@ -18,11 +18,17 @@ const SectionHeading = styled.h2`
         line-height: 7rem;
         font-weight: 600;
     }
+
+    @media (min-width: 450px) {
+        font-size: 6rem;
+        line-height: 6rem;
+        font-weight: 600;
+    }
 `;
 
 const SectionDescription = styled.p`
-    font-size: 1.8rem;
-    line-height: 4rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
     font-weight: 400;
     color: #5c4529;
     margin-bottom: ${(props) => `${props.$marginBottom}rem`};
@@ -35,6 +41,11 @@ const SectionDescription = styled.p`
     @media (min-width: 960px) {
         font-size: 1.8rem;
         line-height: 3.7rem;
+    }
+
+    @media (min-width: 450px) {
+        font-size: 1.6rem;
+        line-height: 3rem;
     }
 `;
 
