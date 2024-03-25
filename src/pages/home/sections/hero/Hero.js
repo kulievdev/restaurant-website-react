@@ -76,14 +76,14 @@ const Hero = () => {
         <HeroSection>
             <HeroSectionContainer>
                 <HeroContent>
-                    <RestaurantName>DeliziOso</RestaurantName>
+                    <RestaurantName>Luce Notte</RestaurantName>
                     <SectionHeading $marginBottom="2.2">
                         Italian <br />
                         Cuisine
                     </SectionHeading>
                     <SectionDescription $marginBottom="8.4">
                         Experience the Essence of Italy at{" "}
-                        <OrangeSpanText>DeliziOso,</OrangeSpanText> where each
+                        <OrangeSpanText>Luce Notte,</OrangeSpanText> where each
                         dish embodies the rich flavors and traditions of Italian
                         cuisine. From handmade pastas to mouthwatering pizzas
                         and decadent desserts, our menu promises a culinary

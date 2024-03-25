@@ -69,11 +69,11 @@ const Welcome = () => {
                 <WelcomeContent>
                     <SectionHeading $marginBottom="6">
                         Welcome to <br />
-                        <OrangeSpanText>DeliziOso</OrangeSpanText>
+                        <OrangeSpanText>Luce Notte</OrangeSpanText>
                     </SectionHeading>
                     <SectionDescription $marginBottom="10">
                         Benvenuti! Welcome to{" "}
-                        <OrangeSpanText>DeliziOso,</OrangeSpanText> where the
+                        <OrangeSpanText>Luce Notte,</OrangeSpanText> where the
                         aroma of Italy fills the air and every guest is family.
                         Step into our cozy ambiance and prepare to be
                         transported to the heart of Italian culinary tradition.

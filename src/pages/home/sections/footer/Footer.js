@@ -132,8 +132,8 @@ const Footer = () => {
                                 3247 Johnson Ave, <br />
                                 New York, NY 10063
                             </FooterText>
-                            <Link href="mailto:delizioso@gmail.com">
-                                delizioso@gmail.com
+                            <Link href="mailto:Luce Notte@gmail.com">
+                                Luce Notte@gmail.com
                             </Link>
                             <Link
                                 href="tel:347-567-2828"
@@ -144,7 +144,7 @@ const Footer = () => {
                         </Navigation>
                     </NavigationWrapper>
                 </FooterContent>
-                <CopyrightText>Copyright &copy; 2023 DeliziOso</CopyrightText>
+                <CopyrightText>Copyright &copy; 2023 Luce Notte</CopyrightText>
             </FooterSectionContainer>
         </FooterSection>
     );

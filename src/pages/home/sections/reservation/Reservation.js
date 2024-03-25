@@ -79,7 +79,7 @@ const Reservation = () => {
                     </SectionHeading>
                     <SectionDescription $marginBottom="10">
                         Ready to savor the flavors of Italy with us? Secure your
-                        spot at <OrangeSpanText>DeliziOso,</OrangeSpanText> by
+                        spot at <OrangeSpanText>Luce Notte,</OrangeSpanText> by
                         making a reservation today. Whether it's a romantic
                         dinner for two or a lively gathering with friends, we're
                         here to make your dining experience memorable. Simply
