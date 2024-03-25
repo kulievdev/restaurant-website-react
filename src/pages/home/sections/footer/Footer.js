@@ -3,6 +3,7 @@ import styled from "styled-components";
 import mySocials from "./mySocials";
 import SocialMedia from "./SocialMedia";
 import { SectionContainer } from "../../../components/layout";
+import Logo from "../../../../design-system/Logo/Logo";
 
 const FooterSection = styled.footer`
     background-color: #311f09;
@@ -31,12 +32,8 @@ const BrandWrapper = styled.div`
     }
 `;
 
-const FooterLogo = styled.img`
-    margin-bottom: 2.5rem;
-    width: 14rem;
-`;
-
 const FooterText = styled.p`
+    margin-top: 2.5rem;
     color: #e3e2e0;
     font-size: 2rem;
     line-height: 4rem;
@@ -92,7 +89,7 @@ const Footer = () => {
             <FooterSectionContainer>
                 <FooterContent>
                     <BrandWrapper>
-                        <FooterLogo src={logo} alt="Logo" />
+                        <Logo type="black" />
                         <FooterText className="footer__text">
                             Taste the Difference, Explore Our Menu and Stay
                             Connected. Follow Us on Social Media for Updates,

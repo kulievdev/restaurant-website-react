@@ -1,7 +1,54 @@
-.logo {
-    width: 18rem;
+.logo_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
-.logo:hover {
+.logo_wrapper:hover {
     cursor: pointer;
+}
+
+.logo_initials_wrapper {
+    width: 5rem;
+    height: 5rem;
+    background-color: #ff8a00;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+}
+
+.logo_initials_text_black {
+    font-size: 2rem;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo_initials_text_white {
+    color: #fff;
+    font-weight: 600;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo_name_white {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.logo_name_black {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.logo_name_highlight {
+    color: #ff8a00;
+    font-size: 2rem;
+    font-weight: 600;
 }
