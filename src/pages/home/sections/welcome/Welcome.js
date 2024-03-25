@@ -13,8 +13,12 @@ const WelcomeSection = styled.section`
 `;
 
 const WelcomeSectionContainer = styled(SectionContainer)`
+    display: flex;
+    flex-direction: column-reverse;
+
     @media (min-width: 960px) {
         display: flex;
+        flex-direction: row;
     }
 `;
 
@@ -42,6 +46,7 @@ const WelcomeImage = styled.img`
 
 const WelcomeContent = styled.div`
     width: 100%;
+    margin-bottom: 8rem;
 
     @media (min-width: 960px) {
         width: 50%;
@@ -78,7 +83,13 @@ const Welcome = () => {
                         table.
                     </SectionDescription>
                     <Button
-                        size={window.innerWidth > 450 ? "lg" : "md"}
+                        size={
+                            window.innerWidth > 1240
+                                ? "lg"
+                                : window.innerWidth > 400
+                                ? "md"
+                                : "sm"
+                        }
                         color="orange"
                     >
                         See Our Menu

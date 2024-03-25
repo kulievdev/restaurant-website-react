@@ -7,7 +7,6 @@ import {
     SectionContainer,
     OrangeSpanText
 } from "../../../components/layout";
-import { useEffect, useState } from "react";
 
 const HeroSection = styled.section``;
 
@@ -69,28 +68,6 @@ const HeroImage = styled.img`
 `;
 
 const Hero = () => {
-    const [buttonSize, setButtonSize] = useState("sm");
-
-    useEffect(() => {
-        function handleResize() {
-            if (window.innerWidth > 1240) {
-                setButtonSize("lg");
-            } else if (window.innerWidth > 400) {
-                setButtonSize("md");
-            } else {
-                setButtonSize("sm");
-            }
-        }
-
-        window.addEventListener("resize", handleResize);
-
-        handleResize();
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
     return (
         <HeroSection>
             <HeroSectionContainer>
@@ -109,10 +86,28 @@ const Hero = () => {
                         journey through Italy's finest. Buon Appetito!
                     </SectionDescription>
                     <HeroCtaWrapper>
-                        <Button size={buttonSize} color="orange">
+                        <Button
+                            size={
+                                window.innerWidth > 1240
+                                    ? "lg"
+                                    : window.innerWidth > 400
+                                    ? "md"
+                                    : "sm"
+                            }
+                            color="orange"
+                        >
                             Order Now
                         </Button>
-                        <Button size={buttonSize} color="green">
+                        <Button
+                            size={
+                                window.innerWidth > 1240
+                                    ? "lg"
+                                    : window.innerWidth > 400
+                                    ? "md"
+                                    : "sm"
+                            }
+                            color="green"
+                        >
                             Reservation
                         </Button>
                     </HeroCtaWrapper>

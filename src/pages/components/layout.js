@@ -28,7 +28,7 @@ const SectionHeading = styled.h2`
 
 const SectionDescription = styled.p`
     font-size: 1.7rem;
-    line-height: 2.5rem;
+    line-height: 3rem;
     font-weight: 400;
     color: #5c4529;
     margin-bottom: ${(props) => `${props.$marginBottom}rem`};
@@ -44,7 +44,6 @@ const SectionDescription = styled.p`
 
     @media (min-width: 450px) {
         font-size: 1.8rem;
-        line-height: 3rem;
     }
 `;
 
