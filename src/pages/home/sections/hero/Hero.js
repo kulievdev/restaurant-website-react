@@ -25,6 +25,7 @@ const HeroContent = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin-bottom: 0;
     }
 `;
 

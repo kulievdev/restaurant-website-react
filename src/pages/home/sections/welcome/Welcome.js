@@ -27,7 +27,6 @@ const WelcomeImageWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8rem;
 
     @media (min-width: 960px) {
         width: 50%;

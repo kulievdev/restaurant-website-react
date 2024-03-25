@@ -14,12 +14,27 @@ const ReservationSection = styled.section`
 
 const ReservationSectionContainer = styled(SectionContainer)`
     display: flex;
-    align-items: center;
-    gap: 4rem;
+    flex-direction: column-reverse;
+
+    @media (min-width: 960px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
 `;
 
 const ReservationImageWrapper = styled.div`
-    width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem;
+
+    @media (min-width: 960px) {
+        margin-bottom: 0;
+        width: 50%;
+    }
 `;
 
 const ReservationImageContainer = styled.div`
@@ -33,7 +48,13 @@ const ReservationImage = styled.img`
 `;
 
 const ReservationContent = styled.div`
-    width: 50%;
+    width: 100%;
+    margin-bottom: 8rem;
+
+    @media (min-width: 960px) {
+        width: 50%;
+        margin-bottom: 0;
+    }
 `;
 
 const Reservation = () => {
@@ -62,7 +83,16 @@ const Reservation = () => {
                         with click below or give us a call to reserve your
                         table. We can't wait to welcome you!
                     </SectionDescription>
-                    <Button size="lg" color="orange">
+                    <Button
+                        size={
+                            window.innerWidth > 1240
+                                ? "lg"
+                                : window.innerWidth > 400
+                                ? "md"
+                                : "sm"
+                        }
+                        color="orange"
+                    >
                         Reservation
                     </Button>
                 </ReservationContent>
