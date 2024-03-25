@@ -16,9 +16,9 @@ const Home = () => {
             {/* <Welcome /> */}
             {/* <Menu /> */}
             {/* <Reservation /> */}
-            <Chefs />
+            {/* <Chefs /> */}
             {/* <Testimonials /> */}
-            {/* <BusinessHours /> */}
+            <BusinessHours />
             {/* <Footer /> */}
         </>
     );

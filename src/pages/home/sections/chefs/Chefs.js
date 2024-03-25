@@ -24,8 +24,6 @@ const ChefsWrapper = styled.div`
     @media (min-width: 1000px) {
         gap: 0;
     }
-
-    background-color: gainsboro;
 `;
 
 const Chefs = () => {

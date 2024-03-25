@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const ChefWrapper = styled.div`
     width: 100%;
-    background-color: rebeccapurple;
     display: flex;
     flex-direction: column;
 
@@ -28,7 +27,6 @@ const ChefName = styled.h4`
     font-weight: 600;
     font-size: 2.5rem;
     line-height: 5rem;
-    background-color: aqua;
 `;
 
 const ChefTitle = styled.p`
@@ -36,7 +34,6 @@ const ChefTitle = styled.p`
     font-size: 2.5rem;
     line-height: 5rem;
     font-weight: 400;
-    background-color: yellow;
 `;
 
 const Chef = (props) => {
