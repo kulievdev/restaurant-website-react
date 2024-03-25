@@ -16,7 +16,7 @@ const Home = () => {
             {/* <Welcome /> */}
             {/* <Menu /> */}
             {/* <Reservation /> */}
-            {/* <Chefs /> */}
+            <Chefs />
             {/* <Testimonials /> */}
             {/* <BusinessHours /> */}
             {/* <Footer /> */}

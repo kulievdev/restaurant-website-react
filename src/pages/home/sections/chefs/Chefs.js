@@ -16,8 +16,16 @@ const ChefsSectionContainer = styled(SectionContainer)``;
 
 const ChefsWrapper = styled.div`
     display: flex;
-    gap: 4rem;
+    gap: 8rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: 15rem;
+
+    @media (min-width: 1000px) {
+        gap: 0;
+    }
+
+    background-color: gainsboro;
 `;
 
 const Chefs = () => {
