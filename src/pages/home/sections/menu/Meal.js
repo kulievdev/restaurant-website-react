@@ -5,12 +5,25 @@ import PlusButton from "../../../../design-system/PlusButton/PlusButton";
 import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
 
 const MealCard = styled.div`
-    width: calc((100% - 8rem) / 3);
+    width: 100%;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 3.5rem 3.7rem;
     background-color: #d0ccc733;
     border-radius: 7rem;
+
+    @media (min-width: 800px) {
+        width: calc((100% - 8rem) / 2);
+    }
+
+    @media (min-width: 1200px) {
+        width: calc((100% - 8rem) / 3);
+    }
 `;
+
+const MealBody = styled.div``;
 
 const MealImage = styled.img`
     width: 100%;
@@ -60,14 +73,16 @@ const Meal = (props) => {
 
     return (
         <MealCard>
-            <MealImage src={props.img} alt={props.name} />
-            <MealName>{props.name}</MealName>
-            <MealStarsWrapper>
-                {props.rating.map((number, idx) => {
-                    return <Star number={number} key={idx} />;
-                })}
-            </MealStarsWrapper>
-            <MealDescription>{props.description}</MealDescription>
+            <MealBody>
+                <MealImage src={props.img} alt={props.name} />
+                <MealName>{props.name}</MealName>
+                <MealStarsWrapper>
+                    {props.rating.map((number, idx) => {
+                        return <Star number={number} key={idx} />;
+                    })}
+                </MealStarsWrapper>
+                <MealDescription>{props.description}</MealDescription>
+            </MealBody>
             <MealFooter>
                 <MealPrice>{props.price}</MealPrice>
                 {windowWidth > 1200 ? (
