@@ -18,7 +18,8 @@ const Header = styled(SectionContainer)`
     justify-content: space-between;
     align-items: center;
     margin-top: 6.7rem;
-    padding: 0 5rem;
+    padding-top: 0;
+    padding-bottom: 0;
 `;
 
 const Navigation = styled.nav``;

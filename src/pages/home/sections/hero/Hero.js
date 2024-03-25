@@ -12,16 +12,16 @@ import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
 const HeroSection = styled.section``;
 
 const HeroSectionContainer = styled(SectionContainer)`
-    @media (min-width: 960px) {
+    @media (min-width: 1240px) {
         display: flex;
     }
 `;
 
 const HeroContent = styled.div`
     width: 100%;
-    margin-bottom: 8rem;
+    margin-bottom: 16rem;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1240px) {
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -60,7 +60,7 @@ const HeroImageWrapper = styled.div`
     justify-content: center;
     align-items: center;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1240px) {
         width: 50%;
     }
 `;

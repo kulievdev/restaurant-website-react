@@ -17,7 +17,7 @@ const ReservationSectionContainer = styled(SectionContainer)`
     display: flex;
     flex-direction: column-reverse;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1240px) {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -32,7 +32,7 @@ const ReservationImageWrapper = styled.div`
     align-items: center;
     margin-bottom: 8rem;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1240px) {
         margin-bottom: 0;
         width: 50%;
     }
@@ -50,9 +50,9 @@ const ReservationImage = styled.img`
 
 const ReservationContent = styled.div`
     width: 100%;
-    margin-bottom: 8rem;
+    margin-bottom: 16rem;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1240px) {
         width: 50%;
         margin-bottom: 0;
     }

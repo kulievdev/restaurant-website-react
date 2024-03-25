@@ -17,7 +17,7 @@ const WelcomeSectionContainer = styled(SectionContainer)`
     display: flex;
     flex-direction: column-reverse;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1240px) {
         display: flex;
         flex-direction: row;
     }
@@ -29,7 +29,7 @@ const WelcomeImageWrapper = styled.div`
     justify-content: center;
     align-items: center;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1240px) {
         width: 50%;
     }
 `;
@@ -48,7 +48,7 @@ const WelcomeContent = styled.div`
     width: 100%;
     margin-bottom: 8rem;
 
-    @media (min-width: 960px) {
+    @media (min-width: 1240px) {
         width: 50%;
         flex-direction: column;
         justify-content: center;

@@ -63,6 +63,10 @@ const SectionContainer = styled.div`
         padding: 15rem 5rem;
     }
 
+    @media (min-width: 900px) {
+        padding: 15rem 10rem;
+    }
+
     @media (min-width: 1440px) {
         padding: 15rem 15rem;
     }
