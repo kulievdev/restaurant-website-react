@@ -27,7 +27,7 @@ const SectionHeading = styled.h2`
 `;
 
 const SectionDescription = styled.p`
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     line-height: 2.5rem;
     font-weight: 400;
     color: #5c4529;
@@ -39,12 +39,11 @@ const SectionDescription = styled.p`
     }
 
     @media (min-width: 960px) {
-        font-size: 1.8rem;
         line-height: 3.7rem;
     }
 
     @media (min-width: 450px) {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         line-height: 3rem;
     }
 `;

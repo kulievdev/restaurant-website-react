@@ -20,7 +20,6 @@ const HeroSectionContainer = styled(SectionContainer)`
 const HeroContent = styled.div`
     width: 100%;
     margin-bottom: 8rem;
-    background-color: yellow;
 
     @media (min-width: 960px) {
         width: 50%;
@@ -59,7 +58,6 @@ const HeroImageWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
 
     @media (min-width: 960px) {
         width: 50%;

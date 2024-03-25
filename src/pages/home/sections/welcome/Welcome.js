@@ -13,14 +13,21 @@ const WelcomeSection = styled.section`
 `;
 
 const WelcomeSectionContainer = styled(SectionContainer)`
-    display: flex;
+    @media (min-width: 960px) {
+        display: flex;
+    }
 `;
 
 const WelcomeImageWrapper = styled.div`
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 8rem;
+
+    @media (min-width: 960px) {
+        width: 50%;
+    }
 `;
 
 const WelcomeImageContainer = styled.div`
@@ -34,10 +41,14 @@ const WelcomeImage = styled.img`
 `;
 
 const WelcomeContent = styled.div`
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
+
+    @media (min-width: 960px) {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 `;
 
 const Welcome = () => {
@@ -66,7 +77,10 @@ const Welcome = () => {
                         the art of food and the joy of gathering around the
                         table.
                     </SectionDescription>
-                    <Button size="lg" color="orange">
+                    <Button
+                        size={window.innerWidth > 450 ? "lg" : "md"}
+                        color="orange"
+                    >
                         See Our Menu
                     </Button>
                 </WelcomeContent>
