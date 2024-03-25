@@ -15,7 +15,12 @@ const TestimonialsSectionContainer = styled(SectionContainer)``;
 
 const TestimonialsWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 10rem;
+
+    @media (min-width: 1100px) {
+        flex-direction: row;
+    }
 `;
 
 const Testimonials = () => {

@@ -1,22 +1,26 @@
 import styled from "styled-components";
 
 const SectionHeading = styled.h2`
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 4rem;
+    line-height: 4.3rem;
     font-weight: 600;
     color: #311f09;
     margin-bottom: ${(props) => `${props.$marginBottom}rem`};
 
+    @media (min-width: 375px) {
+        font-size: 5rem;
+        line-height: 5rem;
+        font-weight: 600;
+    }
+
     @media (min-width: 450px) {
         font-size: 6rem;
         line-height: 6rem;
-        font-weight: 600;
     }
 
     @media (min-width: 960px) {
         font-size: 6rem;
         line-height: 7rem;
-        font-weight: 600;
     }
 
     @media (min-width: 1240px) {
