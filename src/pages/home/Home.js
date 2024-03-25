@@ -18,8 +18,8 @@ const Home = () => {
             {/* <Reservation /> */}
             {/* <Chefs /> */}
             {/* <Testimonials /> */}
-            <BusinessHours />
-            {/* <Footer /> */}
+            {/* <BusinessHours /> */}
+            <Footer />
         </>
     );
 };

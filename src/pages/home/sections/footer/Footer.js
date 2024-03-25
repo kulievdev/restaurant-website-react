@@ -11,16 +11,24 @@ const FooterSection = styled.footer`
 const FooterSectionContainer = styled(SectionContainer)``;
 
 const FooterContent = styled.div`
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 14rem;
+
+    @media (min-width: 1150px) {
+        display: flex;
+        justify-content: space-between;
+    }
 `;
 
 const BrandWrapper = styled.div`
-    width: 30%;
+    width: 100%;
+    margin-bottom: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (min-width: 1150px) {
+        width: 30%;
+    }
 `;
 
 const FooterLogo = styled.img`
@@ -42,7 +50,17 @@ const SocialMediasWrapper = styled.div`
 
 const NavigationWrapper = styled.div`
     display: flex;
-    gap: 7rem;
+    flex-direction: column;
+    gap: 6rem;
+
+    @media (min-width: 750px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 1150px) {
+        gap: 7rem;
+    }
 `;
 
 const Navigation = styled.nav`
