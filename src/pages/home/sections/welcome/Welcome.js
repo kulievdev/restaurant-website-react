@@ -7,6 +7,7 @@ import {
     SectionDescription,
     SectionHeading
 } from "../../../components/layout";
+import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
 
 const WelcomeSection = styled.section`
     background-color: #3fc66e1a;
@@ -49,13 +50,14 @@ const WelcomeContent = styled.div`
 
     @media (min-width: 960px) {
         width: 50%;
-        display: flex;
         flex-direction: column;
         justify-content: center;
     }
 `;
 
 const Welcome = () => {
+    const windowWidth = useWindowWidth();
+
     return (
         <WelcomeSection id="welcome-section">
             <WelcomeSectionContainer>
@@ -83,9 +85,9 @@ const Welcome = () => {
                     </SectionDescription>
                     <Button
                         size={
-                            window.innerWidth > 1240
+                            windowWidth > 1240
                                 ? "lg"
-                                : window.innerWidth > 400
+                                : windowWidth > 400
                                 ? "md"
                                 : "sm"
                         }

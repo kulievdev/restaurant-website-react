@@ -5,6 +5,7 @@ import {
     SectionDescription,
     SectionHeading
 } from "../../../components/layout";
+import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
 
 const BusinessHoursSection = styled.section``;
 
@@ -87,6 +88,8 @@ const ButtonActionsWrapper = styled.div`
 `;
 
 const BusinessHours = () => {
+    const windowWidth = useWindowWidth();
+
     return (
         <BusinessHoursSection id="hours-section">
             <BusinessHoursSectionContainer>
@@ -101,9 +104,9 @@ const BusinessHours = () => {
                     <ButtonActionsWrapper>
                         <Button
                             size={
-                                window.innerWidth > 1240
+                                windowWidth > 1240
                                     ? "lg"
-                                    : window.innerWidth > 400
+                                    : windowWidth > 400
                                     ? "md"
                                     : "sm"
                             }

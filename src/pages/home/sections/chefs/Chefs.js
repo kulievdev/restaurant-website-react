@@ -7,6 +7,7 @@ import {
 import Chef from "./Chef";
 import styled from "styled-components";
 import currentChefs from "./currentChefs";
+import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
 
 const ChefsSection = styled.section`
     text-align: center;
@@ -27,6 +28,8 @@ const ChefsWrapper = styled.div`
 `;
 
 const Chefs = () => {
+    const windowWidth = useWindowWidth();
+
     return (
         <ChefsSection id="chefs-section">
             <ChefsSectionContainer>
@@ -47,7 +50,16 @@ const Chefs = () => {
                         );
                     })}
                 </ChefsWrapper>
-                <Button size="lg" color="orange">
+                <Button
+                    size={
+                        windowWidth > 1240
+                            ? "lg"
+                            : windowWidth > 400
+                            ? "md"
+                            : "sm"
+                    }
+                    color="orange"
+                >
                     View All
                 </Button>
             </ChefsSectionContainer>

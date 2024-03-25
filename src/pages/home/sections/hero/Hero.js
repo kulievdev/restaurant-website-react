@@ -7,6 +7,7 @@ import {
     SectionContainer,
     OrangeSpanText
 } from "../../../components/layout";
+import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
 
 const HeroSection = styled.section``;
 
@@ -69,6 +70,8 @@ const HeroImage = styled.img`
 `;
 
 const Hero = () => {
+    const windowWidth = useWindowWidth();
+
     return (
         <HeroSection>
             <HeroSectionContainer>
@@ -89,9 +92,9 @@ const Hero = () => {
                     <HeroCtaWrapper>
                         <Button
                             size={
-                                window.innerWidth > 1240
+                                windowWidth > 1240
                                     ? "lg"
-                                    : window.innerWidth > 400
+                                    : windowWidth > 400
                                     ? "md"
                                     : "sm"
                             }

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Button from "../../../../design-system/Button/Button";
 import Star from "./Star";
 import PlusButton from "../../../../design-system/PlusButton/PlusButton";
+import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
 
 const MealCard = styled.div`
     width: calc((100% - 8rem) / 3);
@@ -55,6 +56,8 @@ const MealPrice = styled.span`
 `;
 
 const Meal = (props) => {
+    const windowWidth = useWindowWidth();
+
     return (
         <MealCard>
             <MealImage src={props.img} alt={props.name} />
@@ -67,7 +70,7 @@ const Meal = (props) => {
             <MealDescription>{props.description}</MealDescription>
             <MealFooter>
                 <MealPrice>{props.price}</MealPrice>
-                {window.innerWidth > 1200 ? (
+                {windowWidth > 1200 ? (
                     <Button
                         size={window.innerWidth > 1340 ? "md" : "sm"}
                         color="orange"

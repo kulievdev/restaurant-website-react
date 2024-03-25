@@ -55,6 +55,7 @@ const NavigationWrapper = styled.div`
 
     @media (min-width: 750px) {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
     }
 

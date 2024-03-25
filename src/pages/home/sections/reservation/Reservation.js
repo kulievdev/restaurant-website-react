@@ -7,6 +7,7 @@ import {
     SectionDescription,
     SectionHeading
 } from "../../../components/layout";
+import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
 
 const ReservationSection = styled.section`
     background-color: #fff4e766;
@@ -58,6 +59,8 @@ const ReservationContent = styled.div`
 `;
 
 const Reservation = () => {
+    const windowWidth = useWindowWidth();
+
     return (
         <ReservationSection id="reservation-section">
             <ReservationSectionContainer>
@@ -85,9 +88,9 @@ const Reservation = () => {
                     </SectionDescription>
                     <Button
                         size={
-                            window.innerWidth > 1240
+                            windowWidth > 1240
                                 ? "lg"
-                                : window.innerWidth > 400
+                                : windowWidth > 400
                                 ? "md"
                                 : "sm"
                         }
