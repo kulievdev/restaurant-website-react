@@ -14,12 +14,12 @@ const Home = () => {
             {/* <TopNavigation /> */}
             {/* <Hero /> */}
             {/* <Welcome /> */}
-            {/* <Menu /> */}
+            <Menu />
             {/* <Reservation /> */}
             {/* <Chefs /> */}
             {/* <Testimonials /> */}
             {/* <BusinessHours /> */}
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 };

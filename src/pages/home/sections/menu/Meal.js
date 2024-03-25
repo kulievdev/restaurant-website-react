@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Button from "../../../../design-system/Button/Button";
 import Star from "./Star";
+import PlusButton from "../../../../design-system/PlusButton/PlusButton";
 
 const MealCard = styled.div`
     width: calc((100% - 8rem) / 3);
@@ -66,9 +67,16 @@ const Meal = (props) => {
             <MealDescription>{props.description}</MealDescription>
             <MealFooter>
                 <MealPrice>{props.price}</MealPrice>
-                <Button size="md" color="orange">
-                    Order Now
-                </Button>
+                {window.innerWidth > 1200 ? (
+                    <Button
+                        size={window.innerWidth > 1340 ? "md" : "sm"}
+                        color="orange"
+                    >
+                        Order Now
+                    </Button>
+                ) : (
+                    <PlusButton />
+                )}
             </MealFooter>
         </MealCard>
     );
