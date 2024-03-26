@@ -14,6 +14,7 @@ const MenuSectionContainer = styled(SectionContainer)``;
 const MenuCategories = styled.div`
     display: flex;
     flex-direction: column;
+    color: #311f09;
 
     gap: 4rem;
     margin-bottom: 6rem;
