@@ -7,7 +7,7 @@ const Cart = () => {
 
     return (
         <>
-            {windowWidth < 375 ? null : (
+            {windowWidth < 400 ? null : (
                 <div className="cart">
                     <img src={cartIcon} alt="Shopping Cart" />
                 </div>
