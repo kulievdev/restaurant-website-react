@@ -7,10 +7,12 @@ import Chefs from "./sections/chefs/Chefs";
 import Testimonials from "./sections/testimonials/Testimonials";
 import BusinessHours from "./sections/business-hours/BusinessHours";
 import Footer from "./sections/footer/Footer";
+import Note from "./sections/Note/Note";
 
 const Home = () => {
     return (
         <>
+            <Note />
             <TopNavigation />
             <Hero />
             <Welcome />
