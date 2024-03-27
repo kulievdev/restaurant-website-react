@@ -8,7 +8,8 @@ const Button = ({ size, color, children }) => {
         orange: "btn-orange",
         green: "btn-green",
         black: "btn-black",
-        white: "btn-white"
+        white: "btn-white",
+        gray: "btn-gray"
     };
 
     return (
