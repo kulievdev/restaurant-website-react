@@ -78,7 +78,7 @@ const NavHeading = styled.h4`
     line-height: 4.2;
 
     @media (min-width: 1620px) {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         line-height: 5rem;
     }
 `;
