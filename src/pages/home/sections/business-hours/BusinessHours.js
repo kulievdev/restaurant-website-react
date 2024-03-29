@@ -104,7 +104,7 @@ const BusinessHours = () => {
                     <ButtonActionsWrapper>
                         <Button
                             size={
-                                windowWidth > 1240
+                                windowWidth > 1620
                                     ? "lg"
                                     : windowWidth > 400
                                     ? "md"
@@ -116,7 +116,7 @@ const BusinessHours = () => {
                         </Button>
                         <Button
                             size={
-                                window.innerWidth > 1240
+                                window.innerWidth > 1620
                                     ? "lg"
                                     : window.innerWidth > 400
                                     ? "md"

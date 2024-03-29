@@ -65,7 +65,7 @@ const Menu = () => {
                     {currentCategories.map((category, idx) => (
                         <Button
                             key={idx}
-                            size={windowWidth > 650 ? "lg" : "md"}
+                            size={windowWidth > 1620 ? "lg" : "md"}
                             color={
                                 category === "All Catagories" ? "black" : "gray"
                             }

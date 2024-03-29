@@ -85,7 +85,7 @@ const Welcome = () => {
                     </SectionDescription>
                     <Button
                         size={
-                            windowWidth > 1240
+                            windowWidth > 1620
                                 ? "lg"
                                 : windowWidth > 400
                                 ? "md"

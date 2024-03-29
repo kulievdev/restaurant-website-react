@@ -23,7 +23,7 @@ const SectionHeading = styled.h2`
         line-height: 7rem;
     }
 
-    @media (min-width: 1240px) {
+    @media (min-width: 1620px) {
         font-size: 8rem;
         line-height: 8rem;
         font-weight: 700;
@@ -45,7 +45,7 @@ const SectionDescription = styled.p`
         line-height: 3.7rem;
     }
 
-    @media (min-width: 1240px) {
+    @media (min-width: 1620px) {
         font-size: 2rem;
         line-height: 4rem;
     }
@@ -57,22 +57,18 @@ const OrangeSpanText = styled.span`
 
 const SectionContainer = styled.div`
     margin: 0 auto;
-    padding: 15rem 3rem;
+    padding: 10rem 3rem;
 
     @media (min-width: 500px) {
-        padding: 15rem 5rem;
+        padding: 10rem 5rem;
     }
 
     @media (min-width: 900px) {
-        padding: 15rem 10rem;
-    }
-
-    @media (min-width: 1440px) {
-        padding: 15rem 15rem;
+        padding: 10rem 10rem;
     }
 
     @media (min-width: 1920px) {
-        padding: 15rem 20rem;
+        padding: 10rem 20rem;
     }
 `;
 

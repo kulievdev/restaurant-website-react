@@ -35,8 +35,13 @@ const BrandWrapper = styled.div`
 const FooterText = styled.p`
     margin-top: 2.5rem;
     color: #e3e2e0;
-    font-size: 2rem;
-    line-height: 4rem;
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+
+    @media (min-width: 1620px) {
+        font-size: 2rem;
+        line-height: 4rem;
+    }
 `;
 
 const SocialMediasWrapper = styled.div`
@@ -69,14 +74,24 @@ const Navigation = styled.nav`
 
 const NavHeading = styled.h4`
     color: #ff8a00;
-    font-size: 2.5rem;
-    line-height: 5rem;
+    font-size: 2.2rem;
+    line-height: 4.2;
+
+    @media (min-width: 1620px) {
+        font-size: 2.5rem;
+        line-height: 5rem;
+    }
 `;
 
 const Link = styled.a`
     color: #e3e2e0;
-    font-size: 2rem;
-    line-height: 4rem;
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+
+    @media (min-width: 1620px) {
+        font-size: 2rem;
+        line-height: 4rem;
+    }
 `;
 
 const CopyrightText = styled(FooterText)`
@@ -128,10 +143,10 @@ const Footer = () => {
                             <NavHeading className="footer__heading">
                                 Get In Touch
                             </NavHeading>
-                            <FooterText>
+                            <Link>
                                 3247 Johnson Ave, <br />
                                 New York, NY 10063
-                            </FooterText>
+                            </Link>
                             <Link href="mailto:Luce Notte@gmail.com">
                                 Luce Notte@gmail.com
                             </Link>

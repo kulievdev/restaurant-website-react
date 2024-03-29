@@ -35,7 +35,7 @@ const Navigation = styled.nav`
 const UnorderedList = styled.ul`
     display: flex;
     gap: 4.5rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
 `;
 
 const List = styled.li``;
