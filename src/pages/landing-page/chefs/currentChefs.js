@@ -1,6 +1,6 @@
-import chef1 from "../../../../assets/betran.png";
-import chef2 from "../../../../assets/ferry.png";
-import chef3 from "../../../../assets/iswan.png";
+import chef1 from "../../../assets/betran.png";
+import chef2 from "../../../assets/ferry.png";
+import chef3 from "../../../assets/iswan.png";
 
 const currentChefs = [
     {

@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import Button from "../../../../design-system/Button/Button";
+import Button from "../../../design-system/Button/Button";
 import {
     SectionContainer,
     SectionDescription,
     SectionHeading
-} from "../../../components/layout";
-import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
+} from "../../components/layout";
+import useWindowWidth from "../../../custom-hooks/useWindowWidth";
 
 const BusinessHoursSection = styled.section``;
 
@@ -18,7 +18,7 @@ const BusinessHoursBackground = styled.div`
     border-radius: 5rem;
     padding: 0 2rem;
 
-    background-image: url(${require("../../../../assets/business-hours.png")});
+    background-image: url(${require("../../../assets/business-hours.png")});
 
     display: flex;
     flex-direction: column;

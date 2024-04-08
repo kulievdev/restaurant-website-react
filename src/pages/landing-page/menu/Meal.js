@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Button from "../../../../design-system/Button/Button";
+import Button from "../../../design-system/Button/Button";
 import Star from "./Star";
-import PlusButton from "../../../../design-system/PlusButton/PlusButton";
-import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
+import PlusButton from "../../../design-system/PlusButton/PlusButton";
+import useWindowWidth from "../../../custom-hooks/useWindowWidth";
 
 const MealCard = styled.div`
     width: 100%;

@@ -1,13 +1,13 @@
-import reservationImg from "../../../../assets/reservation.png";
-import Button from "../../../../design-system/Button/Button";
+import reservationImg from "../../../assets/reservation.png";
+import Button from "../../../design-system/Button/Button";
 import styled from "styled-components";
 import {
     OrangeSpanText,
     SectionContainer,
     SectionDescription,
     SectionHeading
-} from "../../../components/layout";
-import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
+} from "../../components/layout";
+import useWindowWidth from "../../../custom-hooks/useWindowWidth";
 
 const ReservationSection = styled.section`
     background-color: #fff4e766;

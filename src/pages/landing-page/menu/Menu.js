@@ -1,9 +1,9 @@
 import meals from "./data";
-import Button from "../../../../design-system/Button/Button";
+import Button from "../../../design-system/Button/Button";
 import Meal from "./Meal";
 import styled from "styled-components";
-import { SectionContainer, SectionHeading } from "../../../components/layout";
-import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
+import { SectionContainer, SectionHeading } from "../../components/layout";
+import useWindowWidth from "../../../custom-hooks/useWindowWidth";
 
 const MenuSection = styled.section`
     text-align: center;

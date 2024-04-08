@@ -1,13 +1,13 @@
-import Button from "../../../../design-system/Button/Button";
+import Button from "../../../design-system/Button/Button";
 import styled from "styled-components";
-import spaghettiImage from "../../../../assets/menu-spaghetti.png";
+import spaghettiImage from "../../../assets/menu-spaghetti.png";
 import {
     SectionHeading,
     SectionDescription,
     SectionContainer,
     OrangeSpanText
-} from "../../../components/layout";
-import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
+} from "../../components/layout";
+import useWindowWidth from "../../../custom-hooks/useWindowWidth";
 
 const HeroSection = styled.section``;
 

@@ -1,8 +1,6 @@
-import logoWhite from "../../assets/logo-white.svg";
 import "./Logo.css";
 
 const Logo = (props) => {
-    // return <img src={logoWhite} alt="Luce Notte" className="logo" />;
     return (
         <div className="logo_wrapper">
             <div className="logo_initials_wrapper">

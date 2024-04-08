@@ -1,9 +1,8 @@
-import logo from "../../../../assets/logo-dark.svg";
 import styled from "styled-components";
 import mySocials from "./mySocials";
 import SocialMedia from "./SocialMedia";
-import { SectionContainer } from "../../../components/layout";
-import Logo from "../../../../design-system/Logo/Logo";
+import { SectionContainer } from "../../components/layout";
+import Logo from "../../../design-system/Logo/Logo";
 
 const FooterSection = styled.footer`
     background-color: #311f09;

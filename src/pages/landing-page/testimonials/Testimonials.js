@@ -1,11 +1,11 @@
 import Testimonial from "./Testimonial";
-import { SectionContainer, SectionHeading } from "../../../components/layout";
+import { SectionContainer, SectionHeading } from "../../components/layout";
 import styled from "styled-components";
 import testimonialsData from "./testimonialsData";
 
 const TestimonialsSection = styled.section`
     text-align: center;
-    background-image: url(${require("../../../../assets/customers.png")});
+    background-image: url(${require("../../../assets/customers.png")});
     background-size: cover;
     background-position: top;
     background-color: rgb(251, 250, 250);

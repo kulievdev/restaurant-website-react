@@ -1,13 +1,13 @@
-import saladImage from "../../../../assets/salad.png";
-import Button from "../../../../design-system/Button/Button";
+import saladImage from "../../../assets/salad.png";
+import Button from "../../../design-system/Button/Button";
 import styled from "styled-components";
 import {
     OrangeSpanText,
     SectionContainer,
     SectionDescription,
     SectionHeading
-} from "../../../components/layout";
-import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
+} from "../../components/layout";
+import useWindowWidth from "../../../custom-hooks/useWindowWidth";
 
 const WelcomeSection = styled.section`
     background-color: #3fc66e1a;

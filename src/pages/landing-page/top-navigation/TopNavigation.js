@@ -1,11 +1,11 @@
-import Button from "../../../../design-system/Button/Button";
+import Button from "../../../design-system/Button/Button";
 import React, { useState } from "react";
-import Logo from "../../../../design-system/Logo/Logo";
+import Logo from "../../../design-system/Logo/Logo";
 import styled from "styled-components";
-import Cart from "../../../../design-system/Cart/Cart";
-import { SectionContainer } from "../../../components/layout";
-import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
-import MobileNavCta from "../../../../design-system/MobileNavCta/MobileNavCta";
+import Cart from "../../../design-system/Cart/Cart";
+import { SectionContainer } from "../../components/layout";
+import useWindowWidth from "../../../custom-hooks/useWindowWidth";
+import MobileNavCta from "../../../design-system/MobileNavCta/MobileNavCta";
 
 const links = [
     { text: "Home", link: "" },

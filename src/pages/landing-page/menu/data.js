@@ -1,9 +1,9 @@
-import spaghettiImage from "../../../../assets/menu-spaghetti-menu.png";
-import gnocchiImage from "../../../../assets/menu-gnocchi.png";
-import ravioliImage from "../../../../assets/menu-rovioli.png";
-import penneAllaVodakImage from "../../../../assets/menu-penne-alla-vodak.png";
-import risotoImage from "../../../../assets/menu-risoto.png";
-import splitzaImage from "../../../../assets/menu-splitza.png";
+import spaghettiImage from "../../../assets/menu-spaghetti-menu.png";
+import gnocchiImage from "../../../assets/menu-gnocchi.png";
+import ravioliImage from "../../../assets/menu-rovioli.png";
+import penneAllaVodakImage from "../../../assets/menu-penne-alla-vodak.png";
+import risotoImage from "../../../assets/menu-risoto.png";
+import splitzaImage from "../../../assets/menu-splitza.png";
 
 const meals = [
     {

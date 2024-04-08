@@ -1,13 +1,13 @@
-import Button from "../../../../design-system/Button/Button";
+import Button from "../../../design-system/Button/Button";
 import {
     OrangeSpanText,
     SectionContainer,
     SectionHeading
-} from "../../../components/layout";
+} from "../../components/layout";
 import Chef from "./Chef";
 import styled from "styled-components";
 import currentChefs from "./currentChefs";
-import useWindowWidth from "../../../../custom-hooks/useWindowWidth";
+import useWindowWidth from "../../../custom-hooks/useWindowWidth";
 
 const ChefsSection = styled.section`
     text-align: center;
