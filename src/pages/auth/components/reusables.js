@@ -2,7 +2,11 @@ import styled from "styled-components";
 
 const Form = styled.form`
     width: 100%;
-    padding: 0 11rem;
+    padding: 0 8rem;
+
+    @media (min-width: 1920px) {
+        padding: 0 12rem;
+    }
 `;
 
 const Header = styled.h1`
