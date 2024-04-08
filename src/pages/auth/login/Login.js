@@ -44,6 +44,10 @@ const LoginInput = styled.input`
     outline-color: #ff8a00;
 `;
 
+const ForgotPasswordText = styled(RememberMeText)`
+    cursor: pointer;
+`;
+
 const LoginForm = () => {
     return (
         <Form>
@@ -67,7 +71,7 @@ const LoginForm = () => {
                     <CheckBoxInput type="checkbox" />
                     <RememberMeText>Remember me</RememberMeText>
                 </CheckBoxWrapper>
-                <RememberMeText>Forgot Password?</RememberMeText>
+                <ForgotPasswordText>Forgot Password?</ForgotPasswordText>
             </RememberMeWrapper>
             <Button size="xl" color="orange">
                 Continue
