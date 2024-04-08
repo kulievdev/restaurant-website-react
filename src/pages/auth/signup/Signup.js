@@ -76,8 +76,11 @@ const SignupForm = () => {
                 <RememberMeWrapper>
                     <CheckBoxWrapper>
                         <CheckBoxInput type="checkbox" />
-                        <RememberMeText onClick={handleTermsOnclick}>
-                            Accept <SpanText>Terms & Conditions</SpanText>
+                        <RememberMeText>
+                            Accept{" "}
+                            <SpanText onClick={handleTermsOnclick}>
+                                Terms & Conditions
+                            </SpanText>
                         </RememberMeText>
                     </CheckBoxWrapper>
                 </RememberMeWrapper>
