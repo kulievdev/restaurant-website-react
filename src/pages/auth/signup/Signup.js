@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Auth from "../components/Auth";
 import signupImg from "../../../assets/signup.png";
+import Button from "../../../design-system/Button/Button";
+import GoogleButton from "../components/GoogleButton";
 
 const Form = styled.form`
     width: 100%;
@@ -82,7 +84,7 @@ const RememberMeText = styled.p`
 const SignupForm = () => {
     return (
         <Form>
-            <Header>Sign up</Header>
+            <Header>Sign Up</Header>
             <TextWrapper>
                 <QuestionText>Have an account?</QuestionText>
                 <SpanText>Login</SpanText>
@@ -100,6 +102,10 @@ const SignupForm = () => {
                     </RememberMeText>
                 </CheckBoxWrapper>
             </RememberMeWrapper>
+            <Button size="xl" color="orange">
+                Sign Up
+            </Button>
+            <GoogleButton text="Sign up with google" />
         </Form>
     );
 };

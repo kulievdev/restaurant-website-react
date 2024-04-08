@@ -5,6 +5,7 @@ const Button = ({ size, color, children }) => {
         sm: "btn-sm",
         md: "btn-md",
         lg: "btn-lg",
+        xl: "btn-xl",
         orange: "btn-orange",
         green: "btn-green",
         black: "btn-black",

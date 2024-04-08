@@ -28,6 +28,14 @@
     padding-left: 5.5rem;
 }
 
+.btn-xl {
+    font-size: 2rem;
+    width: 100%;
+    font-weight: 600;
+    border-radius: 1rem;
+    padding: 2rem 6rem;
+}
+
 .btn-green {
     color: #ffffff;
     background-color: #3fa72f;
