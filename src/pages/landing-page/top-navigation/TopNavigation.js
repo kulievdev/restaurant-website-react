@@ -6,6 +6,7 @@ import Cart from "../../../design-system/Cart/Cart";
 import { SectionContainer } from "../../components/layout";
 import useWindowWidth from "../../../custom-hooks/useWindowWidth";
 import MobileNavCta from "../../../design-system/MobileNavCta/MobileNavCta";
+import Dropdown from "./Dropdown";
 
 const links = [
     { text: "Home", link: "" },
@@ -49,6 +50,7 @@ const Link = styled.a`
 `;
 
 const NavigationActions = styled.div`
+    position: relative;
     display: flex;
     gap: 2.5rem;
     align-items: center;
@@ -56,6 +58,13 @@ const NavigationActions = styled.div`
 
 const TopNavigation = () => {
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+    const [openOptions, setOpenOptions] = useState(false);
+
+    const handleOptionsOnClick = (e) => {
+        e.preventDefault();
+
+        setOpenOptions(!openOptions);
+    };
 
     const toggleHamburger = () => {
         setIsHamburgerOpen(!isHamburgerOpen);
@@ -82,10 +91,15 @@ const TopNavigation = () => {
                 {windowWidth < 1350 ? (
                     <MobileNavCta />
                 ) : (
-                    <Button size="md" color="green">
-                        Log In
+                    <Button
+                        onClick={handleOptionsOnClick}
+                        size="md"
+                        color="green"
+                    >
+                        Options
                     </Button>
                 )}
+                {openOptions && <Dropdown />}
             </NavigationActions>
         </Header>
     );
