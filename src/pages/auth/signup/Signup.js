@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import Auth from "../components/Auth";
 import signupImg from "../../../assets/signup.png";
 import Button from "../../../design-system/Button/Button";
@@ -39,12 +40,20 @@ const SignupInput = styled.input`
 `;
 
 const SignupForm = () => {
+    const navigate = useNavigate();
+
     return (
         <Form>
             <Header>Sign Up</Header>
             <TextWrapper>
                 <QuestionText>Have an account?</QuestionText>
-                <SpanText>Login</SpanText>
+                <SpanText
+                    onClick={() => {
+                        navigate("/login");
+                    }}
+                >
+                    Login
+                </SpanText>
             </TextWrapper>
             <SignupInputsWrapper>
                 <SignupInput type="text" placeholder="Full name" />

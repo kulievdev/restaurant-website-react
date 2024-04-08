@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Button from "../../../design-system/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
     display: flex;
@@ -28,12 +29,26 @@ const Wrapper = styled.div`
 `;
 
 const Dropdown = () => {
+    const navigate = useNavigate();
+
     return (
         <Wrapper>
-            <Button size="md" color="orange">
+            <Button
+                onClick={() => {
+                    navigate("sign-up");
+                }}
+                size="md"
+                color="orange"
+            >
                 Sign Up
             </Button>
-            <Button size="md" color="green">
+            <Button
+                onClick={() => {
+                    navigate("login");
+                }}
+                size="md"
+                color="green"
+            >
                 Login
             </Button>
         </Wrapper>

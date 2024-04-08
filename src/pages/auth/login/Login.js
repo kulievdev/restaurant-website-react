@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import loginImg from "../../../assets/login.png";
 import Auth from "../components/Auth";
 import {
@@ -49,12 +50,19 @@ const ForgotPasswordText = styled(RememberMeText)`
 `;
 
 const LoginForm = () => {
+    const navigate = useNavigate();
     return (
         <Form>
             <Header>Login</Header>
             <TextWrapper>
                 <QuestionText>Don't have an account?</QuestionText>
-                <SpanText>Sign Up</SpanText>
+                <SpanText
+                    onClick={() => {
+                        navigate("/sign-up");
+                    }}
+                >
+                    Sign Up
+                </SpanText>
             </TextWrapper>
             <LoginInputsWrapper>
                 <LoginInputWrapper>
