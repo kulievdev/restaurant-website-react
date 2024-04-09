@@ -3,7 +3,6 @@ import Button from "../../../design-system/Button/Button";
 import styled from "styled-components";
 import {
     OrangeSpanText,
-    SectionContainer,
     SectionDescription,
     SectionHeading
 } from "../../components/layout";
