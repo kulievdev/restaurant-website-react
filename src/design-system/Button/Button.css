@@ -33,7 +33,13 @@
     width: 100%;
     font-weight: 600;
     border-radius: 1rem;
-    padding: 2rem 6rem;
+    padding: 1.6rem 6rem;
+}
+
+@media (min-width: 1920px) {
+    .btn-xl {
+        padding: 2rem 6rem;
+    }
 }
 
 .btn-green {

@@ -11,8 +11,12 @@ const Wrapper = styled.button`
     border: 0.1rem solid #b6a38b;
     background-color: #fff;
     border-radius: 1rem;
-    padding: 2rem 6rem;
+    padding: 1.5rem 6rem;
     margin-top: 2rem;
+
+    @media (min-width: 1920px) {
+        padding: 2rem 6rem;
+    }
 `;
 
 const Icon = styled.img`

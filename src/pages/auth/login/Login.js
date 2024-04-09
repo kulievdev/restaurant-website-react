@@ -39,10 +39,14 @@ const LoginInput = styled.input`
     border: none;
     background-color: rgba(250, 250, 249, 1);
     border-radius: 1rem;
-    padding: 3rem;
+    padding: 2rem 3rem;
     color: #5c4529;
     font-size: 1.6rem;
     outline-color: #ff8a00;
+
+    @media (min-width: 1920px) {
+        padding: 3rem;
+    }
 `;
 
 const ForgotPasswordText = styled(RememberMeText)`
