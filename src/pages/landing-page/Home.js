@@ -12,8 +12,6 @@ import Welcome from "./welcome/Welcome";
 const Home = () => {
     return (
         <>
-            <Note />
-            <TopNavigation />
             <Hero />
             <Welcome />
             <Menu />
@@ -21,7 +19,6 @@ const Home = () => {
             <Chefs />
             <Testimonials />
             <BusinessHours />
-            <Footer />
         </>
     );
 };

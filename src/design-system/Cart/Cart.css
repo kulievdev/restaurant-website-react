@@ -1,7 +1,7 @@
 .cart {
     height: 5rem;
     width: 5rem;
-    background-color: rgb(236, 240, 241);
+    background-color: #ecf0f1;
     border-radius: 50%;
     display: flex;
     align-items: center;

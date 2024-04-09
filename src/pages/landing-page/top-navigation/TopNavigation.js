@@ -7,13 +7,14 @@ import { SectionContainer } from "../../components/layout";
 import useWindowWidth from "../../../custom-hooks/useWindowWidth";
 import MobileNavCta from "../../../design-system/MobileNavCta/MobileNavCta";
 import Dropdown from "./Dropdown";
+import { NavLink } from "react-router-dom";
 
 const links = [
-    { text: "Home", link: "" },
-    { text: "Menu", link: "" },
-    { text: "About us", link: "" },
-    { text: "Reservation", link: "" },
-    { text: "Contact Us", link: "" }
+    { text: "Home", link: "/" },
+    { text: "Menu", link: "menu" },
+    { text: "About Us", link: "about-us" },
+    { text: "Reservation", link: "reservation" },
+    { text: "Contact Us", link: "contact-us" }
 ];
 
 const Header = styled(SectionContainer)`
@@ -41,11 +42,15 @@ const UnorderedList = styled.ul`
 
 const List = styled.li``;
 
-const Link = styled.a`
+const Link = styled(NavLink)`
     color: #311f09;
 
-    ${List}:first-child & {
-        color: orange;
+    &.active {
+        color: #ff8a00;
+    }
+
+    &:hover {
+        color: #ff8a00;
     }
 `;
 
@@ -79,7 +84,13 @@ const TopNavigation = () => {
                 <UnorderedList>
                     {links.map((link, idx) => (
                         <List key={idx}>
-                            <Link href={link.link} onClick={toggleHamburger}>
+                            <Link
+                                to={link.link}
+                                className={({ isActive }) => {
+                                    return isActive ? "active" : null;
+                                }}
+                                onClick={toggleHamburger}
+                            >
                                 {link.text}
                             </Link>
                         </List>
