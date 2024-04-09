@@ -32,6 +32,12 @@ const LoginLabel = styled.label`
     font-size: 1.4rem;
     line-height: 2rem;
     color: #311f09;
+`;
+
+const LoginLabelWrapper = styled.div`
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     margin-bottom: 1.6rem;
 `;
 
@@ -52,6 +58,7 @@ const LoginInput = styled.input`
 const ForgotPasswordText = styled(RememberMeText)`
     cursor: pointer;
     color: #0094ff;
+    line-height: 2rem;
 `;
 
 const LoginForm = () => {
@@ -71,11 +78,22 @@ const LoginForm = () => {
             </TextWrapper>
             <LoginInputsWrapper>
                 <LoginInputWrapper>
-                    <LoginLabel>Email address</LoginLabel>
+                    <LoginLabelWrapper>
+                        <LoginLabel>Email address</LoginLabel>
+                    </LoginLabelWrapper>
                     <LoginInput type="text" />
                 </LoginInputWrapper>
                 <LoginInputWrapper>
-                    <LoginLabel>Password</LoginLabel>
+                    <LoginLabelWrapper>
+                        <LoginLabel>Password</LoginLabel>
+                        <ForgotPasswordText
+                            onClick={() => {
+                                navigate("/reset-password");
+                            }}
+                        >
+                            Forgot Password?
+                        </ForgotPasswordText>
+                    </LoginLabelWrapper>
                     <LoginInput type="password" />
                 </LoginInputWrapper>
             </LoginInputsWrapper>
@@ -84,13 +102,6 @@ const LoginForm = () => {
                     <CheckBoxInput type="checkbox" />
                     <RememberMeText>Stay signed in for a week</RememberMeText>
                 </CheckBoxWrapper>
-                <ForgotPasswordText
-                    onClick={() => {
-                        navigate("/reset-password");
-                    }}
-                >
-                    Forgot Password?
-                </ForgotPasswordText>
             </RememberMeWrapper>
             <Button size="xl" color="orange">
                 Continue

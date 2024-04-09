@@ -2,7 +2,11 @@ import styled from "styled-components";
 
 const Form = styled.form`
     width: 100%;
-    padding: 0 8rem;
+    padding: 0 4rem;
+
+    @media (min-width: 1440px) {
+        padding: 0 8rem;
+    }
 
     @media (min-width: 1920px) {
         padding: 0 12rem;
