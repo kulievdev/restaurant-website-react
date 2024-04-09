@@ -47,6 +47,7 @@ const LoginInput = styled.input`
 
 const ForgotPasswordText = styled(RememberMeText)`
     cursor: pointer;
+    color: #0094ff;
 `;
 
 const LoginForm = () => {
@@ -77,9 +78,15 @@ const LoginForm = () => {
             <RememberMeWrapper>
                 <CheckBoxWrapper>
                     <CheckBoxInput type="checkbox" />
-                    <RememberMeText>Remember me</RememberMeText>
+                    <RememberMeText>Stay signed in for a week</RememberMeText>
                 </CheckBoxWrapper>
-                <ForgotPasswordText>Forgot Password?</ForgotPasswordText>
+                <ForgotPasswordText
+                    onClick={() => {
+                        navigate("/reset-password");
+                    }}
+                >
+                    Forgot Password?
+                </ForgotPasswordText>
             </RememberMeWrapper>
             <Button size="xl" color="orange">
                 Continue

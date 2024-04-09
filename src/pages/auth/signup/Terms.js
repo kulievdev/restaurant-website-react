@@ -6,7 +6,9 @@ import {
 } from "../components/reusables";
 import Button from "../../../design-system/Button/Button";
 
-const TermsWrapper = styled.div``;
+const TermsWrapper = styled.div`
+    max-width: 100rem;
+`;
 const TermsTitle = styled.h2`
     text-align: center;
     font-size: 5rem;
