@@ -26,8 +26,8 @@ const Note = () => {
         <NoteWrapper>
             <NoteReminder>Note: </NoteReminder>
             <NoteText>
-                This site is fully responsive. It will be fully functional soon
-                along with other pages.
+                This site is fully responsive. It is partially functional now
+                and will be fully functional soon along with other pages.
             </NoteText>
         </NoteWrapper>
     );
