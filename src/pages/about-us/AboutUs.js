@@ -31,18 +31,15 @@ const AboutTop = styled.div`
     }
 
     @media (min-width: 1240px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8rem;
         padding: 10rem 10rem 0 0;
     }
 
     @media (min-width: 1920px) {
         padding: 10rem 20rem 0 0;
-    }
-
-    @media (min-width: 1240px) {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 8rem;
     }
 `;
 
@@ -61,18 +58,15 @@ const AboutBottom = styled.div`
     }
 
     @media (min-width: 1240px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8rem;
         padding: 0 0 10rem 10rem;
     }
 
     @media (min-width: 1920px) {
         padding: 0 0 10rem 20rem;
-    }
-
-    @media (min-width: 1240px) {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 8rem;
     }
 `;
 
@@ -89,6 +83,10 @@ const AboutImageWrapper = styled.div`
 
 const AboutImage = styled.img`
     max-width: 100%;
+
+    @media (min-width: 1240px) {
+        width: 100%;
+    }
 `;
 
 const AboutContent = styled.div`
@@ -134,8 +132,9 @@ const OwnerWrapper = styled.div`
 
 const OwnerImageWrapper = styled(AboutImageWrapper)``;
 
-const OwnerImage = styled(AboutImage)`
+const OwnerImage = styled.img`
     border-radius: 5rem;
+    max-width: 100%;
 `;
 
 const OwnerContent = styled(AboutContent)`
