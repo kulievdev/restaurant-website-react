@@ -24,8 +24,13 @@ const Container = styled.div`
 `;
 
 const Img = styled.img`
-    width: 30rem;
-    height: 30rem;
+    width: 25rem;
+    height: 25rem;
+
+    @media (min-width: 1920px) {
+        width: 30rem;
+        height: 30rem;
+    }
 `;
 
 const Title = styled.h2`
@@ -47,7 +52,7 @@ const Input = styled.input`
     border: none;
     background-color: rgba(250, 250, 249, 1);
     border-radius: 1rem;
-    padding: 3rem;
+    padding: 2rem 3rem;
     outline-color: #3fa72f;
     color: #5c4529;
     font-size: 1.6rem;
@@ -56,6 +61,10 @@ const Input = styled.input`
         font-size: 1.5rem;
         line-height: 3rem;
         color: #a0978c;
+    }
+
+    @media (min-width: 1920px) {
+        padding: 3rem;
     }
 `;
 
