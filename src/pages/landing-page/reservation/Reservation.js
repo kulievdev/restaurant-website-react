@@ -13,15 +13,34 @@ const ReservationSection = styled.section`
     background-color: #fff4e766;
 `;
 
-const ReservationSectionContainer = styled(SectionContainer)`
+const ReservationSectionContainer = styled.div`
     display: flex;
     flex-direction: column-reverse;
+    margin: 0 auto;
+
+    padding: 5rem 3rem;
+
+    @media (min-width: 500px) {
+        padding: 10rem 5rem;
+    }
+
+    @media (min-width: 900px) {
+        padding: 10rem 10rem;
+    }
+
+    @media (min-width: 1240px) {
+        padding: 10rem 10rem 10rem 0;
+    }
+
+    @media (min-width: 1920px) {
+        padding: 10rem 20rem 10rem 0;
+    }
 
     @media (min-width: 1240px) {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 4rem;
+        gap: 10rem;
     }
 `;
 
@@ -36,12 +55,6 @@ const ReservationImageWrapper = styled.div`
         margin-bottom: 0;
         width: 50%;
     }
-`;
-
-const ReservationImageContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
 `;
 
 const ReservationImage = styled.img`
@@ -65,12 +78,10 @@ const Reservation = () => {
         <ReservationSection id="reservation-section">
             <ReservationSectionContainer>
                 <ReservationImageWrapper>
-                    <ReservationImageContainer>
-                        <ReservationImage
-                            src={reservationImg}
-                            alt="Reservation Image"
-                        />
-                    </ReservationImageContainer>
+                    <ReservationImage
+                        src={reservationImg}
+                        alt="Reservation Image"
+                    />
                 </ReservationImageWrapper>
                 <ReservationContent>
                     <SectionHeading $marginBottom="5">
