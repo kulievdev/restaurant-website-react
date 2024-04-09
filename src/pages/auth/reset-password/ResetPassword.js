@@ -8,6 +8,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 3rem;
     height: 100vh;
 `;
 const Container = styled.div`
@@ -18,14 +19,23 @@ const Container = styled.div`
     border-radius: 3rem;
     max-width: 60rem;
     text-align: center;
-    padding: 6rem 8rem;
+    padding: 3rem 2rem;
     background-color: #fff;
     box-shadow: 0 2.5rem 5rem -1.2rem rgb(0 0 0 / 0.25);
+
+    @media (min-width: 500px) {
+        padding: 6rem 8rem;
+    }
 `;
 
 const Img = styled.img`
-    width: 25rem;
-    height: 25rem;
+    width: 20rem;
+    height: 20rem;
+
+    @media (min-width: 450px) {
+        width: 25rem;
+        height: 25rem;
+    }
 
     @media (min-width: 1920px) {
         width: 30rem;
