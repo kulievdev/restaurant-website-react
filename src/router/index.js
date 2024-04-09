@@ -9,6 +9,7 @@ import Login from "../pages/auth/login/Login";
 import ResetPassword from "../pages/auth/reset-password/ResetPassword";
 import Home from "../pages/landing-page/Home";
 import Menu from "../pages/landing-page/menu/Menu";
+import AboutUs from "../pages/about-us/AboutUs";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -16,7 +17,7 @@ export const router = createBrowserRouter(
             <Route path="/" element={<App />}>
                 <Route index element={<Home />} />
                 <Route path="menu" element={<Menu />} />
-                <Route path="about-us" element={<div>About Us</div>} />
+                <Route path="about-us" element={<AboutUs />} />
                 <Route path="reservation" element={<div>Reservation</div>} />
                 <Route path="contact-us" element={<div>Contact Us</div>} />
             </Route>
