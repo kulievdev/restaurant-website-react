@@ -32,3 +32,10 @@ ul {
 a {
     text-decoration: none;
 }
+
+::-webkit-calendar-picker-indicator {
+    background-color: #ff8a00;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
