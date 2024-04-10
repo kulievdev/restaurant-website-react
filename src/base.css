@@ -39,3 +39,10 @@ a {
     cursor: pointer;
     border-radius: 0.3rem;
 }
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.1rem;
+    text-overflow: "";
+}

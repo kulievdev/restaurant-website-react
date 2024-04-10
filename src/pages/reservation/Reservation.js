@@ -81,7 +81,7 @@ const DatePicker = styled.input`
     &::placeholder {
         font-size: 1.5rem;
         line-height: 3rem;
-        color: #a0978c;
+        color: #5c4529;
     }
 
     @media (min-width: 1920px) {
@@ -101,7 +101,7 @@ const TimePicker = styled.input`
     &::placeholder {
         font-size: 1.5rem;
         line-height: 3rem;
-        color: #a0978c;
+        color: #5c4529;
     }
 
     @media (min-width: 1920px) {
@@ -124,8 +124,8 @@ const Select = styled.select`
 `;
 
 const Option = styled.option`
-    &:first-child {
-        color: #a0978c;
+    &:hover {
+        background-color: yellow;
     }
 `;
 
