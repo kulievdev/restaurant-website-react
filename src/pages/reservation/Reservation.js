@@ -2,21 +2,23 @@ import styled from "styled-components";
 import { OrangeSpanText, SectionHeading } from "../components/layout";
 import reservationImg from "../../assets/reservation2.png";
 import { useState } from "react";
+import Button from "../../design-system/Button/Button";
 
 const ReservationSection = styled.section``;
 
 const ReservationSectionContainer = styled.div`
     display: flex;
+    align-items: center;
     flex-direction: column-reverse;
 
-    padding: 5rem 3rem 5rem 0;
+    padding: 5rem 0;
 
     @media (min-width: 500px) {
-        padding: 10rem 5rem 10rem 0;
+        padding: 10rem 0;
     }
 
     @media (min-width: 900px) {
-        padding: 10rem 10rem 10rem 0;
+        padding: 10rem 0;
     }
 
     @media (min-width: 1240px) {
@@ -53,9 +55,17 @@ const ReservationImage = styled.img`
 const ReservationContent = styled.div`
     width: 100%;
     text-align: center;
-    padding: 15rem 0;
+    max-width: 70rem;
+
+    padding: 5rem 3rem;
+
+    @media (min-width: 500px) {
+        padding: 10rem 5rem;
+    }
 
     @media (min-width: 1240px) {
+        max-width: 52rem;
+        padding: 0;
         text-align: start;
         width: 50%;
         margin-bottom: 0;
@@ -66,7 +76,7 @@ const InputsWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    max-width: 50rem;
+    margin-bottom: 7rem;
 `;
 
 const DatePicker = styled.input`
@@ -193,6 +203,9 @@ const Reservation = () => {
                             <Option>15 People</Option>
                         </Select>
                     </InputsWrapper>
+                    <Button color="orange" size="xl">
+                        Book Now
+                    </Button>
                 </ReservationContent>
             </ReservationSectionContainer>
         </ReservationSection>
