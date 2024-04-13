@@ -3,6 +3,7 @@ import { OrangeSpanText, SectionHeading } from "../components/layout";
 import reservationImg from "../../assets/reservation2.png";
 import { useState } from "react";
 import Button from "../../design-system/Button/Button";
+import Input from "../../design-system/Input/Input";
 
 const ReservationSection = styled.section``;
 
@@ -79,69 +80,12 @@ const InputsWrapper = styled.div`
     margin-bottom: 7rem;
 `;
 
-const DatePicker = styled.input`
-    border: none;
-    background-color: rgba(250, 250, 249, 1);
-    border-radius: 1rem;
-    padding: 2rem 3rem;
-    outline-color: #ff8a00;
-    color: #5c4529;
-    font-size: 1.6rem;
-
-    &::placeholder {
-        font-size: 1.5rem;
-        line-height: 3rem;
-        color: #5c4529;
-    }
-
-    @media (min-width: 1920px) {
-        padding: 3rem;
-    }
-`;
-
-const TimePicker = styled.input`
-    border: none;
-    background-color: rgba(250, 250, 249, 1);
-    border-radius: 1rem;
-    padding: 2rem 3rem;
-    outline-color: #ff8a00;
-    color: #5c4529;
-    font-size: 1.6rem;
-
-    &::placeholder {
-        font-size: 1.5rem;
-        line-height: 3rem;
-        color: #5c4529;
-    }
-
-    @media (min-width: 1920px) {
-        padding: 3rem;
-    }
-`;
-
-const Select = styled.select`
-    border: none;
-    background-color: rgba(250, 250, 249, 1);
-    border-radius: 1rem;
-    padding: 2rem 3rem;
-    outline-color: #ff8a00;
-    font-size: 1.6rem;
-    color: #5c4529;
-
-    @media (min-width: 1920px) {
-        padding: 3rem;
-    }
-`;
-
-const Option = styled.option`
-    &:hover {
-        background-color: yellow;
-    }
-`;
+const Option = styled.option``;
 
 const Reservation = () => {
     const [dateInputType, setDateInputType] = useState("text");
     const [timeInputType, setTimeInputType] = useState("text");
+    const [selectInputType, setSelectInputType] = useState("text");
 
     const handleDateFocus = () => {
         setDateInputType("date");
@@ -159,6 +103,14 @@ const Reservation = () => {
         setTimeInputType("text");
     };
 
+    const handleSelectFocus = () => {
+        setSelectInputType("select");
+    };
+
+    const handleSelectBlur = () => {
+        setSelectInputType("text");
+    };
+
     return (
         <ReservationSection>
             <ReservationSectionContainer>
@@ -173,20 +125,26 @@ const Reservation = () => {
                         Book a <OrangeSpanText>table</OrangeSpanText>
                     </SectionHeading>
                     <InputsWrapper>
-                        <DatePicker
+                        <Input
                             type={dateInputType}
                             placeholder="Date"
-                            onFocus={handleDateFocus}
-                            onBlur={handleDateBlur}
+                            handleOnFocus={handleDateFocus}
+                            handleOnBlur={handleDateBlur}
                         />
-                        <TimePicker
+                        <Input
                             type={timeInputType}
                             placeholder="Time"
-                            onFocus={handleTimeFocus}
-                            onBlur={handleTimeBlur}
+                            handleOnFocus={handleTimeFocus}
+                            handleOnBlur={handleTimeBlur}
                         />
-                        <Select>
-                            <Option>Party size</Option>
+                        <Input
+                            type={selectInputType}
+                            placeholder="Party size"
+                            handleOnFocus={handleSelectFocus}
+                            handleOnBlur={handleSelectBlur}
+                        >
+                            <Option>Choose a number</Option>
+                            <Option>1 person</Option>
                             <Option>2 People</Option>
                             <Option>3 People</Option>
                             <Option>4 People </Option>
@@ -201,7 +159,7 @@ const Reservation = () => {
                             <Option>13 People</Option>
                             <Option>14 People</Option>
                             <Option>15 People</Option>
-                        </Select>
+                        </Input>
                     </InputsWrapper>
                     <Button color="orange" size="xl">
                         Book Now

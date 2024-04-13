@@ -1,0 +1,32 @@
+.input {
+    border: none;
+    background-color: rgba(250, 250, 249, 1);
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    outline-color: #ff8a00;
+    color: #5c4529;
+    font-size: 1.6rem;
+
+    &::placeholder {
+        font-size: 1.5rem;
+        line-height: 3rem;
+        color: #a0978c;
+    }
+}
+
+.select {
+    border: none;
+    background-color: rgba(250, 250, 249, 1);
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    outline-color: #ff8a00;
+    color: #5c4529;
+    font-size: 1.6rem;
+}
+
+@media (min-width: 1920px) {
+    .input,
+    .select {
+        padding: 3rem;
+    }
+}

@@ -18,32 +18,13 @@ import {
     TextWrapper
 } from "../components/reusables";
 import Terms from "./Terms";
+import Input from "../../../design-system/Input/Input";
 
 const SignupInputsWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 4rem;
     margin-bottom: 4rem;
-`;
-
-const SignupInput = styled.input`
-    border: none;
-    background-color: rgba(250, 250, 249, 1);
-    border-radius: 1rem;
-    padding: 2rem 3rem;
-    outline-color: #ff8a00;
-    color: #5c4529;
-    font-size: 1.6rem;
-
-    &::placeholder {
-        font-size: 1.5rem;
-        line-height: 3rem;
-        color: #a0978c;
-    }
-
-    @media (min-width: 1920px) {
-        padding: 3rem;
-    }
 `;
 
 const SignupForm = () => {
@@ -73,9 +54,9 @@ const SignupForm = () => {
                     </SpanText>
                 </TextWrapper>
                 <SignupInputsWrapper>
-                    <SignupInput type="text" placeholder="Full name" />
-                    <SignupInput type="email" placeholder="Email address" />
-                    <SignupInput type="password" placeholder="Password" />
+                    <Input type="text" placeholder="Full name" />
+                    <Input type="email" placeholder="Email address" />
+                    <Input type="password" placeholder="Password" />
                 </SignupInputsWrapper>
                 <RememberMeWrapper>
                     <CheckBoxWrapper>
