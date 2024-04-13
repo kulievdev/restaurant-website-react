@@ -92,11 +92,12 @@ const ResetPassword = () => {
                 <Title>Reset your password</Title>
                 <Text>Enter the email address you used to register with.</Text>
                 <Input type="email" placeholder="Enter email address" />
-                <Button color="green" size="xl">
+                <Button color="green" size="xl" width="full">
                     Get Instructions
                 </Button>
                 <ReturnText
-                    onClick={() => {
+                    onClick={(e) => {
+                        e.preventDefault();
                         navigate("/login");
                     }}
                 >

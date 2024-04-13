@@ -46,7 +46,8 @@ const SignupForm = () => {
                 <TextWrapper>
                     <QuestionText>Have an account?</QuestionText>
                     <SpanText
-                        onClick={() => {
+                        onClick={(e) => {
+                            e.preventDefault();
                             navigate("/login");
                         }}
                     >
@@ -69,7 +70,7 @@ const SignupForm = () => {
                         </RememberMeText>
                     </CheckBoxWrapper>
                 </RememberMeWrapper>
-                <Button size="xl" color="orange">
+                <Button size="xl" color="orange" width="full">
                     Create account
                 </Button>
                 <GoogleButton text="Sign up with google" />

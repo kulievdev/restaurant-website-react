@@ -73,6 +73,8 @@ const ReservationContent = styled.div`
     }
 `;
 
+const Form = styled.form``;
+
 const InputsWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -124,46 +126,53 @@ const Reservation = () => {
                     <SectionHeading $marginBottom="5">
                         Book a <OrangeSpanText>table</OrangeSpanText>
                     </SectionHeading>
-                    <InputsWrapper>
-                        <Input
-                            type={dateInputType}
-                            placeholder="Date"
-                            handleOnFocus={handleDateFocus}
-                            handleOnBlur={handleDateBlur}
-                        />
-                        <Input
-                            type={timeInputType}
-                            placeholder="Time"
-                            handleOnFocus={handleTimeFocus}
-                            handleOnBlur={handleTimeBlur}
-                        />
-                        <Input
-                            type={selectInputType}
-                            placeholder="Party size"
-                            handleOnFocus={handleSelectFocus}
-                            handleOnBlur={handleSelectBlur}
+                    <Form>
+                        <InputsWrapper>
+                            <Input
+                                type={dateInputType}
+                                placeholder="Date"
+                                handleOnFocus={handleDateFocus}
+                                handleOnBlur={handleDateBlur}
+                            />
+                            <Input
+                                type={timeInputType}
+                                placeholder="Time"
+                                handleOnFocus={handleTimeFocus}
+                                handleOnBlur={handleTimeBlur}
+                            />
+                            <Input
+                                type={selectInputType}
+                                placeholder="Party size"
+                                handleOnFocus={handleSelectFocus}
+                                handleOnBlur={handleSelectBlur}
+                            >
+                                <Option>Choose a number</Option>
+                                <Option>1 person</Option>
+                                <Option>2 People</Option>
+                                <Option>3 People</Option>
+                                <Option>4 People </Option>
+                                <Option>5 People</Option>
+                                <Option>6 People</Option>
+                                <Option>7 People</Option>
+                                <Option>8 People</Option>
+                                <Option>9 People</Option>
+                                <Option>10 People</Option>
+                                <Option>11 People</Option>
+                                <Option>12 People</Option>
+                                <Option>13 People</Option>
+                                <Option>14 People</Option>
+                                <Option>15 People</Option>
+                            </Input>
+                        </InputsWrapper>
+                        <Button
+                            onClick={(e) => e.preventDefault()}
+                            color="orange"
+                            size="xl"
+                            width="full"
                         >
-                            <Option>Choose a number</Option>
-                            <Option>1 person</Option>
-                            <Option>2 People</Option>
-                            <Option>3 People</Option>
-                            <Option>4 People </Option>
-                            <Option>5 People</Option>
-                            <Option>6 People</Option>
-                            <Option>7 People</Option>
-                            <Option>8 People</Option>
-                            <Option>9 People</Option>
-                            <Option>10 People</Option>
-                            <Option>11 People</Option>
-                            <Option>12 People</Option>
-                            <Option>13 People</Option>
-                            <Option>14 People</Option>
-                            <Option>15 People</Option>
-                        </Input>
-                    </InputsWrapper>
-                    <Button color="orange" size="xl">
-                        Book Now
-                    </Button>
+                            Book Now
+                        </Button>
+                    </Form>
                 </ReservationContent>
             </ReservationSectionContainer>
         </ReservationSection>

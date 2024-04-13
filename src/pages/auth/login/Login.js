@@ -103,7 +103,12 @@ const LoginForm = () => {
                     <RememberMeText>Stay signed in for a week</RememberMeText>
                 </CheckBoxWrapper>
             </RememberMeWrapper>
-            <Button size="xl" color="orange">
+            <Button
+                onClick={(e) => e.preventDefault()}
+                size="xl"
+                color="orange"
+                width="full"
+            >
                 Continue
             </Button>
             <GoogleButton text="Login with google" />

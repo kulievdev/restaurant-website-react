@@ -1,6 +1,6 @@
 import "./Button.css";
 
-const Button = ({ size, color, children, onClick }) => {
+const Button = ({ size, color, width, children, onClick }) => {
     const classNames = {
         sm: "btn-sm",
         md: "btn-md",
@@ -10,13 +10,14 @@ const Button = ({ size, color, children, onClick }) => {
         green: "btn-green",
         black: "btn-black",
         white: "btn-white",
-        gray: "btn-gray"
+        gray: "btn-gray",
+        full: "btn-full"
     };
 
     return (
         <button
             onClick={onClick}
-            className={`btn ${classNames[size]} ${classNames[color]}`}
+            className={`btn ${classNames[size]} ${classNames[color]} ${classNames[width]}`}
         >
             {children}
         </button>
