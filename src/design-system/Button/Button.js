@@ -11,7 +11,8 @@ const Button = ({ size, color, width, children, onClick }) => {
         black: "btn-black",
         white: "btn-white",
         gray: "btn-gray",
-        full: "btn-full"
+        full: "btn-full",
+        half: "btn-half"
     };
 
     return (

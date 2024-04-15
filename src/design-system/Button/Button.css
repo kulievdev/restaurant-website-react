@@ -39,6 +39,10 @@
     width: 100%;
 }
 
+.btn-half {
+    width: 50%;
+}
+
 @media (min-width: 1920px) {
     .btn-xl {
         padding: 2rem 6rem;
