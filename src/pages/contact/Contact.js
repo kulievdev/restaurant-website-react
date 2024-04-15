@@ -6,6 +6,7 @@ import {
 } from "../components/layout";
 import Input from "../../design-system/Input/Input";
 import Button from "../../design-system/Button/Button";
+import useWindowWidth from "../../custom-hooks/useWindowWidth";
 
 const ContactSection = styled.section``;
 
@@ -73,6 +74,8 @@ const TextArea = styled.textarea`
 `;
 
 const Contact = () => {
+    const windowWidth = useWindowWidth();
+
     return (
         <ContactSection>
             <ContactSectionContainer>
@@ -95,7 +98,7 @@ const Contact = () => {
                         onClick={(e) => e.preventDefault()}
                         color="orange"
                         size="xl"
-                        width="half"
+                        width={windowWidth < 650 ? "full" : "half"}
                     >
                         Submit
                     </Button>
