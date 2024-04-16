@@ -5,7 +5,7 @@ import PlusButton from "../../../design-system/PlusButton/PlusButton";
 import useWindowWidth from "../../../custom-hooks/useWindowWidth";
 
 const MealCard = styled.div`
-    max-width: 70rem;
+    max-width: 100rem;
 
     display: flex;
     flex-direction: column;
@@ -28,6 +28,7 @@ const MealBody = styled.div``;
 const MealImage = styled.img`
     width: 100%;
     height: auto;
+    border-radius: 6rem;
     margin-bottom: 2.4rem;
 `;
 

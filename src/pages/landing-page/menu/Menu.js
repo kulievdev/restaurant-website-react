@@ -1,10 +1,9 @@
-import { primaryMeals, secondaryMeals } from "./data";
 import Button from "../../../design-system/Button/Button";
-import Meal from "./Meal";
 import styled from "styled-components";
 import { SectionContainer, SectionHeading } from "../../components/layout";
 import useWindowWidth from "../../../custom-hooks/useWindowWidth";
 import { useState } from "react";
+import { Desserts, Dinner, Drinks, General, Lunch, Pizzas } from "./Categories";
 
 const MenuSection = styled.section`
     text-align: center;
@@ -37,28 +36,24 @@ const MenuCategories = styled.div`
     }
 `;
 
-const MenuMealsWrapper = styled.div`
+export const MenuMealsWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 4rem;
-
-    margin-bottom: 10rem;
 `;
 
 const currentCategories = [
-    "General",
-    "Dinner",
-    "Lunch",
-    "Pizza",
-    "Supper",
-    "Dessert",
-    "Drink"
+    { text: "General", link: "" },
+    { text: "Lunch", link: "lunch" },
+    { text: "Dinner", link: "dinner" },
+    { text: "Pizzas", link: "pizzas" },
+    { text: "Desserts", link: "desserts" },
+    { text: "Drinks", link: "drinks" }
 ];
 
 const Menu = () => {
     const windowWidth = useWindowWidth();
-    const [seeMore, setSeeMore] = useState(false);
+    const [active, setActive] = useState("General");
 
     return (
         <MenuSection id="menu-section">
@@ -71,54 +66,20 @@ const Menu = () => {
                         <Button
                             key={idx}
                             size={windowWidth > 1620 ? "lg" : "md"}
-                            color={category === "General" ? "black" : "gray"}
+                            color={category.text === active ? "black" : "gray"}
+                            width="full"
+                            onClick={() => setActive(category.text)}
                         >
-                            {category}
+                            {category.text}
                         </Button>
                     ))}
                 </MenuCategories>
-                <MenuMealsWrapper>
-                    {primaryMeals.map((meal, idx) => {
-                        return (
-                            <Meal
-                                key={idx}
-                                name={meal.name}
-                                price={meal.price}
-                                description={meal.text}
-                                rating={meal.rating}
-                                img={meal.img}
-                            />
-                        );
-                    })}
-                    {seeMore &&
-                        secondaryMeals.map((meal, idx) => {
-                            return (
-                                <Meal
-                                    key={idx}
-                                    name={meal.name}
-                                    price={meal.price}
-                                    description={meal.text}
-                                    rating={meal.rating}
-                                    img={meal.img}
-                                />
-                            );
-                        })}
-                </MenuMealsWrapper>
-                <Button
-                    size={
-                        windowWidth > 1620
-                            ? "lg"
-                            : windowWidth > 400
-                            ? "md"
-                            : "sm"
-                    }
-                    color="orange"
-                    onClick={() => {
-                        setSeeMore(!seeMore);
-                    }}
-                >
-                    {seeMore ? "See less" : "See more"}
-                </Button>
+                {active === "General" && <General />}
+                {active === "Dinner" && <Dinner />}
+                {active === "Lunch" && <Lunch />}
+                {active === "Pizzas" && <Pizzas />}
+                {active === "Desserts" && <Desserts />}
+                {active === "Drinks" && <Drinks />}
             </MenuSectionContainer>
         </MenuSection>
     );
