@@ -6,8 +6,9 @@ import {
 } from "../../components/layout";
 import Chef from "./Chef";
 import styled from "styled-components";
-import currentChefs from "./currentChefs";
+import { currentChefs, otherChefs } from "./currentChefs";
 import useWindowWidth from "../../../custom-hooks/useWindowWidth";
+import { useState } from "react";
 
 const ChefsSection = styled.section`
     text-align: center;
@@ -20,15 +21,16 @@ const ChefsWrapper = styled.div`
     gap: 8rem;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
 
     @media (min-width: 1000px) {
-        gap: 0;
+        gap: 4rem;
     }
 `;
 
 const Chefs = () => {
     const windowWidth = useWindowWidth();
+    const [seeMore, setSeeMore] = useState(false);
 
     return (
         <ChefsSection id="chefs-section">
@@ -49,7 +51,21 @@ const Chefs = () => {
                             />
                         );
                     })}
+                    {seeMore &&
+                        otherChefs.map((chef, idx) => {
+                            return (
+                                <Chef
+                                    key={idx}
+                                    img={chef.img}
+                                    alt={chef.name}
+                                    name={chef.name}
+                                    title={chef.title}
+                                    backgroundColor={chef.backgroundColor}
+                                />
+                            );
+                        })}
                 </ChefsWrapper>
+
                 <Button
                     size={
                         windowWidth > 1620
@@ -59,8 +75,11 @@ const Chefs = () => {
                             : "sm"
                     }
                     color="orange"
+                    onClick={() => {
+                        setSeeMore(!seeMore);
+                    }}
                 >
-                    View All
+                    {seeMore ? "Hide" : "View all"}
                 </Button>
             </ChefsSectionContainer>
         </ChefsSection>
