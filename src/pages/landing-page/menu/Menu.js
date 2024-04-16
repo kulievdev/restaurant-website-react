@@ -1,9 +1,10 @@
-import meals from "./data";
+import { primaryMeals, secondaryMeals } from "./data";
 import Button from "../../../design-system/Button/Button";
 import Meal from "./Meal";
 import styled from "styled-components";
 import { SectionContainer, SectionHeading } from "../../components/layout";
 import useWindowWidth from "../../../custom-hooks/useWindowWidth";
+import { useState } from "react";
 
 const MenuSection = styled.section`
     text-align: center;
@@ -41,12 +42,15 @@ const MenuMealsWrapper = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 4rem;
+
+    margin-bottom: 10rem;
 `;
 
 const currentCategories = [
-    "All Catagories",
+    "General",
     "Dinner",
     "Lunch",
+    "Pizza",
     "Supper",
     "Dessert",
     "Drink"
@@ -54,6 +58,7 @@ const currentCategories = [
 
 const Menu = () => {
     const windowWidth = useWindowWidth();
+    const [seeMore, setSeeMore] = useState(false);
 
     return (
         <MenuSection id="menu-section">
@@ -66,16 +71,14 @@ const Menu = () => {
                         <Button
                             key={idx}
                             size={windowWidth > 1620 ? "lg" : "md"}
-                            color={
-                                category === "All Catagories" ? "black" : "gray"
-                            }
+                            color={category === "General" ? "black" : "gray"}
                         >
                             {category}
                         </Button>
                     ))}
                 </MenuCategories>
                 <MenuMealsWrapper>
-                    {meals.map((meal, idx) => {
+                    {primaryMeals.map((meal, idx) => {
                         return (
                             <Meal
                                 key={idx}
@@ -87,7 +90,35 @@ const Menu = () => {
                             />
                         );
                     })}
+                    {seeMore &&
+                        secondaryMeals.map((meal, idx) => {
+                            return (
+                                <Meal
+                                    key={idx}
+                                    name={meal.name}
+                                    price={meal.price}
+                                    description={meal.text}
+                                    rating={meal.rating}
+                                    img={meal.img}
+                                />
+                            );
+                        })}
                 </MenuMealsWrapper>
+                <Button
+                    size={
+                        windowWidth > 1620
+                            ? "lg"
+                            : windowWidth > 400
+                            ? "md"
+                            : "sm"
+                    }
+                    color="orange"
+                    onClick={() => {
+                        setSeeMore(!seeMore);
+                    }}
+                >
+                    {seeMore ? "See less" : "See more"}
+                </Button>
             </MenuSectionContainer>
         </MenuSection>
     );

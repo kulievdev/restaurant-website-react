@@ -16,6 +16,9 @@ const links = [
     { text: "Reservation", link: "reservation" },
     { text: "Contact Us", link: "contact-us" }
 ];
+const NavSection = styled.section`
+    background-image: "../../";
+`;
 
 const Header = styled(SectionContainer)`
     display: flex;
@@ -78,41 +81,43 @@ const TopNavigation = () => {
     const windowWidth = useWindowWidth();
 
     return (
-        <Header as="header">
-            <Logo type="white" />
-            <Navigation>
-                <UnorderedList>
-                    {links.map((link, idx) => (
-                        <List key={idx}>
-                            <Link
-                                to={link.link}
-                                className={({ isActive }) => {
-                                    return isActive ? "active" : null;
-                                }}
-                                onClick={toggleHamburger}
-                            >
-                                {link.text}
-                            </Link>
-                        </List>
-                    ))}
-                </UnorderedList>
-            </Navigation>
-            <NavigationActions>
-                <Cart />
-                {windowWidth < 1350 ? (
-                    <MobileNavCta />
-                ) : (
-                    <Button
-                        onClick={handleOptionsOnClick}
-                        size="md"
-                        color="green"
-                    >
-                        Options
-                    </Button>
-                )}
-                {openOptions && <Dropdown />}
-            </NavigationActions>
-        </Header>
+        <NavSection>
+            <Header as="header">
+                <Logo type="white" />
+                <Navigation>
+                    <UnorderedList>
+                        {links.map((link, idx) => (
+                            <List key={idx}>
+                                <Link
+                                    to={link.link}
+                                    className={({ isActive }) => {
+                                        return isActive ? "active" : null;
+                                    }}
+                                    onClick={toggleHamburger}
+                                >
+                                    {link.text}
+                                </Link>
+                            </List>
+                        ))}
+                    </UnorderedList>
+                </Navigation>
+                <NavigationActions>
+                    <Cart />
+                    {windowWidth < 1350 ? (
+                        <MobileNavCta />
+                    ) : (
+                        <Button
+                            onClick={handleOptionsOnClick}
+                            size="md"
+                            color="green"
+                        >
+                            Options
+                        </Button>
+                    )}
+                    {openOptions && <Dropdown />}
+                </NavigationActions>
+            </Header>
+        </NavSection>
     );
 };
 

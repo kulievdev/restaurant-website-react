@@ -21,7 +21,7 @@ import meatMeat from "../../../assets/menu-meatMeat.png";
 import meatzza from "../../../assets/menu-meatzza.png";
 import tunaDelight from "../../../assets/menu-tunaDelight.png";
 
-const meals = [
+const primaryMeals = [
     {
         name: "Spaghetti",
         img: spaghettiImage,
@@ -68,12 +68,14 @@ const meals = [
         text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
         rating: [1, 1, 1, 0, 0],
         price: "$6.99"
-    },
+    }
+];
 
+const secondaryMeals = [
     {
         name: "Linguine",
         img: linguineImage,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Experience a fusion of Italian flavors in our Linguine, where al dente pasta meets aromatic spices and innovative combinations like chili crab or laksa-infused sauces, redefining traditional pasta with every bite.",
         rating: [1, 1, 1, 1, 0],
         price: "$9.99"
     },
@@ -81,7 +83,7 @@ const meals = [
     {
         name: "Capellini",
         img: capelliniImage,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Embark on a culinary adventure with our Capellini, where delicate strands of pasta are transformed by inventive combinations like chili crab, laksa, or salted egg, offering a delightful twist on traditional Italian pasta dishes.",
         rating: [1, 1, 1, 1, 0],
         price: "$13.99"
     },
@@ -89,7 +91,7 @@ const meals = [
     {
         name: "Fettuccine",
         img: fettuccineImage,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Discover a symphony of flavors in our Fettuccine, where velvety ribbons of pasta embrace inventive pairings like chili crab, laksa, or salted egg, reimagining classic Italian fare with a tantalizing twist.",
         rating: [1, 1, 1, 1, 1],
         price: "$7.99"
     },
@@ -97,7 +99,7 @@ const meals = [
     {
         name: "Bucatini",
         img: bucatiniImage,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Embark on a flavorful journey with our Bucatini, where hollow strands of pasta intertwine with inventive blends like chili crab, laksa, or salted egg, infusing traditional Italian dishes with a burst of innovative flavors.",
         rating: [1, 1, 1, 1, 1],
         price: "$11.99"
     },
@@ -105,7 +107,7 @@ const meals = [
     {
         name: "Tortellini",
         img: tortelliniImage,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Delight in a culinary adventure with our Tortellini, where each delicate parcel of pasta is filled with inventive combinations like chili crab, laksa, or salted egg, offering a tantalizing twist on traditional Italian flavors.",
         rating: [1, 1, 1, 1, 0],
         price: "$7.99"
     },
@@ -113,7 +115,7 @@ const meals = [
     {
         name: "Fusilli",
         img: fusilliImage,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Experience a burst of creativity with our Fusilli, as spiral-shaped pasta embraces inventive combinations like chili crab, laksa, or salted egg, crafting a delightful fusion of traditional Italian taste and innovative flavors.",
         rating: [1, 1, 1, 1, 1],
         price: "$8.99"
     },
@@ -121,7 +123,7 @@ const meals = [
     {
         name: "Farfalle",
         img: farfalleImage,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Embark on a culinary exploration with our Farfalle, where butterfly-shaped pasta meets inventive pairings like chili crab, laksa, or salted egg, presenting a delightful fusion of traditional Italian essence with innovative flavors.",
         rating: [1, 1, 1, 1, 1],
         price: "$12.99"
     },
@@ -129,7 +131,7 @@ const meals = [
     {
         name: "Super Supreme",
         img: superSupremeImage,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Indulge in the ultimate pizza experience with our Super Supreme, boasting a tantalizing fusion of flavors including savory Italian meats, robust marinara sauce, fresh vegetables, and a hint of aromatic spices, delivering a delightful twist on the classic pizza.",
         rating: [1, 1, 1, 1, 0],
         price: "$10.99"
     },
@@ -137,7 +139,7 @@ const meals = [
     {
         name: "Veggie Garden",
         img: veggieGarden,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Savor the garden-fresh goodness of our Veggie Garden Pizza, featuring a harmonious medley of vibrant vegetables atop a crispy crust, each bite bursting with the flavors of sun-ripened tomatoes, crisp bell peppers, earthy mushrooms, and more, offering a delightful ode to nature's bounty.",
         rating: [1, 1, 1, 0, 0],
         price: "$11.99"
     },
@@ -145,7 +147,7 @@ const meals = [
     {
         name: "Double Beef Burger",
         img: doubleBeef,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Experience the ultimate meat lover's delight with our Double Beef Burger Pizza, where juicy beef patties mingle with savory bacon, melted cheese, tangy pickles, and a drizzle of special sauce atop a golden crust, crafting a flavor-packed homage to the classic American burger.",
         rating: [1, 1, 1, 1, 1],
         price: "$16.99"
     },
@@ -153,7 +155,7 @@ const meals = [
     {
         name: "Meat Lovers",
         img: meatLovers,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Indulge in a carnivorous feast with our Meat Lover's Pizza, featuring a symphony of savory flavors including hearty pepperoni, sizzling sausage, succulent ham, and crispy bacon atop a bed of melted cheese and tangy tomato sauce, offering a mouthwatering celebration of all things meaty.",
         rating: [1, 1, 1, 1, 0],
         price: "$12.99"
     },
@@ -161,7 +163,7 @@ const meals = [
     {
         name: "Extravaganzza",
         img: extravaganzza,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Dive into a culinary spectacle with our Extravaganza Pizza, where every slice is a symphony of flavors, boasting a lavish array of premium toppings such as savory pepperoni, spicy sausage, juicy ham, fresh bell peppers, onions, mushrooms, and olives, all nestled atop a golden crust, delivering an extravagant feast for the senses.",
         rating: [1, 1, 1, 1, 1],
         price: "$16.99"
     },
@@ -169,7 +171,7 @@ const meals = [
     {
         name: "Meat & Meat",
         img: meatMeat,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Experience meaty perfection with our Meat & Meat Pizza, where layers of succulent pepperoni, savory sausage, tender ham, and crispy bacon come together atop a cheesy canvas, offering a flavor-packed celebration of carnivorous delight.",
         rating: [1, 1, 1, 1, 0],
         price: "$11.50"
     },
@@ -177,7 +179,7 @@ const meals = [
     {
         name: "Meatzza",
         img: meatzza,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Enter a realm of carnivorous bliss with our Meatzza Pizza, where a hearty combination of pepperoni, sausage, ham, and bacon, generously piled atop a savory crust, creates a meat lover's dream, delivering a flavor explosion with every bite.",
         rating: [1, 1, 1, 1, 1],
         price: "$13.99"
     },
@@ -185,10 +187,10 @@ const meals = [
     {
         name: "Tuna Delight",
         img: tunaDelight,
-        text: "A delightful fusion of Italian pizza and Singaporean flavors, featuring a thin crust topped with unique combinations such as chili crab, laksa, or salted egg, offering a deliciously inventive twist on traditional pizza.",
+        text: "Embark on a culinary voyage with our Tuna Delight Pizza, where tender chunks of premium tuna meet savory olives, tangy red onions, and a sprinkle of capers, all atop a golden crust and finished with a drizzle of zesty lemon, offering a delightful fusion of flavors reminiscent of coastal indulgence.",
         rating: [1, 1, 1, 1, 0],
         price: "$9.75"
     }
 ];
 
-export default meals;
+export { primaryMeals, secondaryMeals };
