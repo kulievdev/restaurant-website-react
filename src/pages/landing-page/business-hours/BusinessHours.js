@@ -6,6 +6,7 @@ import {
     SectionHeading
 } from "../../components/layout";
 import useWindowWidth from "../../../custom-hooks/useWindowWidth";
+import { useNavigate } from "react-router-dom";
 
 const BusinessHoursSection = styled.section``;
 
@@ -89,6 +90,7 @@ const ButtonActionsWrapper = styled.div`
 
 const BusinessHours = () => {
     const windowWidth = useWindowWidth();
+    const navigate = useNavigate();
 
     return (
         <BusinessHoursSection id="hours-section">
@@ -123,6 +125,7 @@ const BusinessHours = () => {
                                     : "sm"
                             }
                             color="white"
+                            onClick={() => navigate("/reservation")}
                         >
                             Reservation
                         </Button>

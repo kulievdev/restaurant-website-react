@@ -8,6 +8,7 @@ import {
     OrangeSpanText
 } from "../../components/layout";
 import useWindowWidth from "../../../custom-hooks/useWindowWidth";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = styled.section``;
 
@@ -71,6 +72,7 @@ const HeroImage = styled.img`
 
 const Hero = () => {
     const windowWidth = useWindowWidth();
+    const navigate = useNavigate();
 
     return (
         <HeroSection>
@@ -111,6 +113,7 @@ const Hero = () => {
                                     : "sm"
                             }
                             color="green"
+                            onClick={() => navigate("reservation")}
                         >
                             Reservation
                         </Button>

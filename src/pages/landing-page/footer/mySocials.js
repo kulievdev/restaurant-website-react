@@ -5,15 +5,18 @@ import facebookImg from "../../../assets/facebook.svg";
 const mySocials = [
     {
         imgSrc: twitterImg,
-        name: "Twitter"
+        name: "Twitter",
+        link: "https://twitter.com/"
     },
     {
         imgSrc: instagramImg,
-        name: "Instagram"
+        name: "Instagram",
+        link: "https://www.instagram.com/"
     },
     {
         imgSrc: facebookImg,
-        name: "Facebook"
+        name: "Facebook",
+        link: "https://www.facebook.com/"
     }
 ];
 

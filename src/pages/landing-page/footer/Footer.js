@@ -3,6 +3,7 @@ import mySocials from "./mySocials";
 import SocialMedia from "./SocialMedia";
 import { SectionContainer } from "../../components/layout";
 import Logo from "../../../design-system/Logo/Logo";
+import { NavLink } from "react-router-dom";
 
 const FooterSection = styled.footer`
     background-color: #311f09;
@@ -82,7 +83,18 @@ const NavHeading = styled.h4`
     }
 `;
 
-const Link = styled.a`
+const ALink = styled.a`
+    color: #e3e2e0;
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+
+    @media (min-width: 1620px) {
+        font-size: 2rem;
+        line-height: 4rem;
+    }
+`;
+
+const Link = styled(NavLink)`
     color: #e3e2e0;
     font-size: 1.6rem;
     line-height: 3.5rem;
@@ -115,6 +127,7 @@ const Footer = () => {
                                     <SocialMedia
                                         key={idx}
                                         imgSrc={social.imgSrc}
+                                        link={social.link}
                                         alt={social.name}
                                     />
                                 );
@@ -124,39 +137,39 @@ const Footer = () => {
                     <NavigationWrapper>
                         <Navigation>
                             <NavHeading>Page</NavHeading>
-                            <Link href="">Home</Link>
-                            <Link href="">Menu</Link>
-                            <Link href="">Order Online</Link>
-                            <Link href="">Catering</Link>
-                            <Link href="">Reservation</Link>
+                            <Link to="/">Home</Link>
+                            <Link to="menu">Menu</Link>
+                            <Link>Order Online</Link>
+                            <Link>Catering</Link>
+                            <Link to="reservation">Reservation</Link>
                         </Navigation>
                         <Navigation>
                             <NavHeading className="footer__heading">
                                 Information
                             </NavHeading>
-                            <Link href="">About us</Link>
-                            <Link href="">Testimonial</Link>
-                            <Link href="">Event</Link>
+                            <Link to="about-us">About us</Link>
+                            <Link>Testimonial</Link>
+                            <Link>Event</Link>
                         </Navigation>
                         <Navigation className="footer__contact">
                             <NavHeading className="footer__heading">
                                 Get In Touch
                             </NavHeading>
-                            <Link
+                            <ALink
                                 target="_blank"
                                 href="https://www.google.com/search?q=205+Allen+St%2C+New+York%2C+NY+10002%2C+USA&rlz=1C5CHFA_enUS964US964&oq=205+Allen+St%2C+New+York%2C+NY+10002%2C+USA&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg70gEHMzg5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
                             >
                                 205 Allen St, New York, NY 10002, USA
-                            </Link>
-                            <Link href="mailto:Luce Notte@gmail.com">
+                            </ALink>
+                            <ALink href="mailto:Luce Notte@gmail.com">
                                 Luce Notte@gmail.com
-                            </Link>
-                            <Link
+                            </ALink>
+                            <ALink
                                 href="tel:347-567-2828"
                                 className="footer__text"
                             >
                                 222-222-2222
-                            </Link>
+                            </ALink>
                         </Navigation>
                     </NavigationWrapper>
                 </FooterContent>

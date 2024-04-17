@@ -7,6 +7,7 @@ import {
     SectionHeading
 } from "../../components/layout";
 import useWindowWidth from "../../../custom-hooks/useWindowWidth";
+import { useNavigate } from "react-router-dom";
 
 const ReservationSection = styled.section`
     background-color: #fff4e766;
@@ -72,6 +73,7 @@ const ReservationContent = styled.div`
 
 const Reservation = () => {
     const windowWidth = useWindowWidth();
+    const navigate = useNavigate();
 
     return (
         <ReservationSection id="reservation-section">
@@ -105,6 +107,7 @@ const Reservation = () => {
                                 : "sm"
                         }
                         color="orange"
+                        onClick={() => navigate("/reservation")}
                     >
                         Reservation
                     </Button>

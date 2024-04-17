@@ -8,6 +8,7 @@ import {
     SectionHeading
 } from "../../components/layout";
 import useWindowWidth from "../../../custom-hooks/useWindowWidth";
+import { useNavigate } from "react-router-dom";
 
 const WelcomeSection = styled.section`
     background-color: #3fc66e1a;
@@ -57,6 +58,7 @@ const WelcomeContent = styled.div`
 
 const Welcome = () => {
     const windowWidth = useWindowWidth();
+    const navigate = useNavigate();
 
     return (
         <WelcomeSection id="welcome-section">
@@ -92,6 +94,7 @@ const Welcome = () => {
                                 : "sm"
                         }
                         color="orange"
+                        onClick={() => navigate("menu")}
                     >
                         See Our Menu
                     </Button>
