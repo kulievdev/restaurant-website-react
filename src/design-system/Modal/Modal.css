@@ -5,6 +5,7 @@
     top: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.4);
+    padding: 0 3rem;
     z-index: 1;
     overflow: auto;
 }
@@ -16,7 +17,17 @@
     transition: all 0.5s;
     height: max-content;
     max-width: 140rem;
-    margin: 6rem auto;
-    padding: 6rem;
+    margin: 4rem auto;
+    padding: 6rem 3rem;
     border-radius: 1.6rem;
+}
+
+@media (min-width: 650px) {
+    .modal {
+        padding: 6rem;
+        margin: 6rem auto;
+    }
+    .modal-overlay {
+        padding: 0 6rem;
+    }
 }

@@ -32,12 +32,36 @@ const CtaWrapper = styled.div`
 
 const Title = styled(SectionHeading)`
     text-align: center;
+
+    @media (max-width: 610px) {
+        font-size: 4rem;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 3rem;
+    }
 `;
 
 const DetailsWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: rgba(250, 250, 249, 1);
     margin-bottom: 5rem;
+    border-radius: 2rem;
+    padding: 2rem;
+
+    @media (min-width: 645px) {
+        padding: 3rem;
+    }
+
+    @media (min-width: 1050px) {
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: transparent;
+        padding: 0;
+        gap: 0;
+    }
 `;
 
 const Detail = styled.div`
@@ -48,12 +72,20 @@ const Detail = styled.div`
 const Icon = styled.img``;
 
 const Note = styled.div`
-    padding: 5rem 13rem;
+    padding: 2.5rem 2rem;
     background-color: #c6f7ff;
     border: none;
     border-radius: 2rem;
     text-align: center;
     margin-bottom: 6rem;
+
+    @media (min-width: 645px) {
+        padding: 5rem 8rem;
+    }
+
+    @media (min-width: 850px) {
+        padding: 5rem 13rem;
+    }
 `;
 
 const Form = styled.form``;
@@ -68,17 +100,26 @@ const Header = styled.h3`
 
 const InputsWrapper = styled.div`
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 4rem;
     margin-bottom: 7rem;
+
+    @media (min-width: 700px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 `;
 
 const Option = styled.option``;
 
 const BottomPart = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-direction: column-reverse;
     gap: 4rem;
+
+    @media (min-width: 950px) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 `;
 
 const TermsWrapper = styled.div`
@@ -87,11 +128,19 @@ const TermsWrapper = styled.div`
 `;
 
 const TermsTextWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
     margin-bottom: 8rem;
+    gap: 1.5rem;
 `;
 
 const CheckBoxWrapperReservation = styled(CheckBoxWrapper)`
+    align-items: center;
     margin-bottom: 0;
+`;
+
+const TermTextReservation = styled(RememberMeText)`
+    line-height: normal;
 `;
 
 const InfoWrapper = styled.div`
@@ -115,7 +164,7 @@ const ReservationConfirmation = ({ closeModal }) => {
 
     return (
         <ConfirmationWrapper>
-            <Navbar>
+            {/* <Navbar>
                 <Logo type="white" />
                 <CtaWrapper>
                     <Button
@@ -137,7 +186,7 @@ const ReservationConfirmation = ({ closeModal }) => {
                         Sign up
                     </Button>
                 </CtaWrapper>
-            </Navbar>
+            </Navbar> */}
             <Title $marginBottom="4.5">Reservation</Title>
             <DetailsWrapper>
                 <Detail>
@@ -152,9 +201,7 @@ const ReservationConfirmation = ({ closeModal }) => {
                 </Detail>
                 <Detail>
                     <Icon src={personIcon} alt="Person icon" />
-                    <SectionDescription>
-                        2 people (Standard seating)
-                    </SectionDescription>
+                    <SectionDescription>2 people</SectionDescription>
                 </Detail>
             </DetailsWrapper>
             <Note>
@@ -174,7 +221,7 @@ const ReservationConfirmation = ({ closeModal }) => {
                         type="select"
                         placeholder="Select an occasion (optional)"
                     >
-                        <Option>Select an occasion (optional)</Option>
+                        <Option>Select an occasion</Option>
                         <Option>Regular Dining</Option>
                         <Option>Birthday Party</Option>
                         <Option>Anniversary Celebration</Option>
@@ -190,16 +237,15 @@ const ReservationConfirmation = ({ closeModal }) => {
                         <TermsTextWrapper>
                             <CheckBoxWrapperReservation>
                                 <CheckBoxInput type="checkbox" />
-                                <RememberMeText>
+                                <TermTextReservation>
                                     I agree with what is stated above.
-                                </RememberMeText>
+                                </TermTextReservation>
                             </CheckBoxWrapperReservation>
                             <CheckBoxWrapperReservation>
                                 <CheckBoxInput type="checkbox" />
-                                <RememberMeText>
-                                    Sign me up to receive dining offers and news
-                                    from this restaurant by email.
-                                </RememberMeText>
+                                <TermTextReservation>
+                                    Sign me up to receive dining offers.
+                                </TermTextReservation>
                             </CheckBoxWrapperReservation>
                         </TermsTextWrapper>
                         <Button
