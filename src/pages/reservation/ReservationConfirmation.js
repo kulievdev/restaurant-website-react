@@ -16,6 +16,9 @@ import {
     RememberMeText
 } from "../auth/components/reusables";
 import { useNavigate } from "react-router-dom";
+import useWindowWidth from "../../custom-hooks/useWindowWidth";
+import MobileNavCta from "../../design-system/MobileNavCta/MobileNavCta";
+import Cart from "../../design-system/Cart/Cart";
 
 const ConfirmationWrapper = styled.div``;
 
@@ -27,7 +30,8 @@ const Navbar = styled.div`
 
 const CtaWrapper = styled.div`
     display: flex;
-    gap: 4rem;
+    align-items: center;
+    gap: 2rem;
 `;
 
 const Title = styled(SectionHeading)`
@@ -161,32 +165,42 @@ const Link = styled.a`
 
 const ReservationConfirmation = ({ closeModal }) => {
     const navigate = useNavigate();
+    const windowWidth = useWindowWidth();
 
     return (
         <ConfirmationWrapper>
-            {/* <Navbar>
+            <Navbar>
                 <Logo type="white" />
                 <CtaWrapper>
-                    <Button
-                        size="md"
-                        color="orange"
-                        onClick={() => {
-                            navigate("/login");
-                        }}
-                    >
-                        Sign in
-                    </Button>
-                    <Button
-                        size="md"
-                        color="green"
-                        onClick={() => {
-                            navigate("/sign-up");
-                        }}
-                    >
-                        Sign up
-                    </Button>
+                    {windowWidth < 850 ? (
+                        <>
+                            <Cart />
+                            <MobileNavCta />
+                        </>
+                    ) : (
+                        <>
+                            <Button
+                                size="md"
+                                color="orange"
+                                onClick={() => {
+                                    navigate("/login");
+                                }}
+                            >
+                                Sign in
+                            </Button>
+                            <Button
+                                size="md"
+                                color="green"
+                                onClick={() => {
+                                    navigate("/sign-up");
+                                }}
+                            >
+                                Sign up
+                            </Button>
+                        </>
+                    )}
                 </CtaWrapper>
-            </Navbar> */}
+            </Navbar>
             <Title $marginBottom="4.5">Reservation</Title>
             <DetailsWrapper>
                 <Detail>
