@@ -9,7 +9,6 @@ import Menu from "../pages/landing-page/menu/Menu";
 import AboutUs from "../pages/about-us/AboutUs";
 import Reservation from "../pages/reservation/Reservation";
 import Contact from "../pages/contact/Contact";
-import General from "../pages/landing-page/menu/Categories";
 
 const Router = () => {
     return (
