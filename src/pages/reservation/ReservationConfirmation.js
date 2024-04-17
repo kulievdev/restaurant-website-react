@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 import useWindowWidth from "../../custom-hooks/useWindowWidth";
 import MobileNavCta from "../../design-system/MobileNavCta/MobileNavCta";
 import Cart from "../../design-system/Cart/Cart";
+import { useState } from "react";
 
 const ConfirmationWrapper = styled.div``;
 
@@ -166,7 +167,15 @@ const Link = styled.a`
 const ReservationConfirmation = ({ closeModal }) => {
     const navigate = useNavigate();
     const windowWidth = useWindowWidth();
+    const [selectInputType, setSelectInputType] = useState("text");
 
+    const handleSelectFocus = () => {
+        setSelectInputType("select");
+    };
+
+    const handleSelectBlur = () => {
+        setSelectInputType("text");
+    };
     return (
         <ConfirmationWrapper>
             <Navbar>
@@ -232,10 +241,11 @@ const ReservationConfirmation = ({ closeModal }) => {
                     <Input type="tel" placeholder="Phone Number" />
                     <Input type="email" placeholder="Email Address" />
                     <Input
-                        type="select"
-                        placeholder="Select an occasion (optional)"
+                        type={selectInputType}
+                        placeholder="Select an occasion"
+                        handleOnFocus={handleSelectFocus}
+                        handleOnBlur={handleSelectBlur}
                     >
-                        <Option>Select an occasion</Option>
                         <Option>Regular Dining</Option>
                         <Option>Birthday Party</Option>
                         <Option>Anniversary Celebration</Option>
