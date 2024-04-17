@@ -142,9 +142,11 @@ const Footer = () => {
                             <NavHeading className="footer__heading">
                                 Get In Touch
                             </NavHeading>
-                            <Link>
-                                3247 Johnson Ave, <br />
-                                New York, NY 10063
+                            <Link
+                                target="_blank"
+                                href="https://www.google.com/search?q=205+Allen+St%2C+New+York%2C+NY+10002%2C+USA&rlz=1C5CHFA_enUS964US964&oq=205+Allen+St%2C+New+York%2C+NY+10002%2C+USA&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg70gEHMzg5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
+                            >
+                                205 Allen St, New York, NY 10002, USA
                             </Link>
                             <Link href="mailto:Luce Notte@gmail.com">
                                 Luce Notte@gmail.com
