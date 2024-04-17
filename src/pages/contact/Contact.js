@@ -73,6 +73,14 @@ const TextArea = styled.textarea`
     }
 `;
 
+const Map = styled.div``;
+
+const Iframe = styled.iframe`
+    width: 100%;
+    height: 80rem;
+    border: none;
+`;
+
 const Contact = () => {
     const windowWidth = useWindowWidth();
 
@@ -104,6 +112,14 @@ const Contact = () => {
                     </Button>
                 </Form>
             </ContactSectionContainer>
+            <Map>
+                <Iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.7850270214817!2d-73.99165022325835!3d40.72274867139201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598474c10bcf%3A0xd62d514f22a03f04!2s205%20Allen%20St%2C%20New%20York%2C%20NY%2010002!5e0!3m2!1sen!2sus!4v1713375430917!5m2!1sen!2sus"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></Iframe>
+            </Map>
         </ContactSection>
     );
 };
