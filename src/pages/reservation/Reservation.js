@@ -90,10 +90,15 @@ const Reservation = () => {
     const [dateInputType, setDateInputType] = useState("text");
     const [timeInputType, setTimeInputType] = useState("text");
     const [selectInputType, setSelectInputType] = useState("text");
-    const [confirmationOpen, setConfirmationOpen] = useState(false);
+    const [preConfirmationOpen, setPreConfirmationOpen] = useState(false);
+    const [postConfirmationOpen, setPostConfirmationOpen] = useState(false);
 
-    const closeModal = () => {
-        setConfirmationOpen(false);
+    const closePreConfirmation = () => {
+        setPreConfirmationOpen(false);
+    };
+
+    const closePostConfirmation = () => {
+        setPostConfirmationOpen(false);
     };
 
     const handleDateFocus = () => {
@@ -175,7 +180,7 @@ const Reservation = () => {
                             <Button
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    setConfirmationOpen(true);
+                                    setPreConfirmationOpen(true);
                                 }}
                                 color="orange"
                                 size="xl"
@@ -187,9 +192,24 @@ const Reservation = () => {
                     </ReservationContent>
                 </ReservationSectionContainer>
             </ReservationSection>
-            {confirmationOpen && (
-                <Modal show={confirmationOpen} onClose={closeModal}>
-                    <ReservationConfirmation closeModal={closeModal} />
+            {preConfirmationOpen && (
+                <Modal
+                    show={preConfirmationOpen}
+                    onClose={closePreConfirmation}
+                >
+                    <ReservationConfirmation
+                        closeModal={closePreConfirmation}
+                    />
+                </Modal>
+            )}
+            {postConfirmationOpen && (
+                <Modal
+                    show={postConfirmationOpen}
+                    onClose={closePostConfirmation}
+                >
+                    <ReservationConfirmation
+                        closeModal={closePostConfirmation}
+                    />
                 </Modal>
             )}
         </>
