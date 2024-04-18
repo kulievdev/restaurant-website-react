@@ -31,3 +31,17 @@
         padding: 0 6rem;
     }
 }
+
+.modal-cancel {
+    background-color: #fff;
+    cursor: pointer;
+    width: 8rem;
+    height: 8rem;
+    margin: 4rem auto;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}

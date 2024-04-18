@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./Modal.css";
+import cancelIcon from "../../assets/icon-cancel.svg";
 
 const Modal = ({ show, children, onClose }) => {
     const modalRef = useRef();
@@ -26,6 +27,9 @@ const Modal = ({ show, children, onClose }) => {
         <>
             {show ? (
                 <div className="modal-overlay">
+                    <button className="modal-cancel">
+                        <img src={cancelIcon} alt="Close Modal" />
+                    </button>
                     <div ref={modalRef} className="modal">
                         {children}
                     </div>
