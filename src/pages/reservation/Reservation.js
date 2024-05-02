@@ -92,6 +92,7 @@ const Reservation = () => {
     const [selectInputType, setSelectInputType] = useState("text");
     const [preConfirmationOpen, setPreConfirmationOpen] = useState(false);
     const [postConfirmationOpen, setPostConfirmationOpen] = useState(false);
+    const [cancelConfirmationOpen, setCancelConfirmationOpen] = useState(false);
 
     const closePreConfirmation = () => {
         setPreConfirmationOpen(false);
@@ -99,6 +100,10 @@ const Reservation = () => {
 
     const closePostConfirmation = () => {
         setPostConfirmationOpen(false);
+    };
+
+    const closeCancelConfirmation = () => {
+        setCancelConfirmationOpen(false);
     };
 
     const handleDateFocus = () => {
@@ -209,6 +214,16 @@ const Reservation = () => {
                 >
                     <ReservationConfirmation
                         closeModal={closePostConfirmation}
+                    />
+                </Modal>
+            )}
+            {cancelConfirmationOpen && (
+                <Modal
+                    show={cancelConfirmationOpen}
+                    onClose={cancelConfirmationOpen}
+                >
+                    <ReservationConfirmation
+                        closeModal={closeCancelConfirmation}
                     />
                 </Modal>
             )}

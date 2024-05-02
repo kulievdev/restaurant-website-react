@@ -1,16 +1,13 @@
 import styled from "styled-components";
 import { SectionDescription } from "../components/layout";
-import checkReservationIcon from "../../assets/icon-check-confirm.svg";
 import calendarReservationIcon from "../../assets/icon-calendar-confirm.svg";
 import confirmImage from "../../assets/confirm-image.png";
 import calendarIcon from "../../assets/calendar-icon.svg";
 import timeIcon from "../../assets/time-icon.svg";
 import personIcon from "../../assets/person-icon.svg";
-import modifyIcon from "../../assets/icon-modify.svg";
-import cancelIcon from "../../assets/icon-cancel.svg";
 
 const BannerWrapper = styled.div`
-    background-image: url(${require("../../assets/green-bg.png")});
+    background-image: url(${require("../../assets/orange-bg.png")});
     padding: 2rem 3rem;
 
     width: calc(100% + 6rem);
@@ -64,11 +61,12 @@ const Text = styled(SectionDescription)`
 const InfoWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    margin-bottom: 5rem;
 
     @media (min-width: 1250px) {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        gap: 8rem;
         align-items: center;
         max-width: none;
     }
@@ -113,50 +111,28 @@ const Detail = styled.div`
     gap: 2rem;
 `;
 
-const CtaWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 3rem;
-
-    @media (min-width: 1250px) {
-        flex-wrap: nowrap;
-        flex-direction: column;
-        margin-top: 0;
-    }
-`;
-
-const ModifyButton = styled.button`
+const CancelButton = styled.button`
     cursor: pointer;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 2rem;
     font-size: 2rem;
     padding: 2rem 6rem;
-    border-radius: 2rem;
-    color: #123968;
+    border-radius: 1rem;
+    color: #fff;
     background-color: rgba(0, 116, 255, 0.11);
     border: none;
-`;
-const CancelButton = styled(ModifyButton)`
-    color: #ea1010;
-    background-color: rgba(255, 0, 0, 0.1);
+    background-color: #ff3838;
+
+    @media (min-width: 750px) {
+        max-width: 50rem;
+    }
 `;
 
-const PostConfirmation = ({ setPostConfirmation, setCancelConfirmation }) => {
+const CancelConfirmation = ({ closeModal }) => {
     return (
         <>
             <BannerWrapper>
-                <Title>Reservation has been confirmed.</Title>
-                <DetailWrapper>
-                    <Icon src={checkReservationIcon} alt="Check Icon" />
-                    <Text>
-                        The confirmation result has been sent to your email.
-                    </Text>
-                </DetailWrapper>
+                <Title>Are you sure you want to cancel the reservation?</Title>
                 <DetailWrapper>
                     <Icon src={calendarReservationIcon} alt="Calendar Icon" />
                     <Text>Booking ID : #123456</Text>
@@ -183,23 +159,10 @@ const PostConfirmation = ({ setPostConfirmation, setCancelConfirmation }) => {
                         </Detail>
                     </ReservationDetailsBody>
                 </ReservationDetailsWrapper>
-                <CtaWrapper>
-                    <ModifyButton>
-                        Modify <Icon src={modifyIcon} alt="Modify Icon" />
-                    </ModifyButton>
-                    <CancelButton
-                        onClick={(e) => {
-                            e.preventDefault();
-                            setPostConfirmation(false);
-                            setCancelConfirmation(true);
-                        }}
-                    >
-                        Cancel <Icon src={cancelIcon} alt="Cancel Icon" />
-                    </CancelButton>
-                </CtaWrapper>
             </InfoWrapper>
+            <CancelButton onClick={closeModal}>Cancel Reservation</CancelButton>
         </>
     );
 };
 
-export default PostConfirmation;
+export default CancelConfirmation;

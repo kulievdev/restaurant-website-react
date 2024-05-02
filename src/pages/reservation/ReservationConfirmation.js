@@ -8,6 +8,7 @@ import Cart from "../../design-system/Cart/Cart";
 import { useState } from "react";
 import PreConfirmation from "./PreConfirmationReservation";
 import PostConfirmation from "./PostConfirmation";
+import CancelConfirmation from "./CancelConfirmation";
 
 const ConfirmationWrapper = styled.div``;
 
@@ -28,6 +29,7 @@ const ReservationConfirmation = ({ closeModal }) => {
     const windowWidth = useWindowWidth();
     const [preConfirmation, setPreConfirmation] = useState(true);
     const [postConfirmation, setPostConfirmation] = useState(false);
+    const [cancelConfirmation, setCancelConfirmation] = useState(false);
 
     return (
         <ConfirmationWrapper>
@@ -65,12 +67,19 @@ const ReservationConfirmation = ({ closeModal }) => {
             </Navbar>
             {preConfirmation && (
                 <PreConfirmation
-                    closeModal={closeModal}
                     setPreConfirmation={setPreConfirmation}
                     setPostConfirmation={setPostConfirmation}
                 />
             )}
-            {postConfirmation && <PostConfirmation closeModal={closeModal} />}
+            {postConfirmation && (
+                <PostConfirmation
+                    setPostConfirmation={setPostConfirmation}
+                    setCancelConfirmation={setCancelConfirmation}
+                />
+            )}
+            {cancelConfirmation && (
+                <CancelConfirmation closeModal={closeModal} />
+            )}
         </ConfirmationWrapper>
     );
 };

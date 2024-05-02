@@ -145,11 +145,7 @@ const Link = styled.a`
     }
 `;
 
-const PreConfirmation = ({
-    closeModal,
-    setPreConfirmation,
-    setPostConfirmation
-}) => {
+const PreConfirmation = ({ setPreConfirmation, setPostConfirmation }) => {
     const [selectInputType, setSelectInputType] = useState("text");
 
     const handleSelectFocus = () => {
