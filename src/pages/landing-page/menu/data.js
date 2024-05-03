@@ -421,7 +421,7 @@ const drinks = [
     {
         name: "Mojito",
         img: drink1,
-        text: "Dive into a culinary spectacle with our Extravaganza Pizza, where every slice is a symphony of flavors, boasting a lavish array of premium toppings such as savory pepperoni, spicy sausage, juicy ham, fresh bell peppers, onions, mushrooms, and olives, all nestled atop a golden crust, delivering an extravagant feast for the senses.",
+        text: "Savor the taste of summer with our Mojito. Made with fresh mint, tangy lime, and premium rum, it's the perfect refresher for any occasion.",
         rating: [1, 1, 1, 1, 1],
         price: "$16.99"
     },
@@ -429,7 +429,7 @@ const drinks = [
     {
         name: "Cosmopolitan",
         img: drink2,
-        text: "Experience meaty perfection with our Meat & Meat Pizza, where layers of succulent pepperoni, savory sausage, tender ham, and crispy bacon come together atop a cheesy canvas, offering a flavor-packed celebration of carnivorous delight.",
+        text: "Try our Cosmopolitan cocktail: vodka, triple sec, cranberry juice, and lime. A chic and refreshing choice for any occasion.",
         rating: [1, 1, 1, 1, 0],
         price: "$11.50"
     },
@@ -437,14 +437,14 @@ const drinks = [
     {
         name: "Piña Colada",
         img: drink3,
-        text: "Enter a realm of carnivorous bliss with our Meatzza Pizza, where a hearty combination of pepperoni, sausage, ham, and bacon, generously piled atop a savory crust, creates a meat lover's dream, delivering a flavor explosion with every bite.",
+        text: "Escape to the tropics with our Pina Colada. A blissful blend of coconut cream, pineapple juice, and rum, shaken with ice and served in a chilled glass.",
         rating: [1, 1, 1, 1, 1],
         price: "$13.99"
     },
     {
         name: "Margarita",
         img: drink4,
-        text: "Savor the garden-fresh goodness of our Veggie Garden Pizza, featuring a harmonious medley of vibrant vegetables atop a crispy crust, each bite bursting with the flavors of sun-ripened tomatoes, crisp bell peppers, earthy mushrooms, and more, offering a delightful ode to nature's bounty.",
+        text: "Enjoy our classic Margarita: tequila, triple sec, and fresh lime juice over ice. The perfect blend of sweet and tangy for any occasion.",
         rating: [1, 1, 1, 0, 0],
         price: "$11.99"
     },
@@ -452,7 +452,7 @@ const drinks = [
     {
         name: "Sangria",
         img: drink5,
-        text: "Experience the ultimate meat lover's delight with our Double Beef Burger Pizza, where juicy beef patties mingle with savory bacon, melted cheese, tangy pickles, and a drizzle of special sauce atop a golden crust, crafting a flavor-packed homage to the classic American burger.",
+        text: "Try our Sangria: red wine with fresh fruit and a citrus splash. Refreshing and vibrant, it's perfect for any occasion.",
         rating: [1, 1, 1, 1, 1],
         price: "$16.99"
     },
@@ -460,7 +460,7 @@ const drinks = [
     {
         name: "Manhattan",
         img: drink6,
-        text: "Indulge in a carnivorous feast with our Meat Lover's Pizza, featuring a symphony of savory flavors including hearty pepperoni, sizzling sausage, succulent ham, and crispy bacon atop a bed of melted cheese and tangy tomato sauce, offering a mouthwatering celebration of all things meaty.",
+        text: "Enjoy our classic Manhattan: bourbon, sweet vermouth, and bitters. A sophisticated sip with timeless charm.",
         rating: [1, 1, 1, 1, 0],
         price: "$12.99"
     },
@@ -468,7 +468,7 @@ const drinks = [
     {
         name: "Paloma",
         img: drink7,
-        text: "Embark on a culinary voyage with our Tuna Delight Pizza, where tender chunks of premium tuna meet savory olives, tangy red onions, and a sprinkle of capers, all atop a golden crust and finished with a drizzle of zesty lemon, offering a delightful fusion of flavors reminiscent of coastal indulgence.",
+        text: "Savor our Paloma: tequila, grapefruit soda, and lime over ice. A refreshing taste of Mexico in every sip.",
         rating: [1, 1, 1, 1, 0],
         price: "$9.75"
     },
@@ -476,7 +476,7 @@ const drinks = [
     {
         name: "Daiquiri",
         img: drink8,
-        text: "Embark on a culinary voyage with our Tuna Delight Pizza, where tender chunks of premium tuna meet savory olives, tangy red onions, and a sprinkle of capers, all atop a golden crust and finished with a drizzle of zesty lemon, offering a delightful fusion of flavors reminiscent of coastal indulgence.",
+        text: "Enjoy our classic Daiquiri: rum, lime juice, and simple syrup. A timeless blend of sweet and tangy flavors.",
         rating: [1, 1, 1, 1, 0],
         price: "$9.75"
     }
