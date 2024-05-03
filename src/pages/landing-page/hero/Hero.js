@@ -101,6 +101,7 @@ const Hero = () => {
                                     : "sm"
                             }
                             color="orange"
+                            onClick={() => navigate("menu")}
                         >
                             Order Now
                         </Button>
