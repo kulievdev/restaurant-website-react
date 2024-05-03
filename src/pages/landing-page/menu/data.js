@@ -364,7 +364,7 @@ const desserts = [
     {
         name: "Crème Brûlée",
         img: dessert4,
-        text: "Dive into a culinary spectacle with our Extravaganza Pizza, where every slice is a symphony of flavors, boasting a lavish array of premium toppings such as savory pepperoni, spicy sausage, juicy ham, fresh bell peppers, onions, mushrooms, and olives, all nestled atop a golden crust, delivering an extravagant feast for the senses.",
+        text: "Indulge in our classic Crème Brûlée: a silky-smooth vanilla custard crowned with a caramelized sugar crust. A timeless delight that promises pure indulgence in every spoonful.",
         rating: [1, 1, 1, 1, 1],
         price: "$16.99"
     },
@@ -372,7 +372,7 @@ const desserts = [
     {
         name: "Panna Cotta",
         img: dessert5,
-        text: "Experience meaty perfection with our Meat & Meat Pizza, where layers of succulent pepperoni, savory sausage, tender ham, and crispy bacon come together atop a cheesy canvas, offering a flavor-packed celebration of carnivorous delight.",
+        text: "Enjoy our delicate Panna Cotta, a silky Italian dessert with hints of vanilla. Served chilled, it melts on your palate, complemented by a choice of fruit coulis or fresh berries. The perfect ending to any meal.",
         rating: [1, 1, 1, 1, 0],
         price: "$11.50"
     },
@@ -380,14 +380,14 @@ const desserts = [
     {
         name: "Éclair",
         img: dessert6,
-        text: "Enter a realm of carnivorous bliss with our Meatzza Pizza, where a hearty combination of pepperoni, sausage, ham, and bacon, generously piled atop a savory crust, creates a meat lover's dream, delivering a flavor explosion with every bite.",
+        text: "Treat yourself to our Éclair: a light pastry filled with creamy custard and topped with chocolate glaze. Perfect for a moment of sweet indulgence.",
         rating: [1, 1, 1, 1, 1],
         price: "$13.99"
     },
     {
         name: "Lava Cake",
         img: dessert1,
-        text: "Savor the garden-fresh goodness of our Veggie Garden Pizza, featuring a harmonious medley of vibrant vegetables atop a crispy crust, each bite bursting with the flavors of sun-ripened tomatoes, crisp bell peppers, earthy mushrooms, and more, offering a delightful ode to nature's bounty.",
+        text: "Delight in our Lava Cake, a decadent dessert experience. With a molten chocolate center that oozes with each forkful, it's a symphony of rich flavors and indulgence. Served warm, each bite is a heavenly escape into chocolate bliss.",
         rating: [1, 1, 1, 0, 0],
         price: "$11.99"
     },
@@ -395,7 +395,7 @@ const desserts = [
     {
         name: "Tiramisu",
         img: dessert2,
-        text: "Experience the ultimate meat lover's delight with our Double Beef Burger Pizza, where juicy beef patties mingle with savory bacon, melted cheese, tangy pickles, and a drizzle of special sauce atop a golden crust, crafting a flavor-packed homage to the classic American burger.",
+        text: "Try our classic Tiramisu: espresso-soaked ladyfingers layered with creamy mascarpone, dusted with cocoa. An Italian delight in every bite. Each heavenly bite unveils a symphony of flavors, where the robust essence of coffee harmonizes with the creamy richness of mascarpone, culminating in a sensation of pure indulgence. ",
         rating: [1, 1, 1, 1, 1],
         price: "$16.99"
     },
@@ -403,7 +403,7 @@ const desserts = [
     {
         name: "Cheesecake",
         img: dessert3,
-        text: "Indulge in a carnivorous feast with our Meat Lover's Pizza, featuring a symphony of savory flavors including hearty pepperoni, sizzling sausage, succulent ham, and crispy bacon atop a bed of melted cheese and tangy tomato sauce, offering a mouthwatering celebration of all things meaty.",
+        text: "Indulge in our creamy Cheesecake, a timeless favorite. With a velvety texture and a hint of tanginess, it's a decadent treat for any dessert lover. Topped with your choice of fresh fruit compote or drizzled with rich caramel sauce, each bite is a blissful escape into dessert perfection.",
         rating: [1, 1, 1, 1, 0],
         price: "$12.99"
     },
@@ -411,7 +411,7 @@ const desserts = [
     {
         name: "Profiteroles",
         img: dessert7,
-        text: "Embark on a culinary voyage with our Tuna Delight Pizza, where tender chunks of premium tuna meet savory olives, tangy red onions, and a sprinkle of capers, all atop a golden crust and finished with a drizzle of zesty lemon, offering a delightful fusion of flavors reminiscent of coastal indulgence.",
+        text: "Enjoy our Profiteroles, a delightful French pastry treat. Light and airy choux pastry filled with luscious vanilla cream and drizzled with decadent chocolate sauce. Each bite is a heavenly combination of textures and flavors, making it the perfect ending to any meal or a sweet indulgence any time of day.",
         rating: [1, 1, 1, 1, 0],
         price: "$9.75"
     }
