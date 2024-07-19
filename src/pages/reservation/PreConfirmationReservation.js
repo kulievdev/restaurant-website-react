@@ -14,7 +14,7 @@ import Button from "../../design-system/Button/Button";
 import calendarIcon from "../../assets/calendar-icon.svg";
 import timeIcon from "../../assets/time-icon.svg";
 import personIcon from "../../assets/person-icon.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Title = styled(SectionHeading)`
     text-align: center;
@@ -150,7 +150,79 @@ const PreConfirmation = ({
     setPostConfirmation,
     details
 }) => {
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [email, setEmail] = useState("");
+    const [occasionType, setOccasionType] = useState("");
+    const [specialRequest, setSpecialRequest] = useState("");
+
+    const [guestDetails, setGuestDetails] = useState(null);
+
+    const handleFirstName = (e) => {
+        setFirstName(e.target.value);
+    };
+
+    const handleLastName = (e) => {
+        setLastName(e.target.value);
+    };
+
+    const handlePhoneNumber = (e) => {
+        setPhoneNumber(e.target.value);
+    };
+
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+    };
+
+    const handleOccasionType = (e) => {
+        setOccasionType(e.target.value);
+    };
+
+    const handleSpecialRequest = (e) => {
+        setSpecialRequest(e.target.value);
+    };
+
+    const isFormValid = () =>
+        firstName && lastName && phoneNumber && email && occasionType;
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const guestDetails = {
+            firstName,
+            lastName,
+            phoneNumber,
+            email,
+            occasionType,
+            specialRequest
+        };
+        setGuestDetails(guestDetails);
+        setPreConfirmation(false);
+        setPostConfirmation(true);
+    };
+
     const [selectInputType, setSelectInputType] = useState("text");
+    const [timeLeft, setTimeLeft] = useState(300);
+
+    useEffect(() => {
+        if (timeLeft <= 0) return;
+
+        const intervalId = setInterval(() => {
+            setTimeLeft((prev) => prev - 1);
+        }, 1000);
+
+        return () => clearInterval(intervalId);
+    }, [timeLeft]);
+
+    const formatTime = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(
+            2,
+            "0"
+        )}`;
+    };
 
     const handleSelectFocus = () => {
         setSelectInputType("select");
@@ -184,17 +256,42 @@ const PreConfirmation = ({
             <Note>
                 <SectionDescription>
                     Due to limited availability, we can hold this table for you
-                    for <OrangeSpanText>5:00 minutes</OrangeSpanText>
+                    for{" "}
+                    <OrangeSpanText>
+                        {formatTime(timeLeft)} minutes
+                    </OrangeSpanText>
                 </SectionDescription>
             </Note>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Header>Details</Header>
                 <InputsWrapper>
-                    <Input type="text" placeholder="First Name" />
-                    <Input type="text" placeholder="Last Name" />
-                    <Input type="tel" placeholder="Phone Number" />
-                    <Input type="email" placeholder="Email Address" />
                     <Input
+                        value={firstName}
+                        onChange={handleFirstName}
+                        type="text"
+                        placeholder="First Name"
+                    />
+                    <Input
+                        value={lastName}
+                        onChange={handleLastName}
+                        type="text"
+                        placeholder="Last Name"
+                    />
+                    <Input
+                        value={phoneNumber}
+                        onChange={handlePhoneNumber}
+                        type="tel"
+                        placeholder="Phone Number"
+                    />
+                    <Input
+                        value={email}
+                        onChange={handleEmail}
+                        type="email"
+                        placeholder="Email Address"
+                    />
+                    <Input
+                        value={occasionType}
+                        onChange={handleOccasionType}
                         type={selectInputType}
                         placeholder="Select an occasion"
                         handleOnFocus={handleSelectFocus}
@@ -208,7 +305,12 @@ const PreConfirmation = ({
                         <Option>Networking Event</Option>
                         <Option>Graduation Party</Option>
                     </Input>
-                    <Input type="text" placeholder="Add a special request" />
+                    <Input
+                        value={specialRequest}
+                        onChange={handleSpecialRequest}
+                        type="text"
+                        placeholder="Add a special request"
+                    />
                 </InputsWrapper>
                 <BottomPart>
                     <TermsWrapper>
@@ -230,11 +332,7 @@ const PreConfirmation = ({
                             size="xl"
                             color="orange"
                             width="full"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                setPreConfirmation(false);
-                                setPostConfirmation(true);
-                            }}
+                            disabled={!isFormValid()}
                         >
                             Confirm Reservation
                         </Button>
