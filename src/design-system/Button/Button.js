@@ -1,6 +1,6 @@
 import "./Button.css";
 
-const Button = ({ size, color, width, children, onClick }) => {
+const Button = ({ size, color, width, children, onClick, disabled }) => {
     const classNames = {
         sm: "btn-sm",
         md: "btn-md",
@@ -17,6 +17,7 @@ const Button = ({ size, color, width, children, onClick }) => {
 
     return (
         <button
+            disabled={disabled}
             onClick={onClick}
             className={`btn ${classNames[size]} ${classNames[color]} ${classNames[width]}`}
         >

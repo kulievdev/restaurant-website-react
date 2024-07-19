@@ -145,7 +145,11 @@ const Link = styled.a`
     }
 `;
 
-const PreConfirmation = ({ setPreConfirmation, setPostConfirmation }) => {
+const PreConfirmation = ({
+    setPreConfirmation,
+    setPostConfirmation,
+    details
+}) => {
     const [selectInputType, setSelectInputType] = useState("text");
 
     const handleSelectFocus = () => {
@@ -162,17 +166,15 @@ const PreConfirmation = ({ setPreConfirmation, setPostConfirmation }) => {
             <DetailsWrapper>
                 <Detail>
                     <Icon src={calendarIcon} alt="Calendar icon" />
-                    <SectionDescription>
-                        Saturday, 13 April 2024
-                    </SectionDescription>
+                    <SectionDescription>{details.date}</SectionDescription>
                 </Detail>
                 <Detail>
                     <Icon src={timeIcon} alt="Time icon" />
-                    <SectionDescription>04:30 pm</SectionDescription>
+                    <SectionDescription>{details.time}</SectionDescription>
                 </Detail>
                 <Detail>
                     <Icon src={personIcon} alt="Person icon" />
-                    <SectionDescription>2 people</SectionDescription>
+                    <SectionDescription>{details.partySize}</SectionDescription>
                 </Detail>
             </DetailsWrapper>
             <Note>

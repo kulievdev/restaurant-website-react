@@ -5,7 +5,9 @@ const Input = ({
     placeholder,
     handleOnFocus,
     handleOnBlur,
-    children
+    children,
+    value,
+    onChange
 }) => {
     return type !== "select" ? (
         <input
@@ -14,9 +16,19 @@ const Input = ({
             placeholder={placeholder}
             onFocus={handleOnFocus}
             onBlur={handleOnBlur}
+            value={value}
+            onChange={onChange}
         />
     ) : (
-        <select className="select">{children}</select>
+        <select
+            className="select"
+            value={value}
+            onChange={onChange}
+            onFocus={handleOnFocus}
+            onBlur={handleOnBlur}
+        >
+            {children}
+        </select>
     );
 };
 

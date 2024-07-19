@@ -87,6 +87,31 @@ const InputsWrapper = styled.div`
 const Option = styled.option``;
 
 const Reservation = () => {
+    const [date, setDate] = useState("");
+    const [time, setTime] = useState("");
+    const [partySize, setPartySize] = useState("");
+    const [reservationDetails, setReservationDetails] = useState(null);
+
+    const handleDate = (e) => {
+        setDate(e.target.value);
+    };
+
+    const handleTime = (e) => {
+        setTime(e.target.value);
+    };
+
+    const handlePartySize = (e) => {
+        setPartySize(e.target.value);
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const details = { date, time, partySize };
+        setPreConfirmationOpen(true);
+        setReservationDetails(details);
+    };
+
     const [dateInputType, setDateInputType] = useState("text");
     const [timeInputType, setTimeInputType] = useState("text");
     const [selectInputType, setSelectInputType] = useState("text");
@@ -130,6 +155,10 @@ const Reservation = () => {
         setSelectInputType("text");
     };
 
+    const isFormValid = () => {
+        return date && time && partySize;
+    };
+
     return (
         <>
             <ReservationSection>
@@ -144,52 +173,55 @@ const Reservation = () => {
                         <SectionHeading $marginBottom="5">
                             Book a <OrangeSpanText>table</OrangeSpanText>
                         </SectionHeading>
-                        <Form>
+                        <Form onSubmit={handleSubmit}>
                             <InputsWrapper>
                                 <Input
                                     type={dateInputType}
                                     placeholder="Date"
                                     handleOnFocus={handleDateFocus}
                                     handleOnBlur={handleDateBlur}
+                                    value={date}
+                                    onChange={handleDate}
                                 />
                                 <Input
                                     type={timeInputType}
                                     placeholder="Time"
                                     handleOnFocus={handleTimeFocus}
                                     handleOnBlur={handleTimeBlur}
+                                    value={time}
+                                    onChange={handleTime}
                                 />
                                 <Input
                                     type={selectInputType}
                                     placeholder="Party size"
                                     handleOnFocus={handleSelectFocus}
                                     handleOnBlur={handleSelectBlur}
+                                    value={partySize}
+                                    onChange={handlePartySize}
                                 >
                                     <Option>Choose a number</Option>
-                                    <Option>1 person</Option>
-                                    <Option>2 People</Option>
-                                    <Option>3 People</Option>
-                                    <Option>4 People </Option>
-                                    <Option>5 People</Option>
-                                    <Option>6 People</Option>
-                                    <Option>7 People</Option>
-                                    <Option>8 People</Option>
-                                    <Option>9 People</Option>
-                                    <Option>10 People</Option>
-                                    <Option>11 People</Option>
-                                    <Option>12 People</Option>
-                                    <Option>13 People</Option>
-                                    <Option>14 People</Option>
-                                    <Option>15 People</Option>
+                                    <Option value="1 person">1 person</Option>
+                                    <Option value="2 people">2 People</Option>
+                                    <Option value="3 people">3 People</Option>
+                                    <Option value="4 people">4 People </Option>
+                                    <Option value="5 people">5 People</Option>
+                                    <Option value="6 people">6 People</Option>
+                                    <Option value="7 people">7 People</Option>
+                                    <Option value="8 people">8 People</Option>
+                                    <Option value="9 people">9 People</Option>
+                                    <Option value="10 people">10 People</Option>
+                                    <Option value="11 people">11 People</Option>
+                                    <Option value="12 people">12 People</Option>
+                                    <Option value="13 people">13 People</Option>
+                                    <Option value="14 people">14 People</Option>
+                                    <Option value="15 people">15 People</Option>
                                 </Input>
                             </InputsWrapper>
                             <Button
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    setPreConfirmationOpen(true);
-                                }}
                                 color="orange"
                                 size="xl"
                                 width="full"
+                                disabled={!isFormValid()}
                             >
                                 Book Now
                             </Button>
@@ -204,6 +236,7 @@ const Reservation = () => {
                 >
                     <ReservationConfirmation
                         closeModal={closePreConfirmation}
+                        details={reservationDetails}
                     />
                 </Modal>
             )}

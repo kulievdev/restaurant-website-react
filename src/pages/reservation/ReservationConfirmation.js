@@ -24,7 +24,7 @@ const CtaWrapper = styled.div`
     gap: 2rem;
 `;
 
-const ReservationConfirmation = ({ closeModal }) => {
+const ReservationConfirmation = ({ closeModal, details }) => {
     const navigate = useNavigate();
     const windowWidth = useWindowWidth();
     const [preConfirmation, setPreConfirmation] = useState(true);
@@ -69,6 +69,7 @@ const ReservationConfirmation = ({ closeModal }) => {
                 <PreConfirmation
                     setPreConfirmation={setPreConfirmation}
                     setPostConfirmation={setPostConfirmation}
+                    details={details}
                 />
             )}
             {postConfirmation && (
