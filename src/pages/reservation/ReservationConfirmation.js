@@ -76,10 +76,11 @@ const ReservationConfirmation = ({ closeModal, details }) => {
                 <PostConfirmation
                     setPostConfirmation={setPostConfirmation}
                     setCancelConfirmation={setCancelConfirmation}
+                    details={details}
                 />
             )}
             {cancelConfirmation && (
-                <CancelConfirmation closeModal={closeModal} />
+                <CancelConfirmation closeModal={closeModal} details={details} />
             )}
         </ConfirmationWrapper>
     );

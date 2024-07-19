@@ -146,7 +146,11 @@ const CancelButton = styled(ModifyButton)`
     background-color: rgba(255, 0, 0, 0.1);
 `;
 
-const PostConfirmation = ({ setPostConfirmation, setCancelConfirmation }) => {
+const PostConfirmation = ({
+    setPostConfirmation,
+    setCancelConfirmation,
+    details
+}) => {
     return (
         <>
             <BannerWrapper>
@@ -170,16 +174,20 @@ const PostConfirmation = ({ setPostConfirmation, setCancelConfirmation }) => {
                         <Detail>
                             <Icon src={calendarIcon} alt="Calendar icon" />
                             <SectionDescription>
-                                Saturday, 13 April 2024
+                                {details.formattedDateStr}
                             </SectionDescription>
                         </Detail>
                         <Detail>
                             <Icon src={timeIcon} alt="Time icon" />
-                            <SectionDescription>04:30 pm</SectionDescription>
+                            <SectionDescription>
+                                {details.formattedTimeStr}
+                            </SectionDescription>
                         </Detail>
                         <Detail>
                             <Icon src={personIcon} alt="Person icon" />
-                            <SectionDescription>2 people</SectionDescription>
+                            <SectionDescription>
+                                {details.partySize}
+                            </SectionDescription>
                         </Detail>
                     </ReservationDetailsBody>
                 </ReservationDetailsWrapper>

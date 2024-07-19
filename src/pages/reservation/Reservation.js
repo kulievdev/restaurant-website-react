@@ -6,6 +6,7 @@ import Button from "../../design-system/Button/Button";
 import Input from "../../design-system/Input/Input";
 import Modal from "../../design-system/Modal/Modal";
 import ReservationConfirmation from "./ReservationConfirmation";
+import { format, parseISO } from "date-fns";
 
 const ReservationSection = styled.section``;
 
@@ -109,13 +110,29 @@ const Reservation = () => {
         }
     };
 
+    const formattedDate = (dateString) => {
+        const date = parseISO(dateString);
+        return format(date, "MM/dd/yyyy");
+    };
+
+    const formattedTime = (timeString) => {
+        const [hours, minutes] = timeString.split(":").map(Number);
+
+        const date = new Date();
+        date.setHours(hours, minutes, 0, 0);
+
+        return format(date, "hh:mm a");
+    };
+
     const handlePartySize = (e) => {
         setPartySize(e.target.value);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const details = { date, time, partySize };
+        const formattedDateStr = formattedDate(date);
+        const formattedTimeStr = formattedTime(time);
+        const details = { formattedDateStr, formattedTimeStr, partySize };
         setPreConfirmationOpen(true);
         setReservationDetails(details);
     };

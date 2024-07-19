@@ -128,7 +128,7 @@ const CancelButton = styled.button`
     }
 `;
 
-const CancelConfirmation = ({ closeModal }) => {
+const CancelConfirmation = ({ closeModal, details }) => {
     return (
         <>
             <BannerWrapper>
@@ -146,16 +146,22 @@ const CancelConfirmation = ({ closeModal }) => {
                         <Detail>
                             <Icon src={calendarIcon} alt="Calendar icon" />
                             <SectionDescription>
-                                Saturday, 13 April 2024
+                                {details.formattedDateStr}
                             </SectionDescription>
                         </Detail>
                         <Detail>
                             <Icon src={timeIcon} alt="Time icon" />
-                            <SectionDescription>04:30 pm</SectionDescription>
+                            <SectionDescription>
+                                {" "}
+                                {details.formattedTimeStr}
+                            </SectionDescription>
                         </Detail>
                         <Detail>
                             <Icon src={personIcon} alt="Person icon" />
-                            <SectionDescription>2 people</SectionDescription>
+                            <SectionDescription>
+                                {" "}
+                                {details.partySize}
+                            </SectionDescription>
                         </Detail>
                     </ReservationDetailsBody>
                 </ReservationDetailsWrapper>
