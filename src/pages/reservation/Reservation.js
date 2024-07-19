@@ -13,14 +13,9 @@ const ReservationSectionContainer = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
-
     padding: 5rem 0;
 
     @media (min-width: 500px) {
-        padding: 10rem 0;
-    }
-
-    @media (min-width: 900px) {
         padding: 10rem 0;
     }
 
@@ -40,9 +35,9 @@ const ReservationImageWrapper = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
+
     @media (min-width: 1240px) {
         justify-content: center;
-        margin-bottom: 0;
         width: 50%;
     }
 `;
@@ -59,7 +54,6 @@ const ReservationContent = styled.div`
     width: 100%;
     text-align: center;
     max-width: 70rem;
-
     padding: 5rem 3rem;
 
     @media (min-width: 500px) {
@@ -71,7 +65,6 @@ const ReservationContent = styled.div`
         padding: 0;
         text-align: start;
         width: 50%;
-        margin-bottom: 0;
     }
 `;
 
@@ -92,12 +85,28 @@ const Reservation = () => {
     const [partySize, setPartySize] = useState("");
     const [reservationDetails, setReservationDetails] = useState(null);
 
+    const [dateInputType, setDateInputType] = useState("text");
+    const [timeInputType, setTimeInputType] = useState("text");
+    const [selectInputType, setSelectInputType] = useState("text");
+    const [preConfirmationOpen, setPreConfirmationOpen] = useState(false);
+    const [postConfirmationOpen, setPostConfirmationOpen] = useState(false);
+    const [cancelConfirmationOpen, setCancelConfirmationOpen] = useState(false);
+
     const handleDate = (e) => {
-        setDate(e.target.value);
+        const inputDate = e.target.value;
+        if (inputDate) {
+            const date = new Date(inputDate);
+            setDate(date.toISOString().split("T")[0]);
+        }
     };
 
     const handleTime = (e) => {
-        setTime(e.target.value);
+        const inputTime = e.target.value;
+        if (inputTime) {
+            const [hours, minutes] = inputTime.split(":");
+            const formattedTime = `${hours}:${minutes}`;
+            setTime(formattedTime);
+        }
     };
 
     const handlePartySize = (e) => {
@@ -106,58 +115,25 @@ const Reservation = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         const details = { date, time, partySize };
         setPreConfirmationOpen(true);
         setReservationDetails(details);
     };
 
-    const [dateInputType, setDateInputType] = useState("text");
-    const [timeInputType, setTimeInputType] = useState("text");
-    const [selectInputType, setSelectInputType] = useState("text");
-    const [preConfirmationOpen, setPreConfirmationOpen] = useState(false);
-    const [postConfirmationOpen, setPostConfirmationOpen] = useState(false);
-    const [cancelConfirmationOpen, setCancelConfirmationOpen] = useState(false);
+    const handleDateFocus = () => setDateInputType("date");
+    const handleDateBlur = () => setDateInputType("text");
 
-    const closePreConfirmation = () => {
-        setPreConfirmationOpen(false);
-    };
+    const handleTimeFocus = () => setTimeInputType("time");
+    const handleTimeBlur = () => setTimeInputType("text");
 
-    const closePostConfirmation = () => {
-        setPostConfirmationOpen(false);
-    };
+    const handleSelectFocus = () => setSelectInputType("select");
+    const handleSelectBlur = () => setSelectInputType("text");
 
-    const closeCancelConfirmation = () => {
-        setCancelConfirmationOpen(false);
-    };
+    const isFormValid = () => date && time && partySize;
 
-    const handleDateFocus = () => {
-        setDateInputType("date");
-    };
-
-    const handleDateBlur = () => {
-        setDateInputType("text");
-    };
-
-    const handleTimeFocus = () => {
-        setTimeInputType("time");
-    };
-
-    const handleTimeBlur = () => {
-        setTimeInputType("text");
-    };
-
-    const handleSelectFocus = () => {
-        setSelectInputType("select");
-    };
-
-    const handleSelectBlur = () => {
-        setSelectInputType("text");
-    };
-
-    const isFormValid = () => {
-        return date && time && partySize;
-    };
+    const closePreConfirmation = () => setPreConfirmationOpen(false);
+    const closePostConfirmation = () => setPostConfirmationOpen(false);
+    const closeCancelConfirmation = () => setCancelConfirmationOpen(false);
 
     return (
         <>
@@ -203,7 +179,7 @@ const Reservation = () => {
                                     <Option value="1 person">1 person</Option>
                                     <Option value="2 people">2 People</Option>
                                     <Option value="3 people">3 People</Option>
-                                    <Option value="4 people">4 People </Option>
+                                    <Option value="4 people">4 People</Option>
                                     <Option value="5 people">5 People</Option>
                                     <Option value="6 people">6 People</Option>
                                     <Option value="7 people">7 People</Option>
@@ -253,7 +229,7 @@ const Reservation = () => {
             {cancelConfirmationOpen && (
                 <Modal
                     show={cancelConfirmationOpen}
-                    onClose={cancelConfirmationOpen}
+                    onClose={closeCancelConfirmation}
                 >
                     <ReservationConfirmation
                         closeModal={closeCancelConfirmation}

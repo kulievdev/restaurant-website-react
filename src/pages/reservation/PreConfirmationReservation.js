@@ -1,3 +1,4 @@
+import { format, parseISO } from "date-fns";
 import styled from "styled-components";
 import {
     OrangeSpanText,
@@ -160,17 +161,34 @@ const PreConfirmation = ({
         setSelectInputType("text");
     };
 
+    const formattedDate = (dateString) => {
+        const date = parseISO(dateString);
+        return format(date, "MM/dd/yyyy");
+    };
+
+    const formattedTime = (timeString) => {
+        const [hours, minutes] = timeString.split(":").map(Number);
+
+        const date = new Date();
+        date.setHours(hours, minutes, 0, 0);
+
+        return format(date, "hh:mm a");
+    };
+
+    const formattedDateStr = formattedDate(details.date);
+    const formattedTimeStr = formattedTime(details.time);
+
     return (
         <>
             <Title $marginBottom="4.5">Reservation</Title>
             <DetailsWrapper>
                 <Detail>
                     <Icon src={calendarIcon} alt="Calendar icon" />
-                    <SectionDescription>{details.date}</SectionDescription>
+                    <SectionDescription>{formattedDateStr}</SectionDescription>
                 </Detail>
                 <Detail>
                     <Icon src={timeIcon} alt="Time icon" />
-                    <SectionDescription>{details.time}</SectionDescription>
+                    <SectionDescription>{formattedTimeStr}</SectionDescription>
                 </Detail>
                 <Detail>
                     <Icon src={personIcon} alt="Person icon" />
