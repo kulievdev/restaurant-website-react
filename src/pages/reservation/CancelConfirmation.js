@@ -146,14 +146,14 @@ const CancelConfirmation = ({ closeModal, details }) => {
                         <Detail>
                             <Icon src={calendarIcon} alt="Calendar icon" />
                             <SectionDescription>
-                                {details.formattedDateStr}
+                                {details.date}
                             </SectionDescription>
                         </Detail>
                         <Detail>
                             <Icon src={timeIcon} alt="Time icon" />
                             <SectionDescription>
                                 {" "}
-                                {details.formattedTimeStr}
+                                {details.time}
                             </SectionDescription>
                         </Detail>
                         <Detail>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { OrangeSpanText, SectionHeading } from "../components/layout";
 import reservationImg from "../../assets/reservation2.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "../../design-system/Button/Button";
 import Input from "../../design-system/Input/Input";
 import Modal from "../../design-system/Modal/Modal";
@@ -93,23 +93,6 @@ const Reservation = () => {
     const [postConfirmationOpen, setPostConfirmationOpen] = useState(false);
     const [cancelConfirmationOpen, setCancelConfirmationOpen] = useState(false);
 
-    const handleDate = (e) => {
-        const inputDate = e.target.value;
-        if (inputDate) {
-            const date = new Date(inputDate);
-            setDate(date.toISOString().split("T")[0]);
-        }
-    };
-
-    const handleTime = (e) => {
-        const inputTime = e.target.value;
-        if (inputTime) {
-            const [hours, minutes] = inputTime.split(":");
-            const formattedTime = `${hours}:${minutes}`;
-            setTime(formattedTime);
-        }
-    };
-
     const formattedDate = (dateString) => {
         const date = parseISO(dateString);
         return format(date, "MM/dd/yyyy");
@@ -117,11 +100,17 @@ const Reservation = () => {
 
     const formattedTime = (timeString) => {
         const [hours, minutes] = timeString.split(":").map(Number);
-
         const date = new Date();
         date.setHours(hours, minutes, 0, 0);
-
         return format(date, "hh:mm a");
+    };
+
+    const handleDate = (e) => {
+        setDate(e.target.value);
+    };
+
+    const handleTime = (e) => {
+        setTime(e.target.value);
     };
 
     const handlePartySize = (e) => {
@@ -130,21 +119,23 @@ const Reservation = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const formattedDateStr = formattedDate(date);
-        const formattedTimeStr = formattedTime(time);
-        const details = { formattedDateStr, formattedTimeStr, partySize };
+        const details = {
+            date: formattedDate(date),
+            time: formattedTime(time),
+            partySize
+        };
         setPreConfirmationOpen(true);
         setReservationDetails(details);
     };
 
     const handleDateFocus = () => setDateInputType("date");
-    const handleDateBlur = () => setDateInputType("text");
+    const handleDateBlur = () => setDateInputType("date");
 
     const handleTimeFocus = () => setTimeInputType("time");
-    const handleTimeBlur = () => setTimeInputType("text");
+    const handleTimeBlur = () => setTimeInputType("time");
 
     const handleSelectFocus = () => setSelectInputType("select");
-    const handleSelectBlur = () => setSelectInputType("text");
+    const handleSelectBlur = () => setSelectInputType("select");
 
     const isFormValid = () => date && time && partySize;
 
@@ -193,21 +184,21 @@ const Reservation = () => {
                                     onChange={handlePartySize}
                                 >
                                     <Option>Choose a number</Option>
-                                    <Option value="1 person">1 person</Option>
-                                    <Option value="2 people">2 People</Option>
-                                    <Option value="3 people">3 People</Option>
-                                    <Option value="4 people">4 People</Option>
-                                    <Option value="5 people">5 People</Option>
-                                    <Option value="6 people">6 People</Option>
-                                    <Option value="7 people">7 People</Option>
-                                    <Option value="8 people">8 People</Option>
-                                    <Option value="9 people">9 People</Option>
-                                    <Option value="10 people">10 People</Option>
-                                    <Option value="11 people">11 People</Option>
-                                    <Option value="12 people">12 People</Option>
-                                    <Option value="13 people">13 People</Option>
-                                    <Option value="14 people">14 People</Option>
-                                    <Option value="15 people">15 People</Option>
+                                    <Option value="1 Person">1 Person</Option>
+                                    <Option value="2 People">2 People</Option>
+                                    <Option value="3 People">3 People</Option>
+                                    <Option value="4 People">4 People</Option>
+                                    <Option value="5 People">5 People</Option>
+                                    <Option value="6 People">6 People</Option>
+                                    <Option value="7 People">7 People</Option>
+                                    <Option value="8 People">8 People</Option>
+                                    <Option value="9 People">9 People</Option>
+                                    <Option value="10 People">10 People</Option>
+                                    <Option value="11 People">11 People</Option>
+                                    <Option value="12 People">12 People</Option>
+                                    <Option value="13 People">13 People</Option>
+                                    <Option value="14 People">14 People</Option>
+                                    <Option value="15 People">15 People</Option>
                                 </Input>
                             </InputsWrapper>
                             <Button

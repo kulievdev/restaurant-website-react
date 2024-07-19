@@ -238,15 +238,11 @@ const PreConfirmation = ({
             <DetailsWrapper>
                 <Detail>
                     <Icon src={calendarIcon} alt="Calendar icon" />
-                    <SectionDescription>
-                        {details.formattedDateStr}
-                    </SectionDescription>
+                    <SectionDescription>{details.date}</SectionDescription>
                 </Detail>
                 <Detail>
                     <Icon src={timeIcon} alt="Time icon" />
-                    <SectionDescription>
-                        {details.formattedTimeStr}
-                    </SectionDescription>
+                    <SectionDescription>{details.time}</SectionDescription>
                 </Detail>
                 <Detail>
                     <Icon src={personIcon} alt="Person icon" />
