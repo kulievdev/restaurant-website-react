@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import loginImg from "../../../assets/login.png";
+import loginImg from "../../../assets/login.webp";
 import Auth from "../components/Auth";
 import {
     CheckBoxInput,

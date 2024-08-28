@@ -1,4 +1,4 @@
-import saladImage from "../../../assets/salad.png";
+import saladImage from "../../../assets/salad.webp";
 import Button from "../../../design-system/Button/Button";
 import styled from "styled-components";
 import {

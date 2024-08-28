@@ -19,7 +19,7 @@ const BusinessHoursBackground = styled.div`
     border-radius: 5rem;
     padding: 0 2rem;
 
-    background-image: url(${require("../../../assets/business-hours.png")});
+    background-image: url(${require("../../../assets/business-hours.webp")});
 
     display: flex;
     flex-direction: column;

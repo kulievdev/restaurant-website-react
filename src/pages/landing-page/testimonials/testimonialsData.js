@@ -1,6 +1,6 @@
-import customer1Img from "../../../assets/customer-1.png";
-import customer2Img from "../../../assets/customer-2.png";
-import customer3Img from "../../../assets/customer-3.png";
+import customer1Img from "../../../assets/customer-1.webp";
+import customer2Img from "../../../assets/customer-2.webp";
+import customer3Img from "../../../assets/customer-3.webp";
 
 const testimonialsData = [
     {

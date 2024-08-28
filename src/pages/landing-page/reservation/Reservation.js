@@ -1,4 +1,4 @@
-import reservationImg from "../../../assets/reservation.png";
+import reservationImg from "../../../assets/reservation.webp";
 import Button from "../../../design-system/Button/Button";
 import styled from "styled-components";
 import {

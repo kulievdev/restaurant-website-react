@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { OrangeSpanText, SectionHeading } from "../components/layout";
-import reservationImg from "../../assets/reservation2.png";
+import reservationImg from "../../assets/reservation2.webp";
 import { useState } from "react";
 import Button from "../../design-system/Button/Button";
 import Input from "../../design-system/Input/Input";

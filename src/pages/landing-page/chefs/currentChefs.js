@@ -1,9 +1,9 @@
-import chef1 from "../../../assets/chef1.png";
-import chef2 from "../../../assets/chef2.png";
-import chef3 from "../../../assets/chef3.png";
-import chef4 from "../../../assets/chef4.jpg";
-import chef5 from "../../../assets/chef5.jpg";
-import chef6 from "../../../assets/chef6.jpg";
+import chef1 from "../../../assets/chef1.webp";
+import chef2 from "../../../assets/chef2.webp";
+import chef3 from "../../../assets/chef3.webp";
+import chef4 from "../../../assets/chef4.webp";
+import chef5 from "../../../assets/chef5.webp";
+import chef6 from "../../../assets/chef6.webp";
 
 const currentChefs = [
     {

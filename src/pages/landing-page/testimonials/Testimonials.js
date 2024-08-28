@@ -5,7 +5,7 @@ import testimonialsData from "./testimonialsData";
 
 const TestimonialsSection = styled.section`
     text-align: center;
-    background-image: url(${require("../../../assets/customers.png")});
+    background-image: url(${require("../../../assets/customers.webp")});
     background-size: cover;
     background-position: top;
     background-color: rgb(251, 250, 250);

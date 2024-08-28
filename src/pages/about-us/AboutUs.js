@@ -1,8 +1,8 @@
-import aboutOne from "../../assets/about1.png";
-import aboutOneSmall from "../../assets/about1small.png";
-import aboutTwo from "../../assets/about2.png";
-import aboutTwoSmall from "../../assets/about2small.png";
-import chef from "../../assets/executiveChef.png";
+import aboutOne from "../../assets/about1.webp";
+import aboutOneSmall from "../../assets/about1small.webp";
+import aboutTwo from "../../assets/about2.webp";
+import aboutTwoSmall from "../../assets/about2small.webp";
+import chef from "../../assets/executiveChef.webp";
 import styled from "styled-components";
 import {
     OrangeSpanText,

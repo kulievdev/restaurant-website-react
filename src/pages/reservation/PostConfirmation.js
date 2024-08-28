@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { SectionDescription } from "../components/layout";
 import checkReservationIcon from "../../assets/icon-check-confirm.svg";
 import calendarReservationIcon from "../../assets/icon-calendar-confirm.svg";
-import confirmImage from "../../assets/confirm-image.png";
+import confirmImage from "../../assets/confirm-image.webp";
 import calendarIcon from "../../assets/calendar-icon.svg";
 import timeIcon from "../../assets/time-icon.svg";
 import personIcon from "../../assets/person-icon.svg";
@@ -10,7 +10,7 @@ import modifyIcon from "../../assets/icon-modify.svg";
 import cancelIcon from "../../assets/icon-cancel.svg";
 
 const BannerWrapper = styled.div`
-    background-image: url(${require("../../assets/green-bg.png")});
+    background-image: url(${require("../../assets/green-bg.webp")});
     padding: 2rem 3rem;
 
     width: calc(100% + 6rem);

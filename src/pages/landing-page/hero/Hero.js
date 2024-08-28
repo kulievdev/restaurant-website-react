@@ -1,6 +1,6 @@
 import Button from "../../../design-system/Button/Button";
 import styled from "styled-components";
-import spaghettiImage from "../../../assets/menu-spaghetti.png";
+import spaghettiImage from "../../../assets/menu-spaghetti.webp";
 import {
     SectionHeading,
     SectionDescription,

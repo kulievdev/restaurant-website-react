@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Modal from "../../../design-system/Modal/Modal";
 import Auth from "../components/Auth";
-import signupImg from "../../../assets/signup.png";
+import signupImg from "../../../assets/signup.webp";
 import Button from "../../../design-system/Button/Button";
 import GoogleButton from "../components/GoogleButton";
 import {
